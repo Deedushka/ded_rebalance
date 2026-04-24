@@ -1,0 +1,52 @@
+annex_country_to_overlord_axis = {
+	name = "ANNEX_COUNTRY_TO_OVERLORD_AXIS"
+	group = "RULE_GROUP_ANNEX_COUNTRIES"
+	default = {
+		name = ANNEX
+		text = "RULE_OPTION_ANNEX_COUNTRIES_AXIS"
+		desc = "RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC"
+	}
+	option = {
+		name = ANNEX_CORE
+		text = "RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS"
+		desc = "RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS_DESC"
+	}
+	option = {
+		name = NOT_ANNEX
+		text = "RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS"
+		desc = "RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS_DESC"
+	}
+}
+annex_country_to_overlord_allies = {
+	name = "ANNEX_COUNTRY_TO_OVERLORD_ALLIES"
+	group = "RULE_GROUP_ANNEX_COUNTRIES"
+	default = {
+		name = ANNEX
+		text = "RULE_OPTION_ANNEX_COUNTRIES_ALLIES"
+		desc = "RULE_OPTION_ANNEX_COUNTRIES_ALLIES_DESC"
+	}
+	option = {
+		name = ANNEX_CORE
+		text = "RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES"
+		desc = "RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES_DESC"
+	}
+	option = {
+		name = NOT_ANNEX
+		text = "RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES"
+		desc = "RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES_DESC"
+	}
+}
+annex_all_china = {
+	name = "ANNEX_ALL_CHINA"
+	group = "RULE_GROUP_ANNEX_COUNTRIES"
+	default = {
+		name = ANNEX
+		text = "RULE_OPTION_ANNEX_CHINA"
+		desc = "RULE_OPTION_ANNEX_CHINA_DESC"
+	}
+	option = {
+		name = NOT_ANNEX
+		text = "RULE_OPTION_NOT_ANNEX_CHINA"
+		desc = "RULE_OPTION_NOT_ANNEX_CHINA_DESC"
+	}
+}

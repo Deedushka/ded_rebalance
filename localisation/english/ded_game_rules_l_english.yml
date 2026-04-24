@@ -1,0 +1,32 @@
+﻿l_english:
+ ANNEX_COUNTRY_TO_OVERLORD_AXIS: "Annex AI Axis minors"
+ ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "Annex AI Allies minors"
+ ANNEX_ALL_CHINA: "Annex all cliques into China"
+ RULE_GROUP_ANNEX_COUNTRIES: "Annex AI countries to major"
+ ANNEX: "§GAnnex§!"
+ ANNEX_CORE: "§YAnnex and Core§!"
+ NOT_ANNEX: "§RNot Annex§!"
+
+ RULE_OPTION_ANNEX_COUNTRIES_AXIS: "Annex in Germany"
+ RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC: "Get annexed: Bulgaria, Romania, Hungry. Give 80% of compliance"
+
+ RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS: "Annex with core in Germany"
+ RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS_DESC: "Get annexed: Bulgaria, Romania, Hungry. Give cores"
+
+ RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS: "Not annex"
+ RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS_DESC: "Not annex any country in Axis"
+
+ RULE_OPTION_ANNEX_COUNTRIES_ALLIES: "Annex in UK"
+ RULE_OPTION_ANNEX_COUNTRIES_ALLIES_DESC: "Get annexed: Canada, SAF, Australia, New Zealand, India. Give 80% of compliance"
+
+ RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES: "Annex with core in UK"
+ RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES_DESC: "Get annexed: Canada, SAF, Australia, New Zealand, India. Give cores"
+
+ RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES: "Not annex"
+ RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES_DESC: "Not annex any country in Allies"
+
+ RULE_OPTION_ANNEX_CHINA: "Annex warlords to China"
+ RULE_OPTION_ANNEX_CHINA_DESC: "Annex all cliques into China"
+
+ RULE_OPTION_NOT_ANNEX_CHINA: "Not annex"
+ RULE_OPTION_NOT_ANNEX_CHINA_DESC: "Does not annex warlords"

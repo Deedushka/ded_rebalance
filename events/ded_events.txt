@@ -1,0 +1,11 @@
+add_namespace = ded
+
+# Debug events
+country_event = {
+	id = ded.1
+	title = ded
+	desc = ded
+	is_triggered_only = yes
+	option = {
+	}
+}
