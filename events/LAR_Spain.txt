@@ -10199,52 +10199,52 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			random_other_country = {
-				limit = {
-					ROOT = {
-						has_volunteers_amount_from = {
-						    tag = PREV
-						    count > 0
-						}
-					}
-					NOT = { tag = SOV }
-				}
-				set_country_flag = SPR_relocated_gold_reserves_selection_flag1
-				save_event_target_as = SPR_relocated_gold_reserves_selection_1
-			}
-			random_other_country = {
-				limit = {
-					ROOT = {
-						has_volunteers_amount_from = {
-						    tag = PREV
-						    count > 0
-						}
-					}
-					NOT = { tag = SOV }
-					NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag1 }
-				}
-				set_country_flag = SPR_relocated_gold_reserves_selection_flag2
-				save_event_target_as = SPR_relocated_gold_reserves_selection_2
-			}
-			random_other_country = {
-				limit = {
-					ROOT = {
-						has_volunteers_amount_from = {
-						    tag = PREV
-						    count > 0
-						}
-					}
-					NOT = { tag = SOV }
-					NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag1 }
-					NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag2 }
-				}
-				set_country_flag = SPR_relocated_gold_reserves_selection_flag3
-				save_event_target_as = SPR_relocated_gold_reserves_selection_3
-			}
-		}
-	}
+	# immediate = {
+	# 	hidden_effect = {
+	# 		random_other_country = {
+	# 			limit = {
+	# 				ROOT = {
+	# 					has_volunteers_amount_from = {
+	# 					    tag = PREV
+	# 					    count > 0
+	# 					}
+	# 				}
+	# 				NOT = { tag = SOV }
+	# 			}
+	# 			set_country_flag = SPR_relocated_gold_reserves_selection_flag1
+	# 			save_event_target_as = SPR_relocated_gold_reserves_selection_1
+	# 		}
+	# 		random_other_country = {
+	# 			limit = {
+	# 				ROOT = {
+	# 					has_volunteers_amount_from = {
+	# 					    tag = PREV
+	# 					    count > 0
+	# 					}
+	# 				}
+	# 				NOT = { tag = SOV }
+	# 				NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag1 }
+	# 			}
+	# 			set_country_flag = SPR_relocated_gold_reserves_selection_flag2
+	# 			save_event_target_as = SPR_relocated_gold_reserves_selection_2
+	# 		}
+	# 		random_other_country = {
+	# 			limit = {
+	# 				ROOT = {
+	# 					has_volunteers_amount_from = {
+	# 					    tag = PREV
+	# 					    count > 0
+	# 					}
+	# 				}
+	# 				NOT = { tag = SOV }
+	# 				NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag1 }
+	# 				NOT = { has_country_flag = SPR_relocated_gold_reserves_selection_flag2 }
+	# 			}
+	# 			set_country_flag = SPR_relocated_gold_reserves_selection_flag3
+	# 			save_event_target_as = SPR_relocated_gold_reserves_selection_3
+	# 		}
+	# 	}
+	# }
 	
 	option = { # Send to SOV
 		name = lar_spain.51.a

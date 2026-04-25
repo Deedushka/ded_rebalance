@@ -50,3 +50,18 @@ annex_all_china = {
 		desc = "RULE_OPTION_NOT_ANNEX_CHINA_DESC"
 	}
 }
+
+off_non_important_ai = {
+	name = "OFF_NON_IMPORTANT_AI"
+	group = "RULE_GROUP_AI_COUNTRIES"
+	default = {
+		name = OFF
+		text = "RULE_OPTION_OFF_AI"
+		desc = "RULE_OPTION_OFF_AI_DESC"
+	}
+	option = {
+		name = ON
+		text = "RULE_OPTION_ON_AI"
+		desc = "RULE_OPTION_ON_AI_DESC"
+	}
+}

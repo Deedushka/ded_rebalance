@@ -2,10 +2,14 @@
  ANNEX_COUNTRY_TO_OVERLORD_AXIS: "Аннексировать ИИ миноров Оси"
  ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "Аннексировать ИИ миноров Союзников"
  ANNEX_ALL_CHINA: "Объединить Китай"
+ OFF_NON_IMPORTANT_AI: "Оптимизация ИИ"
  RULE_GROUP_ANNEX_COUNTRIES: "Аннексирование ИИ миноров в мажоров"
+ RULE_GROUP_AI_COUNTRIES: "Оптимизация ИИ"
  ANNEX: "§GАннексировать§!"
  ANNEX_CORE: "§YАннексия с корками§!"
  NOT_ANNEX: "§RНе аннексировать§R"
+ OFF: "Отключить"
+ ON: "Включить"
 
  RULE_OPTION_ANNEX_COUNTRIES_AXIS: "Аннексия миноров в Германию"
  RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC: "Странны §Rбез ИИ§! под аннексию: Болгария, Румыния, Венгрия. Будет добавлено 80% подчинения"
@@ -30,3 +34,9 @@
 
  RULE_OPTION_NOT_ANNEX_CHINA: "Без объединенного Китая"
  RULE_OPTION_NOT_ANNEX_CHINA_DESC: "Не объединяет Китай"
+
+ RULE_OPTION_OFF_AI: "Ограничить ИИ"
+ RULE_OPTION_OFF_AI_DESC: "Ограничение ИИ на строительство дивизии с удалением армии"
+
+ RULE_OPTION_ON_AI: "Включить ИИ"
+ RULE_OPTION_ON_AI_DESC: "Отключить ограничение на ИИ на строительство дивизий"

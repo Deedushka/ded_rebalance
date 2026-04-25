@@ -1,4 +1,5 @@
 add_namespace = ded
+add_namespace = debug_ded
 
 # Debug events
 country_event = {
@@ -7,6 +8,94 @@ country_event = {
 	desc = ded
 	is_triggered_only = yes
 	option = {
-		
+		CHI = {
+			add_ideas = debug_ded_check
+		}
+	}
+	option = {
+		CHI = {
+			remove_ideas = debug_ded_check
+		}
+	}
+	option = {
+	}
+}
+
+country_event = {
+	id = debug_ded.1
+	title = title
+	desc = desc
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		event_target:lobotomy_patient = {
+			if = {
+				limit = {
+					NOT = {
+						is_in_array = {
+							array = global.playable_counties
+							value = THIS
+						}
+						is_in_array = {
+							array = global.important_countries
+							value = THIS
+						}
+						is_ai = no
+					}
+				}
+				set_country_flag = lobotomized
+				add_ideas = ded_lobotomized
+
+				destroy_ships = {
+					type = ship_hull_light
+					count = all
+				}
+				destroy_ships = {
+					type = ship_hull_cruiser
+					count = all
+				}
+				destroy_ships = {
+					type = ship_hull_heavy
+					count = all
+				}
+				destroy_ships = {
+					type = ship_hull_carrier 
+					count = all
+				}
+				destroy_ships = {
+					type = ship_hull_submarine
+					count = all
+				}
+
+				every_controlled_state = {
+					limit = { is_controlled_by = THIS }
+					PREV = {
+						delete_unit = {
+							state = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = debug_ded.2
+	title = title
+	desc = desc
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		event_target:lobotomy_patient = {
+			if = {
+				limit = {
+					has_country_flag = lobotomized
+				}
+				clr_country_flag = lobotomized
+				remove_ideas = ded_lobotomized
+			}
+		}
 	}
 }

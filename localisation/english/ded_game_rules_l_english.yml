@@ -2,10 +2,14 @@
  ANNEX_COUNTRY_TO_OVERLORD_AXIS: "Annex AI Axis minors"
  ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "Annex AI Allies minors"
  ANNEX_ALL_CHINA: "Annex all cliques into China"
+ OFF_NON_IMPORTANT_AI: "AI optimization"
  RULE_GROUP_ANNEX_COUNTRIES: "Annex AI countries to major"
+ RULE_GROUP_AI_COUNTRIES: "AI Optimization"
  ANNEX: "§GAnnex§!"
  ANNEX_CORE: "§YAnnex and Core§!"
  NOT_ANNEX: "§RNot Annex§!"
+ OFF: "Off"
+ ON: "On"
 
  RULE_OPTION_ANNEX_COUNTRIES_AXIS: "Annex in Germany"
  RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC: "Get annexed: Bulgaria, Romania, Hungry. Give 80% of compliance"
@@ -30,3 +34,9 @@
 
  RULE_OPTION_NOT_ANNEX_CHINA: "Not annex"
  RULE_OPTION_NOT_ANNEX_CHINA_DESC: "Does not annex warlords"
+
+ RULE_OPTION_OFF_AI: "Optimize Ai"
+ RULE_OPTION_OFF_AI_DESC: "Delete Ai armies"
+
+ RULE_OPTION_ON_AI: "Not Optimize Ai"
+ RULE_OPTION_ON_AI_DESC: "Don't delete ai armies"
