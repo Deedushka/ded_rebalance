@@ -1,0 +1,7 @@
+    NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 100
+    NDefines.NGame.LAG_DAYS_FOR_PAUSE = 30
+    NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.1, 0.05, 0.0 }
+    NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 36
+    NDefines.NCountry.EVENT_PROCESS_OFFSET = 30
+
+    NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.26
