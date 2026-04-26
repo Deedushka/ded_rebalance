@@ -558,6 +558,119 @@ on_actions = {
 					instant_build = yes
 				}
 			}
+
+			448 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 1149
+				}
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 1149
+					target_province = 11951
+				}
+			}
+			663 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 11951
+				}
+				build_railway = {
+					level = 1
+					fallback = yes
+					start_province = 11951
+					target_province = 1130
+				}
+				build_railway = {
+					level = 1
+					fallback = yes
+					start_province = 11951
+					target_province = 11954
+				}
+			}
+			665 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 10082
+				}
+			}
+			452 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 1143
+				}
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 1143
+					target_province = 10031
+				}
+			}
+			836 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4995
+				}
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 4995
+					target_province = 5010
+				}
+			}
+			841 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 13241
+				}
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 13241
+					target_province = 5010
+				}
+			}
+			885 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 10908
+				}
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 10908
+					target_province = 12806
+				}
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 10908
+					target_province = 5160
+				}
+			}
+			551 = {
+				build_railway = {
+					level = 2
+					fallback = yes
+					start_province = 8105
+					target_province = 11999
+				}
+			}
+			550 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					province = 12766
+				}
+			}
 		}
 	}
 

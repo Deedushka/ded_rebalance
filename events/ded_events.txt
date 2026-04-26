@@ -8,16 +8,7 @@ country_event = {
 	desc = ded
 	is_triggered_only = yes
 	option = {
-		CHI = {
-			add_ideas = debug_ded_check
-		}
-	}
-	option = {
-		CHI = {
-			remove_ideas = debug_ded_check
-		}
-	}
-	option = {
+		
 	}
 }
 
