@@ -32,8 +32,8 @@ country_event = {
 							array = global.important_countries
 							value = THIS
 						}
-						is_ai = no
 					}
+					is_ai = yes
 				}
 				set_country_flag = lobotomized
 				add_ideas = ded_lobotomized
