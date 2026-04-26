@@ -51,12 +51,6 @@ on_actions = {
 
 						original_tag = CHI
 						original_tag = MAN
-
-						original_tag = D01
-						original_tag = D02
-						original_tag = D03
-						original_tag = D04
-						original_tag = D05
 					}
 				}
 				add_to_array = {
@@ -726,6 +720,11 @@ on_actions = {
 								has_focus_tree = vichy_french_focus
 								has_country_flag = lobotomized
 							}
+							original_tag = D01
+							original_tag = D02
+							original_tag = D03
+							original_tag = D04
+							original_tag = D05
 						}
 						save_event_target_as = lobotomy_patient
 						country_event = debug_ded.1
