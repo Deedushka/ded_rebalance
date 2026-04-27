@@ -1,0 +1,14 @@
+ITA_extra_resource_give = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = { 
+		NOT = { 
+			owner = { 
+				original_tag = ITA
+			} 
+		} 
+	}
+	icon = GFX_modifiers_generic_fascist_corporatism
+	state_resources_factor = 1.85
+}

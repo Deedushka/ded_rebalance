@@ -1,8 +1,8 @@
 ﻿l_russian:
- ANNEX_COUNTRY_TO_OVERLORD_AXIS: "Аннексировать ИИ миноров Оси"
- ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "Аннексировать ИИ миноров Союзников"
- ANNEX_ALL_CHINA: "Объединить Китай"
- OFF_NON_IMPORTANT_AI: "Оптимизация ИИ"
+ ANNEX_COUNTRY_TO_OVERLORD_AXIS: "£territory_icon Аннексировать ИИ миноров Оси"
+ ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "£territory_icon Аннексировать ИИ миноров Союзников"
+ ANNEX_ALL_CHINA: "£territory_icon Объединить Китай"
+ OFF_NON_IMPORTANT_AI: "£tank_niche_1  Оптимизация ИИ"
  RULE_GROUP_ANNEX_COUNTRIES: "Аннексирование ИИ миноров в мажоров"
  RULE_GROUP_AI_COUNTRIES: "Оптимизация ИИ"
  ANNEX: "§GАннексировать§!"

@@ -94,7 +94,7 @@ ideas = {
 				always = no 
 			}
 			modifier = {
-				surrender_limit = -0.15
+				surrender_limit = -0.25
 			}
 		}
 	}
@@ -104,7 +104,6 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				
 			}
 		}
 	}

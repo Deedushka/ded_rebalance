@@ -1,8 +1,8 @@
 ﻿l_english:
- ANNEX_COUNTRY_TO_OVERLORD_AXIS: "Annex AI Axis minors"
- ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "Annex AI Allies minors"
- ANNEX_ALL_CHINA: "Annex all cliques into China"
- OFF_NON_IMPORTANT_AI: "AI optimization"
+ ANNEX_COUNTRY_TO_OVERLORD_AXIS: "£territory_icon Annex AI Axis minors"
+ ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "£territory_icon Annex AI Allies minors"
+ ANNEX_ALL_CHINA: "£territory_icon Annex all cliques into China"
+ OFF_NON_IMPORTANT_AI: "£tank_niche_1  AI optimization"
  RULE_GROUP_ANNEX_COUNTRIES: "Annex AI countries to major"
  RULE_GROUP_AI_COUNTRIES: "AI Optimization"
  ANNEX: "§GAnnex§!"

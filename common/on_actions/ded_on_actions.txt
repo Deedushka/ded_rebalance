@@ -71,10 +71,6 @@ on_actions = {
 		# Extension
 		effect = {
 			GER = {
-				set_technology = {
-					interwar_antitank = 1
-					popup = no
-				}
 				if = {
 					limit = {
 						NOT = {
@@ -130,29 +126,33 @@ on_actions = {
 						}
 					}
 					SOV = {
-						add_state_core = 11 
-						add_state_core = 12 
-						add_state_core = 13 
-						add_state_core = 813 
-						add_state_core = 812 
-						add_state_core = 811 
-						add_state_core = 810 
-						add_state_core = 808 
-						add_state_core = 809 
-						add_state_core = 815 
+						add_state_core = 11
+						add_state_core = 12
+						add_state_core = 13
+						add_state_core = 813
+						add_state_core = 812
+						add_state_core = 811
+						add_state_core = 810
+						add_state_core = 808
+						add_state_core = 809
+						add_state_core = 815
 						add_state_core = 814
-						add_state_core = 191 
-						add_state_core = 190 
-						add_state_core = 189 
+						add_state_core = 191
+						add_state_core = 190
+						add_state_core = 189
 
-						add_state_core = 784 
-						add_state_core = 96 
-						add_state_core = 95 
-						add_state_core = 94 
-						add_state_core = 93 
-						add_state_core = 91 
-						add_state_core = 89 
-						add_state_core = 97 
+						add_state_core = 784
+						add_state_core = 96
+						add_state_core = 95
+						add_state_core = 94
+						add_state_core = 93
+						add_state_core = 91
+						add_state_core = 89
+						add_state_core = 97
+						add_state_core = 73
+						add_state_core = 80
+						add_state_core = 78
+						add_state_core = 766
 					}
 				}
 			}
@@ -228,34 +228,14 @@ on_actions = {
 					years = 3
 				}
 			}
-			ITA = {
-				add_collaboration = {
-					target = ALB
-					value = 0.8
-				}
-			}
-			SOV = {
-				generate_scientist_character = {
-					traits = { scientist_trait_fast_learner }
-					skills = {
-						specialization_land = 2
-					}
-				}
-				complete_national_focus = SOV_leningrad_polytechnical_institute
-			}
-			JAP = {
-				add_research_slot = 1
-			}
-			FRA = {
-				complete_national_focus = FRA_extra_research_slot
-			}
+
+			# No embargo
 			every_country = {
 				limit = {
 					OR = {
 						original_tag = SWE
 						original_tag = TUR
 						original_tag = POR
-						original_tag = MAN
 					}
 				}
 				add_ideas = no_embargo_modifier
@@ -309,6 +289,26 @@ on_actions = {
 				CHI = {
 					add_ideas = china_easy_cap
 				}
+			}
+		}
+
+		# Provinces
+		# effect = {
+		# }
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = CHI
+					NOT = {
+						has_game_rule = {
+							rule = ANNEX_ALL_CHINA
+							option = NOT_ANNEX
+						}
+					}
+				}
 				618 = {
 					add_resource = {
 						type = oil
@@ -356,355 +356,6 @@ on_actions = {
 						level = 8
 						instant_build = yes
 					}
-				}
-			}
-		}
-
-		# Provinces
-		effect = {
-			112 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			181 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 5
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			118 = {
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 13228
-				}
-			}
-			248 = {
-				add_building_construction = {
-					type = land_facility
-					level = 1
-					province = 11205
-				}
-			}
-			196 = {
-				add_building_construction = {
-					type = naval_base
-					level = 4
-					province = 721
-				}
-				build_railway = {
-					path = { 737 721 }
-				}
-			}
-			200 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 11405
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					path = { 11405 453 }
-				}
-			}
-			202 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 11557
-				}
-			}
-			219 = {
-				build_railway = {
-					level = 1
-					fallback = yes
-					start_province = 3358
-					target_province = 11234
-				}
-			}
-			220 = {
-				build_railway = {
-					level = 1
-					fallback = yes
-					start_province = 3580
-					target_province = 418
-				}
-			}
-			220 = {
-				build_railway = {
-					level = 1
-					fallback = yes
-					start_province = 418
-					target_province = 11504
-				}
-			}
-			241 = {
-				build_railway = {
-					level = 1
-					fallback = yes
-					start_province = 9288
-					target_province = 6373
-				}
-			}
-			662 = {
-				add_resource = {
-					type = oil
-					amount = 10
-				}
-				add_resource = {
-					type = coal
-					amount = 40
-				}
-				add_resource = {
-					type = rubber
-					amount = 30
-				}
-			}
-			449 = {
-				add_resource = {
-					type = oil
-					amount = 5
-				}
-				add_resource = {
-					type = coal
-					amount = 20
-				}
-				add_resource = {
-					type = rubber
-					amount = 15
-				}
-			}
-			450 = {
-				add_resource = {
-					type = oil
-					amount = 5
-				}
-				add_resource = {
-					type = coal
-					amount = 20
-				}
-				add_resource = {
-					type = rubber
-					amount = 15
-				}
-			}
-			550 = {
-				add_resource = {
-					type = oil
-					amount = 8
-				}
-				add_resource = {
-					type = coal
-					amount = 40
-				}
-				add_resource = {
-					type = rubber
-					amount = 12
-				}
-			}
-			559 = {
-				add_resource = {
-					type = oil
-					amount = 8
-				}
-				add_resource = {
-					type = coal
-					amount = 40
-				}
-				add_resource = {
-					type = rubber
-					amount = 13
-				}
-			}
-			448 = {
-				add_building_construction = {
-					type = dockyard
-					level = 7
-					instant_build = yes
-				}
-			}
-			68 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 7
-					instant_build = yes
-				}
-			}
-			63 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 8
-					instant_build = yes
-				}
-			}
-			62 = {
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 2
-					instant_build = yes
-				}
-			}
-			66 = {
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 2
-					instant_build = yes
-				}
-			}
-			536 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
-				}
-			}
-			533 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
-				}
-			}
-			850 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
-				}
-			}
-			39 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 5
-					instant_build = yes
-				}
-			}
-
-			448 = {
-				add_building_construction = {
-					type = naval_base
-					level = 5
-					province = 1149
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 1149
-					target_province = 11951
-				}
-			}
-			663 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 11951
-				}
-				build_railway = {
-					level = 1
-					fallback = yes
-					start_province = 11951
-					target_province = 1130
-				}
-				build_railway = {
-					level = 1
-					fallback = yes
-					start_province = 11951
-					target_province = 11954
-				}
-			}
-			665 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 10082
-				}
-			}
-			452 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 1143
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 1143
-					target_province = 10031
-				}
-			}
-			836 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 4995
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 4995
-					target_province = 5010
-				}
-			}
-			841 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 13241
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 13241
-					target_province = 5010
-				}
-			}
-			885 = {
-				add_building_construction = {
-					type = supply_node
-					level = 1
-					province = 10908
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 10908
-					target_province = 12806
-				}
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 10908
-					target_province = 5160
-				}
-			}
-			551 = {
-				build_railway = {
-					level = 2
-					fallback = yes
-					start_province = 8105
-					target_province = 11999
-				}
-			}
-			550 = {
-				add_building_construction = {
-					type = naval_base
-					level = 5
-					province = 12766
 				}
 			}
 		}

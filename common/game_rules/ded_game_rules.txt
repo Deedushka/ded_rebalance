@@ -1,12 +1,12 @@
 annex_country_to_overlord_axis = {
 	name = "ANNEX_COUNTRY_TO_OVERLORD_AXIS"
 	group = "RULE_GROUP_ANNEX_COUNTRIES"
-	default = {
+	option = {
 		name = ANNEX
 		text = "RULE_OPTION_ANNEX_COUNTRIES_AXIS"
 		desc = "RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC"
 	}
-	option = {
+	default = {
 		name = ANNEX_CORE
 		text = "RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS"
 		desc = "RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS_DESC"
