@@ -11695,9 +11695,7 @@ focus_tree = {
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
-		allow_branch = { 
-			always = no
-		}
+		
 
 		available = {
 
