@@ -10,6 +10,9 @@ country_event = {
 	option = {
 		
 	}
+	option = {
+		
+	}
 }
 
 country_event = {
@@ -23,16 +26,8 @@ country_event = {
 		event_target:lobotomy_patient = {
 			if = {
 				limit = {
-					NOT = {
-						is_in_array = {
-							array = global.playable_counties
-							value = THIS
-						}
-						is_in_array = {
-							array = global.important_countries
-							value = THIS
-						}
-					}
+					NOT = { is_in_array = { array = global.playable_countries value = THIS } }
+					NOT = { is_in_array = { array = global.important_countries value = THIS } }
 					is_ai = yes
 				}
 				set_country_flag = lobotomized

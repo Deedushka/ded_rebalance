@@ -66,7 +66,7 @@ ideas = {
 					instant = yes
 					build_cost_ic = 0.10
 				}
-			}	
+			}
 		}
 		ded_lobotomized = {
 			allowed = {
@@ -95,6 +95,7 @@ ideas = {
 			}
 			modifier = {
 				surrender_limit = -0.25
+				army_attack_factor = -0.1
 			}
 		}
 	}

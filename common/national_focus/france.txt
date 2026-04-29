@@ -3658,7 +3658,7 @@
 	focus = {
 		id = FRA_intervention_in_spain
 		icon = GFX_focus_focus_fra_intervention_spain
-		x = 7
+		x = 2
 		y = 2
 
 		
@@ -4799,6 +4799,10 @@
 		icon = GFX_focus_generic_strike_at_democracy2
 		x = 36
 		y = 0
+
+		allow_branch = {
+			always = no
+		}
 		
 		offset = {
 			x = -6

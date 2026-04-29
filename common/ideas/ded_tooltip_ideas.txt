@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+		corporatism_occupation_law_fake_idea = {
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				resistance_target 				= -0.1
+				compliance_gain 				= 0.1
+				required_garrison_factor 		= 0.05
+				resistance_damage_to_garrison	= -0.25
+				local_factories 				= 0.2
+				local_resources 				= 0.1
+				local_supplies 					= 0.1
+			}
+		}
+	}
+}

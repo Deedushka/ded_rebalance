@@ -7964,6 +7964,255 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_claim_on_bessarabia
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites }
+		x = 1
+		y = 1
+		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
+		cost = 4
+
+		ai_will_do = {
+			factor = 2.5
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1939.1.1
+					has_civil_war = yes
+				}
+			}	
+			modifier = {
+				factor = 200
+				GER = { has_government = democratic }
+			}
+		}
+
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+			any_country = {
+				owns_state = 78
+				controls_state = 78
+			}
+		}
+
+		bypass = {
+			OR = {
+				AND = {
+					OR = {
+						owns_state = 78 #Bessarabia
+						78 = {
+							owner = { is_in_faction_with = ROOT }
+						}
+					}
+					OR = {
+						owns_state = 80 #Bucovina
+						80 = {
+							owner = { is_in_faction_with = ROOT }
+						}
+					}
+					OR = {
+						owns_state = 766 #Southern Bessarabia
+						766 = {
+							owner = { is_in_faction_with = ROOT }
+						}
+					}
+				}
+				any_country = {
+					owns_state = 78
+					owns_state = 80
+					owns_state = 766
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		will_lead_to_war_with = ROM
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = { #This is now generic and will target any potential (multiple) controllers for these states.
+			if = {
+				limit = { 78 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+				add_state_claim = 78
+			}
+			if = {
+				limit = { 766 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+				add_state_claim = 766
+			}
+			if = {
+				limit = { 80 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+				add_state_claim = 80
+			}
+			add_named_threat = { threat = 1 name = SOV_claim_on_bessarabia }
+			random_other_country = {
+				limit = { owns_state = 78 }
+				add_opinion_modifier = { target = SOV modifier = claimed_bessarabia }
+				set_country_flag = SOV_added_claimed_bessarabia
+				country_event = { id = romania.1 hours = 16 random_hours = 8 }
+			}
+			if = { #Done like this to prevent disgusting tooltip issues, but I hate it ok?
+				limit = {
+					any_other_country = {
+						owns_state = 78
+						NOT = {	owns_state = 80 }
+					}
+				}
+				random_other_country = {
+					limit = { 
+						owns_state = 80 
+						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
+					}
+					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
+					country_event = { id = romania.1 hours = 16 random_hours = 8 }
+				}
+			}
+			if = {
+				limit = {
+					AND = {
+						any_other_country = {
+							owns_state = 78
+							NOT = {	owns_state = 766 }
+						}
+						any_other_country = {
+							owns_state = 80
+							NOT = {	owns_state = 766 }
+						}
+					}
+				}
+				random_other_country = {
+					limit = { 
+						owns_state = 766
+						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
+					}
+					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
+					country_event = { id = romania.1 hours = 16 random_hours = 8 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_secure_leningrad
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites }
+		x = -1
+		y = 1
+		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
+		cost = 3
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_civil_war = yes
+			}	
+		}
+		dynamic = yes 
+
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+		}
+
+		will_lead_to_war_with = FIN
+		bypass = {
+			OR = {
+				has_full_control_of_state = 146
+				is_in_faction_with = FIN
+				has_country_flag = FIN_finno_soviet_pact_flag
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			add_state_claim = 146 # Karjala
+
+			if= {
+				limit = {
+					146 = {
+						controller = {
+							NOT = { has_war_with = ROOT }
+						}
+					}
+				}
+				146 = {
+					controller = {
+						set_country_flag = SOV_ultimatum_sent_flag #Add it for AI strats reasons
+						add_timed_idea = {
+							idea = communist_pressure
+							days = 365
+						}
+						country_event = { id = finland.1 hours = 16 random_hours = 8 }
+					}
+				}
+				custom_effect_tooltip = if_they_accept_tt
+				event_option_tooltip = soviet.12.a
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_claims_in_baltic
+		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_secure_leningrad }
+		x = -1
+		y = 1
+		relative_position_id = SOV_secure_leningrad
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_civil_war = yes
+					date < 1939.1.1
+				}
+			}	
+		}
+
+		available = {
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
+			is_subject = no
+		}
+
+		bypass = {
+			all_state = {
+				OR = {
+					is_core_of = EST
+					is_core_of = LAT
+					is_core_of = LIT
+				}
+				NOT = { state = 188 }
+				is_controlled_by = ROOT
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_estonian_claimed_states_tt		
+			custom_effect_tooltip = SOV_latvian_claimed_states_tt
+			custom_effect_tooltip = SOV_lithuanian_claimed_states_tt
+			#Activate targeted decisions
+			SOV = {
+				annex_country = {
+					target = LIT
+				}
+				annex_country = {
+					target = LAT
+				}
+				annex_country = {
+					target = EST
+				}
+			}
+
+			add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
+		}
+	}
+
+	focus = {
 		id = SOV_behead_the_snake
 		icon = GFX_focus_SOV_behead_the_snake
 		prerequisite = { focus = SOV_the_military_conspiracy }
@@ -8012,7 +8261,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_stalins_cult_of_personality
 		prerequisite = { focus = SOV_the_bloc_of_rights_and_trotskyites }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SOV_the_bloc_of_rights_and_trotskyites
 		cost = 5
 
@@ -13589,6 +13838,10 @@ focus_tree = {
 			}
 			is_subject = no
 		}
+
+		allow_branch = {
+			always = no
+		}
 		
 		search_filters = {}
 
@@ -13678,8 +13931,10 @@ focus_tree = {
 				has_civil_war = yes
 			}	
 		}
-		
-		mutually_exclusive = { focus = SOV_claims_in_baltic }
+
+		allow_branch = {
+			always = no
+		}
 
 		bypass = {
 			NOT = {
@@ -13706,153 +13961,9 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_claims_in_baltic
-		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_baltic_security }
-		x = 1
-		y = 1
-		relative_position_id = SOV_baltic_security
-		cost = 10
+	
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_civil_war = yes
-					date < 1939.1.1
-				}
-			}	
-		}
-
-		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
-
-		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
-		}
-
-		bypass = {
-			all_state = {
-				OR = {
-					is_core_of = EST
-					is_core_of = LAT
-					is_core_of = LIT
-				}
-				NOT = { state = 188 }
-				is_controlled_by = ROOT
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_ANNEXATION}
-
-		completion_reward = {
-			# Estonia
-			custom_effect_tooltip = SOV_estonian_claimed_states_tt
-			hidden_effect = {
-				EST = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			# Latvia
-			custom_effect_tooltip = SOV_latvian_claimed_states_tt
-			hidden_effect = {
-				LAT = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			# Lithuania
-			custom_effect_tooltip = SOV_lithuanian_claimed_states_tt
-			hidden_effect = {
-				LIT = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			#Activate targeted decisions
-			activate_targeted_decision = { target = EST decision = SOV_send_ultimatum_to_country_baltic }
-			activate_targeted_decision = { target = LAT decision = SOV_send_ultimatum_to_country_baltic }
-			activate_targeted_decision = { target = LIT decision = SOV_send_ultimatum_to_country_baltic }
-
-			add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
-		}
-	}
-
-	focus = {
-		id = SOV_secure_leningrad
-		icon = GFX_focus_generic_attack_finland
-		prerequisite = { focus = SOV_respect_baltic_self_determination focus = SOV_claims_in_baltic }
-		x = 0
-		y = 1
-		relative_position_id = SOV_respect_baltic_self_determination
-		cost = 10
-		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_civil_war = yes
-			}	
-		}
-		dynamic = yes 
-
-		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
-		}
-
-		will_lead_to_war_with = FIN
-		bypass = {
-			OR = {
-				has_full_control_of_state = 146
-				is_in_faction_with = FIN
-				has_country_flag = FIN_finno_soviet_pact_flag
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_ANNEXATION}
-
-		completion_reward = {
-			add_state_claim = 146 # Karjala
-
-			if= {
-				limit = {
-					146 = {
-						controller = {
-							NOT = { has_war_with = ROOT }
-						}
-					}
-				}
-				146 = {
-					controller = {
-						set_country_flag = SOV_ultimatum_sent_flag #Add it for AI strats reasons
-						add_timed_idea = {
-							idea = communist_pressure
-							days = 365
-						}
-						country_event = { id = finland.1 hours = 16 random_hours = 8 }
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				event_option_tooltip = soviet.12.a
-			}
-		}
-	}
+	
 
 	focus = {
 		id = SOV_control_scandinavia
@@ -13869,6 +13980,10 @@ focus_tree = {
 				factor = 0
 				has_civil_war = yes
 			}	
+		}
+
+		allow_branch = {
+			always = no
 		}
 		
 		available = {
@@ -13973,6 +14088,10 @@ focus_tree = {
 				factor = 0
 				has_civil_war = yes
 			}	
+		}
+
+		allow_branch = {
+			always = no
 		}
 		
 		ai_will_do = {
@@ -14105,6 +14224,10 @@ focus_tree = {
 			}
 		}
 
+		allow_branch = {
+			always = no
+		}
+
 		mutually_exclusive = { focus = SOV_offer_poland_protection }
 
 		available = {
@@ -14207,6 +14330,9 @@ focus_tree = {
 				ai_irrationality < 10
 			}
 		}
+		allow_branch = {
+			always = no
+		}
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -14271,133 +14397,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_claim_on_bessarabia
-		icon = GFX_focus_generic_attack_romania
-		prerequisite = { focus = SOV_claims_on_poland }
-		x = 3
-		y = 1
-		relative_position_id = SOV_claims_on_poland
-		cost = 10
-
-		ai_will_do = {
-			factor = 2.5
-			modifier = {
-				factor = 0
-				OR = {
-					date < 1939.1.1
-					has_civil_war = yes
-				}
-			}	
-			modifier = {
-				factor = 200
-				GER = { has_government = democratic }
-			}
-		}
-
-		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
-			any_country = {
-				owns_state = 78
-				controls_state = 78
-			}
-		}
-
-		bypass = {
-			OR = {
-				AND = {
-					OR = {
-						owns_state = 78 #Bessarabia
-						78 = {
-							owner = { is_in_faction_with = ROOT }
-						}
-					}
-					OR = {
-						owns_state = 80 #Bucovina
-						80 = {
-							owner = { is_in_faction_with = ROOT }
-						}
-					}
-					OR = {
-						owns_state = 766 #Southern Bessarabia
-						766 = {
-							owner = { is_in_faction_with = ROOT }
-						}
-					}
-				}
-				any_country = {
-					owns_state = 78
-					owns_state = 80
-					owns_state = 766
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		will_lead_to_war_with = ROM
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = { #This is now generic and will target any potential (multiple) controllers for these states.
-			if = {
-				limit = { 78 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
-				add_state_claim = 78
-			}
-			if = {
-				limit = { 766 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
-				add_state_claim = 766
-			}
-			if = {
-				limit = { 80 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
-				add_state_claim = 80
-			}
-			add_named_threat = { threat = 1 name = SOV_claim_on_bessarabia }
-			random_other_country = {
-				limit = { owns_state = 78 }
-				add_opinion_modifier = { target = SOV modifier = claimed_bessarabia }
-				set_country_flag = SOV_added_claimed_bessarabia
-				country_event = { id = romania.1 hours = 16 random_hours = 8 }
-			}
-			if = { #Done like this to prevent disgusting tooltip issues, but I hate it ok?
-				limit = {
-					any_other_country = {
-						owns_state = 78
-						NOT = {	owns_state = 80 }
-					}
-				}
-				random_other_country = {
-					limit = { 
-						owns_state = 80 
-						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
-					}
-					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
-					country_event = { id = romania.1 hours = 16 random_hours = 8 }
-				}
-			}
-			if = {
-				limit = {
-					AND = {
-						any_other_country = {
-							owns_state = 78
-							NOT = {	owns_state = 766 }
-						}
-						any_other_country = {
-							owns_state = 80
-							NOT = {	owns_state = 766 }
-						}
-					}
-				}
-				random_other_country = {
-					limit = { 
-						owns_state = 766
-						NOT = { has_country_flag = SOV_added_claimed_bessarabia }
-					}
-					add_opinion_modifier = { target = SOV modifier = claimed_bucovina }
-					country_event = { id = romania.1 hours = 16 random_hours = 8 }
-				}
-			}
-		}
-	}
+	
 
 	focus = {
 		id = SOV_demand_balkan_submission
@@ -14414,6 +14414,9 @@ focus_tree = {
 				factor = 0
 				has_civil_war = yes
 			}	
+		}
+		allow_branch = {
+			always = no
 		}
 		
 		mutually_exclusive = { focus = SOV_seek_balkan_cooperation }
@@ -14479,6 +14482,10 @@ focus_tree = {
 			is_subject = no
 		}
 		
+		allow_branch = {
+			always = no
+		}
+		
 		search_filters = {}
 
 		completion_reward = {
@@ -14514,7 +14521,7 @@ focus_tree = {
 		id = SOV_middle_east_diplomacy
 		icon = GFX_focus_TUR_treaty_of_saadabad
 		prerequisite = { focus = SOV_the_comintern }
-		x = 4
+		x = 0
 		y = 0
 		relative_position_id = SOV_baltic_security
 		cost = 5

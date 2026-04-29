@@ -1,0 +1,53 @@
+corporatism_occupation_law = {
+	icon = "GFX_modifiers_generic_fascist_corporatism"
+	sound_effect = "Martial_Law_Interface_Foreign_Cvilian_Oversight"
+
+	fallback_law = foreign_civilian_oversight
+
+	visible = {
+		original_tag = ITA
+		has_idea = ITA_italia_irredenta_achieved
+		
+		FROM = { 
+			OR = {
+				tag = YUG
+				tag = ALB
+				tag = GRE
+			}
+		}
+	}
+
+	state_modifier = { #CHANGES HERE NEED TO BE APPLIED ALSO IN corporatism_occupation_law
+		resistance_target 				= -0.1
+		compliance_gain 				= 0.1
+		required_garrison_factor 		= 0.05
+		resistance_damage_to_garrison	= -0.25
+		local_factories 				= 0.2
+		local_resources 				= 0.1
+		local_supplies 					= 0.1
+	}
+}
+
+france_autonomy_occupation = {
+	icon = "GFX_modifiers_SOV_invaders_must_die"
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	visible = {
+		original_tag = FRA
+		has_focus_tree = free_french_focus
+
+		FROM = {
+			FROM = { capital_scope = { is_on_continent = africa } }
+		}
+	}
+
+	state_modifier = {
+		resistance_target 				= 0.05
+		compliance_gain 				= 0.02
+		required_garrison_factor 		= -0.2
+		resistance_damage_to_garrison 	= -0.1
+		local_factories 				= 0.15
+		local_resources 				= 0.05
+		local_supplies 					= 0.05
+	}
+}

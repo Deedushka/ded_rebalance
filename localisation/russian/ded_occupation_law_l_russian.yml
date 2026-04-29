@@ -1,0 +1,7 @@
+﻿l_russian:
+ corporatism_occupation_law: "Локальный корпоративизм"
+ corporatism_occupation_law_fake_idea: "Локальный корпоративизм"
+ corporatism_occupation_law_tt: "Открывает возможность поставить §Yзакон§! при создании §YВеликой Италии§!:"
+ corporatism_occupation_law_countries_tt: "Страны где доступен оккупационный закон: §Y[?YUG.GetNameWithFlag], [?ALB.GetNameWithFlag], [?GRE.GetNameWithFlag]§!"
+
+ france_autonomy_occupation: "Французская автономия"

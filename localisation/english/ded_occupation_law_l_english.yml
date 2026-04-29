@@ -1,0 +1,7 @@
+﻿l_english:
+ corporatism_occupation_law: "Local corporatism"
+ corporatism_occupation_law_fake_idea: "Local corporatism"
+ corporatism_occupation_law_tt: "Opens the possibility to set the §Yoccupation law§! when creating §YGreater Italy§!:"
+ corporatism_occupation_law_countries_tt: "Countries where the occupation law is available: §Y[?YUG.GetNameWithFlag], [?ALB.GetNameWithFlag], [?GRE.GetNameWithFlag]§!"
+
+ france_autonomy_occupation: "French autonomy"

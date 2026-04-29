@@ -9687,6 +9687,11 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = form_greater_italy_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = corporatism_occupation_law_tt
+			show_ideas_tooltip = corporatism_occupation_law_fake_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = corporatism_occupation_law_countries_tt
 
 			#CLAIMS IN TUNISIA
 			if = {
