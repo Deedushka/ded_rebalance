@@ -1842,6 +1842,8 @@ CZE_CEF_puppet = {
 	color_ui = rgb { 85 200 203 }
 }
 
+# New
+
 ENG_imperial_oceania = {
     color = rgb { 0 0 110 }
 	color_ui = rgb { 44 44 110 }
@@ -1850,4 +1852,9 @@ ENG_imperial_oceania = {
 ENG_imperial_india_oceania = {
     color = rgb { 0 0 110 }
 	color_ui = rgb { 44 44 110 }
+}
+
+ALG_colonial = {
+	color = rgb { 57  113  228 }
+	color_ui = rgb { 57  113  228 }
 }

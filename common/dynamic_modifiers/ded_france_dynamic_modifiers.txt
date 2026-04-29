@@ -1,0 +1,19 @@
+FRA_colonial_capital = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = { 
+		NOT = { 
+			owner = { 
+				OR = { 
+					original_tag = FRA
+					has_focus_tree = free_french_focus
+					has_focus_tree = vichy_french_focus
+				}
+			} 
+		}
+	}
+	icon = GFX_modifiers_FIN_weapon_caches
+	local_building_slots = 6
+	state_production_speed_buildings_factor = 0.1
+}

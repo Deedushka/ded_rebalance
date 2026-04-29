@@ -270,6 +270,7 @@ country_event = {
 					OR = {
 						original_tag = SYR
 						original_tag = LEB
+						original_tag = ALG
 					}
 				}
 				country_event = {
@@ -1178,6 +1179,7 @@ country_event = {
 							is_core_of = LAO
 							is_core_of = LEB
 							is_core_of = SYR
+							is_core_of = ALG
 						}
 						NOT = { state = 539 state = 772 state = 773 state = 660 state = 774 }
 					}

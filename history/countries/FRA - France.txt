@@ -80,6 +80,8 @@ if = {
 		puppet = LEB
 	}
 }
+# Extra puppet
+puppet = ALG
 
 set_research_slots = 4
 IF = {
