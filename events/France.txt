@@ -1135,6 +1135,7 @@ country_event = {
 			set_cosmetic_tag = FRA_FREE 
 			add_ideas = FRA_defeatism
 			add_ideas = FRA_allies_help
+			remove_ideas = FRA_capitulation_factor
 			load_focus_tree = free_french_focus
 			if = {
 				limit = {

@@ -150,28 +150,34 @@ on_actions = {
 							}
 						}
 					}
-					43 = {
-						add_resource = {
-							type = aluminium
-							amount = 30
-						}
-						add_resource = {
-							type = steel
-							amount = 20
-						}
-						add_resource = {
-							type = oil
-							amount = 20
+					if = {
+						limit = { NOT = { country_exists = HUN } }
+						43 = {
+							add_resource = {
+								type = aluminium
+								amount = 30
+							}
+							add_resource = {
+								type = steel
+								amount = 20
+							}
+							add_resource = {
+								type = oil
+								amount = 20
+							}
 						}
 					}
-					46 = {
-						add_resource = {
-							type = oil
-							amount = 40
-						}
-						add_resource = {
-							type = steel
-							amount = 12
+					if = {
+						limit = { NOT = { country_exists = ROM } }
+						46 = {
+							add_resource = {
+								type = oil
+								amount = 40
+							}
+							add_resource = {
+								type = steel
+								amount = 12
+							}
 						}
 					}
 				}

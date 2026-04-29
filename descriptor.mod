@@ -1,4 +1,4 @@
-version="0.2.0"
+version="0.2.1"
 tags={
 	"Utilities"
 	"National Focuses"
@@ -10,5 +10,5 @@ tags={
 	"Balance"
 }
 name="Dedushka Rebalance"
-supported_version="1.18.0.0"
+supported_version="1.18.1.0"
 remote_file_id="3713369392"

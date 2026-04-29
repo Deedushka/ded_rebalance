@@ -9,6 +9,7 @@ ideas = {
 				controls_state = 16
 			}
 			modifier = {
+				custom_modifier_tooltip = FRA_allies_help_tt
 				production_speed_buildings_factor = 0.1
 				global_building_slots = 4
 			}
@@ -18,9 +19,6 @@ ideas = {
 		FRA_capitulation_factor = {
 			allowed = {
 				original_tag = FRA
-			}
-			cancel = {
-				NOT = { controls_state = 14 }
 			}
 			modifier = {
 				surrender_limit = -0.5
