@@ -141,7 +141,7 @@ guiTypes = {
 		name = "action_bar_window"
 		position = {x=-300 y=0}
 		show_position = {x=-300 y=-245}
-		size = { width=436 height=100 }
+		size = { width=532 height=100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -196,7 +196,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_target"
-			position = {x=335 y=52}
+			position = {x=434 y=52}
 			spriteType = "GFX_air_target_icon"
 			clicksound = click_default
 		}
@@ -335,62 +335,64 @@ guiTypes = {
 
 		# Mine Laying
 
-		# buttonType = {
-		# 	name = "btn_mission5"
-		# 	position = {x=285 y=@nv_mission_btn_y}
-		# 	spriteType = "GFX_NV_btn_mines_planting"
-		# 	shortcut = "b"
-		# 	clicksound = click_default
-		# }
-		# iconType = {
-		# 	name = "hint_highlight_mission_5"
-		# 	position = {x=285 y=@nv_mission_btn_y}
-		# 	spriteType = "GFX_naval_mission_btn_highlight"
-		# 	alwaystransparent = yes
-		# 	hide = yes
-		# }
-		# iconType = {
-		# 	name ="btn_mission5_warn"
-		# 	spriteType = "GFX_btn_yellow_glow"
-		# 	position = {x=285 y=@nv_mission_btn_y}
-		# 	alwaystransparent = yes
-		# }
+		buttonType = {
+			name = "btn_mission5"
+			position = {x=285 y=@nv_mission_btn_y}
+			spriteType = "GFX_NV_btn_mines_planting"
+			# shortcut = "b"
+			clicksound = click_default
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "hint_highlight_mission_5"
+			position = {x=285 y=@nv_mission_btn_y}
+			spriteType = "GFX_naval_mission_btn_highlight"
+			alwaystransparent = yes
+			hide = yes
+		}
+		iconType = {
+			name ="btn_mission5_warn"
+			spriteType = "GFX_btn_yellow_glow"
+			position = {x=285 y=@nv_mission_btn_y}
+			alwaystransparent = yes
+		}
 
 		# Mine Sweeping
 
-		# buttonType = {
-		# 	name = "btn_mission6"
-		# 	position = {x=335 y=@nv_mission_btn_y}
-		# 	spriteType = "GFX_NV_btn_mines_sweeping"
-		# 	shortcut = "shift+b"
-		# 	clicksound = click_default
-		# }
-		# iconType = {
-		# 	name = "hint_highlight_mission_6"
-		# 	position = {x=335 y=@nv_mission_btn_y}
-		# 	spriteType = "GFX_naval_mission_btn_highlight"
-		# 	alwaystransparent = yes
-		# 	hide = yes
-		# }
-		# iconType = {
-		# 	name ="btn_mission6_warn"
-		# 	spriteType = "GFX_btn_yellow_glow"
-		# 	position = {x=335 y=@nv_mission_btn_y}
-		# 	alwaystransparent = yes
-		# }
+		buttonType = {
+			name = "btn_mission6"
+			position = {x=335 y=@nv_mission_btn_y}
+			spriteType = "GFX_NV_btn_mines_sweeping"
+			# shortcut = "shift+b"
+			clicksound = click_default
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "hint_highlight_mission_6"
+			position = {x=335 y=@nv_mission_btn_y}
+			spriteType = "GFX_naval_mission_btn_highlight"
+			alwaystransparent = yes
+			hide = yes
+		}
+		iconType = {
+			name ="btn_mission6_warn"
+			spriteType = "GFX_btn_yellow_glow"
+			position = {x=335 y=@nv_mission_btn_y}
+			alwaystransparent = yes
+		}
 
 		# Naval Invasion Support
 
 		buttonType = {
 			name = "btn_mission9"
-			position = {x=285 y=@nv_mission_btn_y}
+			position = {x=385 y=@nv_mission_btn_y}
 			spriteType = "GFX_NV_btn_naval_invasion_support"
 			shortcut = "a"
 			clicksound = click_default
 		}
 		iconType = {
 			name = "hint_highlight_mission_9"
-			position = {x=285 y=@nv_mission_btn_y}
+			position = {x=385 y=@nv_mission_btn_y}
 			spriteType = "GFX_naval_mission_btn_highlight"
 			alwaystransparent = yes
 			hide = yes
@@ -398,7 +400,7 @@ guiTypes = {
 		iconType = {
 			name ="btn_mission9_warn"
 			spriteType = "GFX_btn_yellow_glow"
-			position = {x=285 y=@nv_mission_btn_y}
+			position = {x=385 y=@nv_mission_btn_y}
 			alwaystransparent = yes
 		}
 
@@ -406,14 +408,14 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_mission0"
-			position = {x=368 y=54}
+			position = {x=466 y=54}
 			spriteType = "GFX_NV_btn_hold"
 			clicksound = click_default
 		}
 
 		buttonType = {
 			name = "btn_remove_regions"
-			position = {x=398 y=54}
+			position = {x=496 y=54}
 			spriteType = "GFX_NV_btn_remove_regions"
 			clicksound = click_default
 			shortcut = "DEL"

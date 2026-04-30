@@ -1301,9 +1301,9 @@ country_event = {
 					transfer_units_fraction = {
 						target = event_target:vichy_france
 						size = 0.9
-						stockpile_ratio = 0 # was 0.7
-						army_ratio = 0 # was 0.5
-						navy_ratio = 0.85
+						stockpile_ratio = 0.5 # was 0.7
+						army_ratio = 0.5
+						navy_ratio = 0.9 # was 0.85
 						air_ratio = 1.0
 					}
 				}
