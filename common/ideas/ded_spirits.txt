@@ -98,6 +98,34 @@ ideas = {
 				army_attack_factor = -0.1
 			}
 		}
+		economy_integration_axis = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+				is_ai = no
+			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+				extra_trade_to_target_factor = 1
+			}
+		}
+		economy_integration_allies = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+				is_ai = no
+			}
+			targeted_modifier = {
+				tag = ENG
+				cic_to_target_factor = 1
+				mic_to_target_factor = 1
+				extra_trade_to_target_factor = 1
+			}
+		}
 	}
 	country = {
 		debug_ded_check = {

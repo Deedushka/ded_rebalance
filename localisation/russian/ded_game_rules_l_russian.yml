@@ -1,33 +1,27 @@
 ﻿l_russian:
- ANNEX_COUNTRY_TO_OVERLORD_AXIS: "£territory_icon Аннексировать ИИ миноров Оси"
- ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "£territory_icon Аннексировать ИИ миноров Союзников"
+ INTEGRATION_COUNTRY_TO_OVERLORD_AXIS: "£civ_factory Интегрирует промышленность миноров Оси"
+ INTEGRATION_COUNTRY_TO_OVERLORD_ALLIES: "£civ_factory Интегрирует промышленность миноров Союзников"
  ANNEX_ALL_CHINA: "£territory_icon Объединить Китай"
  OFF_NON_IMPORTANT_AI: "£tank_niche_1  Оптимизация ИИ"
- RULE_GROUP_ANNEX_COUNTRIES: "Аннексирование ИИ миноров в мажоров"
+ RULE_GROUP_INTEGRATION_COUNTRIES: "Интегрирует промышленность ИИ миноров в мажоров"
  RULE_GROUP_AI_COUNTRIES: "Оптимизация ИИ"
- ANNEX: "§GАннексировать§!"
- ANNEX_CORE: "§YАннексия с корками§!"
- NOT_ANNEX: "§RНе аннексировать§R"
+ RULE_GROUP_ANNEX_COUNTRIES: "Аннексия стран"
+ INTEGRATION: "§GИнтегрировать§!"
+ NO_INTEGRATION: "§RНе интегрировать§!"
  OFF: "Отключить"
  ON: "Включить"
 
- RULE_OPTION_ANNEX_COUNTRIES_AXIS: "Аннексия миноров в Германию"
- RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC: "Странны §Rбез ИИ§! под аннексию: Болгария, Румыния, Венгрия. Будет добавлено 80% подчинения"
+ RULE_OPTION_INTEGRATION_COUNTRIES_AXIS: "Интеграция промышленности миноров Оси"
+ RULE_OPTION_INTEGRATION_COUNTRIES_AXIS_DESC: "Получаешь промышленность: Болгарии, Румыния, Венгрия"
 
- RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS: "Аннексия миноров с корками в Германию"
- RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS_DESC: "Странны §Rбез ИИ§! под аннексию: Болгария, Румыния, Венгрия. Будет национализировано"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS: "Не интегрирует промышленности миноров Оси"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS_DESC: "Не интегрирует промышленность"
 
- RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS: "Без аннексии"
- RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS_DESC: "Ни аннексирует ни одну страну"
+ RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES: "Интеграция промышленности миноров Союзников"
+ RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES_DESC: "Получаешь промышленность: Канады, ЮАР, Австралия, Новая Зеландия, Индия"
 
- RULE_OPTION_ANNEX_COUNTRIES_ALLIES: "Аннексия миноров в ВБ"
- RULE_OPTION_ANNEX_COUNTRIES_ALLIES_DESC: "Страны §Rбез ИИ§! под аннексию: Канада, ЮАР, Австралия, Новая Зеландия, Индия. Будет добавлено 80% подчинения"
-
- RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES: "Аннексия миноров с корками в ВБ"
- RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES_DESC: "Страны §Rбез ИИ§! под аннексию: Канада, ЮАР, Австралия, Новая Зеландия, Индия. Будет национализировано"
-
- RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES: "Без аннексии"
- RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES_DESC: "Ни аннексирует ни одну страну"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES: "Не интегрирует промышленность миноров Союзников"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES_DESC: "Не интегрирует промышленность"
 
  RULE_OPTION_ANNEX_CHINA: "Аннексирует всех варлордов"
  RULE_OPTION_ANNEX_CHINA_DESC: "Все клики будут аннексированы, на западе Китая будет добавлена нефть"

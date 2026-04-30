@@ -1,33 +1,27 @@
 ﻿l_english:
- ANNEX_COUNTRY_TO_OVERLORD_AXIS: "£territory_icon Annex AI Axis minors"
- ANNEX_COUNTRY_TO_OVERLORD_ALLIES: "£territory_icon Annex AI Allies minors"
+ INTEGRATION_COUNTRY_TO_OVERLORD_AXIS: "£civ_factory Integrate AI Axis minors industry"
+ INTEGRATION_COUNTRY_TO_OVERLORD_ALLIES: "£civ_factory Integrate AI Allies minors industry"
  ANNEX_ALL_CHINA: "£territory_icon Annex all cliques into China"
  OFF_NON_IMPORTANT_AI: "£tank_niche_1  AI optimization"
- RULE_GROUP_ANNEX_COUNTRIES: "Annex AI countries to major"
+ RULE_GROUP_INTEGRATION_COUNTRIES: "Integrate AI countries to major"
  RULE_GROUP_AI_COUNTRIES: "AI Optimization"
- ANNEX: "§GAnnex§!"
- ANNEX_CORE: "§YAnnex and Core§!"
- NOT_ANNEX: "§RNot Annex§!"
+ RULE_GROUP_ANNEX_COUNTRIES: "Annex Countries"
+ INTEGRATION: "§GIntegrate§!"
+ NO_INTEGRATION: "§RNot Integrate§!"
  OFF: "Off"
  ON: "On"
 
- RULE_OPTION_ANNEX_COUNTRIES_AXIS: "Annex in Germany"
- RULE_OPTION_ANNEX_COUNTRIES_AXIS_DESC: "Get annexed: Bulgaria, Romania, Hungry. Give 80% of compliance"
+ RULE_OPTION_INTEGRATION_COUNTRIES_AXIS: "Integrate Axis minors industry"
+ RULE_OPTION_INTEGRATION_COUNTRIES_AXIS_DESC: "Get industry from: Bulgaria, Romania, Hungry"
 
- RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS: "Annex with core in Germany"
- RULE_OPTION_ANNEX_CORE_COUNTRIES_AXIS_DESC: "Get annexed: Bulgaria, Romania, Hungry. Give cores"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS: "Doesn't integrate Axis minors industry"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS_DESC: "Don't get industry"
 
- RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS: "Not annex"
- RULE_OPTION_NOT_ANNEX_COUNTRIES_AXIS_DESC: "Not annex any country in Axis"
+ RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES: "Integrate Allies minors industry"
+ RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES_DESC: "Get industry from: Canada, SAF, Australia, New Zealand, India"
 
- RULE_OPTION_ANNEX_COUNTRIES_ALLIES: "Annex in UK"
- RULE_OPTION_ANNEX_COUNTRIES_ALLIES_DESC: "Get annexed: Canada, SAF, Australia, New Zealand, India. Give 80% of compliance"
-
- RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES: "Annex with core in UK"
- RULE_OPTION_ANNEX_CORE_COUNTRIES_ALLIES_DESC: "Get annexed: Canada, SAF, Australia, New Zealand, India. Give cores"
-
- RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES: "Not annex"
- RULE_OPTION_NOT_ANNEX_COUNTRIES_ALLIES_DESC: "Not annex any country in Allies"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES: "Doesn't integrate Allies minors industry"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES_DESC: "Don't get industry"
 
  RULE_OPTION_ANNEX_CHINA: "Annex warlords to China"
  RULE_OPTION_ANNEX_CHINA_DESC: "Annex all cliques into China"
