@@ -10,6 +10,7 @@
     NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.95
     NDefines.NAir.STRATEGIC_BOMBING_RAILWAY_PRIORITY_SCALE = 0.0
     NDefines.NAir.SECONDARY_DAMAGE_STRAT = 0.0
+    NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_STRATEGIC_BOMBER = 0.007	-- How much efficiency to regain per day. Gain applied hourly.
     NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
 		0.0, -- AIR_SUPERIORITY
 		0.0, -- CAS
@@ -54,6 +55,9 @@
 
     -- Ground Anti-Air reduce CAS damage
     NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8
+
+	-- Production
+	NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 30
 
     -- EXP change
     NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
