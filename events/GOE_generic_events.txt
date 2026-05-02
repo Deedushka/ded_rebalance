@@ -12,12 +12,9 @@ country_event = {
 	desc = GOE_generic_events.1.desc
 	picture = GFX_report_event_generic_sign_treaty2
 	is_triggered_only = yes
+	hidden = yes
 	# Support Vichy
-	option = {
-		name = GOE_generic_events.1.a
-		ai_chance = {
-			base = 10
-		}
+	immediate = {
 		# Syria supports us
 		hidden_effect = {
 			OVERLORD = {
@@ -40,7 +37,7 @@ country_event = {
 				limit = {
 					original_tag = ALG
 				}
-				FRA = {
+				VIC = {
 					annex_country = {
 						target = ALG
 					}

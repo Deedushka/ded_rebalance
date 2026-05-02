@@ -1,0 +1,18 @@
+has_any_economic_exploitation_trigger = {
+	OR = {
+		has_idea = VIC_economic_exploitation_5
+		has_idea = VIC_economic_exploitation_4
+		has_idea = VIC_economic_exploitation_3
+		has_idea = VIC_economic_exploitation_2
+		has_idea = VIC_economic_exploitation_1
+	}
+}
+has_any_trade_exploitation_trigger = {
+	OR = {
+		has_idea = VIC_trade_exploitation_5
+		has_idea = VIC_trade_exploitation_4
+		has_idea = VIC_trade_exploitation_3
+		has_idea = VIC_trade_exploitation_2
+		has_idea = VIC_trade_exploitation_1
+	}
+}

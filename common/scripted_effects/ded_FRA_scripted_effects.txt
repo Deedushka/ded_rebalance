@@ -1,0 +1,342 @@
+reduce_occupation_economy_cost = {
+	custom_effect_tooltip = reduce_occupation_economy_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_5
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_5
+			add_idea = VIC_economic_exploitation_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_4
+			add_idea = VIC_economic_exploitation_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_3
+			add_idea = VIC_economic_exploitation_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_2
+			add_idea = VIC_economic_exploitation_1
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = VIC_economic_exploitation_1
+		}
+		custom_effect_tooltip = VIC_no_reduce_exploitation_tt
+	}
+}
+increase_occupation_economy_cost = {
+	custom_effect_tooltip = increase_occupation_economy_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_1
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_1
+			add_idea = VIC_economic_exploitation_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_2
+			add_idea = VIC_economic_exploitation_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_3
+			add_idea = VIC_economic_exploitation_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_4
+			add_idea = VIC_economic_exploitation_5
+		}
+	}
+}
+reduce_to_minimum_occupation_economy_cost = {
+	custom_effect_tooltip = reduce_to_minimum_occupation_economy_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_5
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_5
+			add_idea = VIC_economic_exploitation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_4
+			add_idea = VIC_economic_exploitation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_3
+			add_idea = VIC_economic_exploitation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_2
+			add_idea = VIC_economic_exploitation_1
+		}
+	}
+}
+remove_occupation_economy_cost = {
+	custom_effect_tooltip = remove_occupation_economy_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_5
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_5
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_4
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_3
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_2
+			add_idea = partial_economic_mobilisation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_economic_exploitation_1
+		}
+		swap_ideas = {
+			remove_idea = VIC_economic_exploitation_1
+			add_idea = partial_economic_mobilisation
+		}
+	}
+}
+reduce_occupation_trade_cost = {
+	custom_effect_tooltip = reduce_occupation_trade_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_5
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_5
+			add_idea = VIC_trade_exploitation_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_4
+			add_idea = VIC_trade_exploitation_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_3
+			add_idea = VIC_trade_exploitation_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_2
+			add_idea = VIC_trade_exploitation_1
+		}
+	}
+	else_if = {
+		limit = { 
+			has_idea = VIC_trade_exploitation_1
+		}
+		custom_effect_tooltip = VIC_no_reduce_exploitation_tt
+	}
+}
+increase_occupation_trade_cost = {
+	custom_effect_tooltip = increase_occupation_trade_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_1
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_1
+			add_idea = VIC_trade_exploitation_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_2
+			add_idea = VIC_trade_exploitation_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_3
+			add_idea = VIC_trade_exploitation_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_4
+			add_idea = VIC_trade_exploitation_5
+		}
+	}
+}
+reduce_to_minimum_occupation_trade_cost = {
+	custom_effect_tooltip = reduce_to_minimum_occupation_trade_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_5
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_5
+			add_idea = VIC_trade_exploitation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_4
+			add_idea = VIC_trade_exploitation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_3
+			add_idea = VIC_trade_exploitation_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_2
+			add_idea = VIC_trade_exploitation_1
+		}
+	}
+}
+remove_occupation_trade_cost = {
+	custom_effect_tooltip = remove_occupation_trade_cost_tt
+	if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_5
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_5
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_4
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_4
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_3
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_3
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_2
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_2
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = VIC_trade_exploitation_1
+		}
+		swap_ideas = {
+			remove_idea = VIC_trade_exploitation_1
+			add_idea = limited_exports
+		}
+	}
+}

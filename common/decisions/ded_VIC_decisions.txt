@@ -1,0 +1,24 @@
+political_actions = {
+	VIC_cancel_payment = {
+		icon = generic_construction
+		allowed = {
+			original_tag = GER
+		}
+		visible = {
+			AND = {
+				country_exists = VIC
+				VIC = {
+					has_idea = FRA_occupation_costs_4
+					has_completed_focus = FRA_VIC_ask_our_masters
+				}
+			}
+		}
+		complete_effect = {
+			VIC = {
+				remove_ideas = FRA_occupation_costs_4
+				remove_occupation_economy_cost = yes
+				remove_occupation_trade_cost = yes
+			}
+		}
+	}
+}

@@ -615,13 +615,12 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
-			targeted_modifier = {
-				tag = GER
-				cic_to_target_factor = 0.5
-				mic_to_target_factor = 0.5
+
+			modifier = {
+				custom_modifier_tooltip = FRA_occupation_costs_tt
 			}
 		}
+		# Not used (I don't want to look at the errors in debug)
 		FRA_occupation_costs_3 = {
 			picture = generic_goods_red_bonus
 			name = FRA_occupation_costs_1
@@ -665,11 +664,15 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = FRA_occupation_costs_tt
+			}
 			
 			targeted_modifier = {
 				tag = GER
-				cic_to_target_factor = 0.4
-				mic_to_target_factor = 0.4
+				cic_to_target_factor = 0.15
+				mic_to_target_factor = 0.15
 			}
 		}
 		FRA_occupation_costs_2 = {
@@ -715,11 +718,15 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = FRA_occupation_costs_tt
+			}
 			
 			targeted_modifier = {
 				tag = GER
-				cic_to_target_factor = 0.25
-				mic_to_target_factor = 0.25
+				cic_to_target_factor = 0.1
+				mic_to_target_factor = 0.1
 			}
 		}
 		FRA_occupation_costs_1 = {
@@ -764,13 +771,18 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			modifier = {
+				custom_modifier_tooltip = FRA_occupation_costs_tt
+			}
 			
 			targeted_modifier = {
 				tag = GER
-				cic_to_target_factor = 0.1
-				mic_to_target_factor = 0.1
+				cic_to_target_factor = 0.05
+				mic_to_target_factor = 0.05
 			}
 		}
+		# End of not used
 		FRA_mandatory_work_service = {
 			picture = ast_all_in
 			allowed = {
@@ -785,7 +797,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.1 
+				stability_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = 0.05
 			}
 		}
 
@@ -890,47 +904,47 @@ ideas = {
 			
 			equipment_bonus = {
 				small_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				cv_small_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				small_plane_cas_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				cv_small_plane_cas_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				cv_small_plane_naval_bomber_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				medium_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				medium_plane_fighter_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				medium_plane_scout_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				large_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				large_plane_maritime_patrol_plane_airframe = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 			}
@@ -950,7 +964,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.1 
+				research_speed_factor = -0.05
 			}
 		}
 		FRA_legionary_service_order = {
@@ -1042,7 +1056,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 		FRA_buy_from_the_enemy = {
@@ -1059,7 +1073,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				license_purchase_cost = -0.5
+				license_purchase_cost = -1.0
 			}
 		}
 		FRA_defeatism = {

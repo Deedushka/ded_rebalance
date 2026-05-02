@@ -1,7 +1,36 @@
 ﻿l_russian:
  ITA_extra_resource_give: "Бедуинские переводчики"
  FRA_colonial_capital: "Столица Французской колонии"
+ VIC_refugees: "Иностранные иммигранты"
+ FRA_VIC_state_german_colonists: "Немецкие колонисты"
 
  FRA_allies_help: "Помощь от союзников"
  FRA_allies_help_desc: "§RМодификатор будет потерян при возвращении обратно во Францию§!"
  FRA_allies_help_tt: "§GДает возможность поставить особый оккупационный закон во всех Африканских провинциях§!"
+
+ FRA_occupation_costs_tt: "§RЭкономика Франции полностью находится под контролем наших господ§!"
+ VIC_economy_block_tt: "§RНаша экономика эксплуатируется нашими покровителями§!"
+ VIC_no_reduce_exploitation_tt: "§RМодификатор в своем минимальном состоянии, взятие этого фокуса не изменит модификатор§!"
+ has_any_exploitation_tt: "§RЕсть любой закон об эксплуатации§!"
+ not_has_any_exploitation_tt: "§RНет ни одного закона об эксплуатации§!"
+ VIC_CGQJ_tt: "§GПозволяет избавиться от нежелательных элементов путем депортации§!"
+ VIC_trade_exploitation_5_tt: "§RМы не можем поднять §2торговую§! политику выше нынешней§!"
+ VIC_economic_exploitation_5_tt: "§RМы не можем поднять §1экономическую§! политику выше нынешней§!"
+
+ reduce_occupation_economy_cost_tt: "§GУменьшит§! §1экономический закон§! об эксплуатации"
+ increase_occupation_economy_cost_tt: "§RПовысит§! §1экономический закон§! об эксплуатации"
+ reduce_to_minimum_occupation_economy_cost_tt: "§GПонизит§! до минимума §1экономической закон§! об эксплуатации"
+ remove_occupation_economy_cost_tt: "§GУдалит§! §1экономической закон§! об эксплуатации"
+ reduce_occupation_trade_cost_tt: "§GУменьшит§! §2торговый закон§! об эксплуатации"
+ increase_occupation_trade_cost_tt: "§RПовысит§! §2торговый закон§! об эксплуатации"
+ reduce_to_minimum_occupation_trade_cost_tt: "§GПонизит§! до минимума §2торговый закон§! об эксплуатации"
+ remove_occupation_trade_cost_tt: "§GУдалит§! §2торговый закон§! об эксплуатации"
+
+ VIC_CGQJ: "Commissariat général aux questions juives"
+ VIC_economic_exploitation_5: "Экономика эксплуатации"
+ VIC_trade_exploitation_5: "Жесткие контракты"
+ FRA_VIC_nuclear_research: "Изучение атома"
+ FRA_VIC_Bloated_administration: "Раздутая администрация"
+ FRA_VIC_unequal_trade: "§RНеравная торговля§!"
+
+ VIC_deportation_immigrants: "Провести депортацию иммигрантов"

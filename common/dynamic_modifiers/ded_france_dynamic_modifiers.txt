@@ -17,3 +17,24 @@ FRA_colonial_capital = {
 	local_building_slots = 6
 	state_production_speed_buildings_factor = 0.1
 }
+VIC_refugees = {
+	enable = {
+		always = yes
+	}
+	
+	icon = GFX_modifiers_CZE_worker_shortage
+	recruitable_population_factor = -1
+}
+FRA_VIC_state_german_colonists = {
+	enable = {
+		always = yes
+	}
+	remove_trigger = {
+		owner = {
+			has_war_with = GER
+		}
+	}
+	icon = GFX_modifiers_generic_immigration_promoted
+	local_building_slots = 2
+	state_production_speed_buildings_factor = -0.25
+}

@@ -1,7 +1,36 @@
 ﻿l_english:
  ITA_extra_resource_give: "Bedouin guides"
  FRA_colonial_capital: "Capital of the French Colony"
+ VIC_refugees: "Foreign immigrants"
+ FRA_VIC_state_german_colonists: "German colonists"
 
  FRA_allies_help: "Support from Allies"
  FRA_allies_help_desc: "§RThe modifier will be lost when returning back to France§!"
  FRA_allies_help_tt: "§GMakes it possible to establish a special occupation law in all African provinces§!"
+
+ FRA_occupation_costs_tt: "§RFrance's economy is completely under the control of our masters§!"
+ VIC_economy_block_tt: "§ROur economy is being exploited by our masters§!"
+ VIC_no_reduce_exploitation_tt: "§RThe modifier is in its minimum state, taking this focus will not change the modifier.§!"
+ has_any_exploitation_tt: "§RHas any law on exploitation§!"
+ not_has_any_exploitation_tt: "§RThere is not a single exploitation law§!"
+ VIC_CGQJ_tt: "§GAllows to get rid of unwanted elements by deportation§!"
+ VIC_trade_exploitation_5_tt: "§RWe cannot raise our §2trade§! law above the current one§!"
+ VIC_economic_exploitation_5_tt: "§RWe cannot raise our §1economic§! law above the current one§!"
+
+ reduce_occupation_economy_cost_tt: "§GReduce§! §1economic law§! on exploitation"
+ increase_occupation_economy_cost_tt: "§RIncrease§! §1economic law§! on exploitation"
+ reduce_to_minimum_occupation_economy_cost_tt: "§GReduce§! to minimum §1economic law§! on exploitation"
+ remove_occupation_economy_cost_tt: "§GRemove§! §1economic law§! on exploitation"
+ reduce_occupation_trade_cost_tt: "§GReduce§! §2trade law§! on exploitation"
+ increase_occupation_trade_cost_tt: "§RIncrease§! §2trade law§! on exploitation"
+ reduce_to_minimum_occupation_trade_cost_tt: "§GReduce§! to minimum §2trade law§! on exploitation"
+ remove_occupation_trade_cost_tt: "§GRemove§! §2trade law§! on exploitation"
+
+ VIC_CGQJ: "Commissariat général aux questions juives"
+ VIC_economic_exploitation_5: "Economics of exploitation"
+ VIC_trade_exploitation_5: "Tough contracts"
+ FRA_VIC_nuclear_research: "The Investigation of the atom"
+ FRA_VIC_Bloated_administration: "Bloated administration"
+ FRA_VIC_unequal_trade: "§RUnequal trade§!"
+
+ VIC_deportation_immigrants: "Deport immigrants"

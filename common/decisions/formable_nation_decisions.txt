@@ -9333,7 +9333,10 @@ form_greater_german_reich_category = {
 		available = {
 			is_subject = no
 			16 = { #Paris
-				state_is_fully_controlled_by_ROOT_or_subject = yes
+				OR = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_controlled_by = VIC
+				}
 			}
 			9 = { #Prague
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -9372,8 +9375,13 @@ form_greater_german_reich_category = {
 					FRA = { has_capitulated = yes }
 				}
 				AND = {
-					owns_state = 16
-					has_full_control_of_state = 16
+					OR = {
+						AND = {
+							owns_state = 16
+							has_full_control_of_state = 16
+						}
+						original_tag = VIC
+					}
 				}
 				219 = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -14765,7 +14773,10 @@ greater_italy_category = {
 						controls_state = 1 # Corsica 
 						}
 						any_country = {
-							is_subject_of = ITA
+							OR = {
+								is_subject_of = ITA
+								original_tag = VIC
+							}
 							controls_state = 1 # Corsica
 						}
 					}

@@ -456,6 +456,7 @@ country_event = {
 	picture = GFX_report_event_german_parade_paris
 	
 	is_triggered_only = yes
+	hidden = yes
 	
 	# option = { # Agree
 	# 	name = france.14.a
@@ -1123,15 +1124,15 @@ country_event = {
 	# 		clr_country_flag = GER_dont_seize_gold_reserves_flag
 	# 	}
 	# }
-	option = { # Agree - Fascism - LaR
-		name = france.14.a
-		ai_chance = { 
-			factor = 50 
-		}
-		trigger = {
-			has_government = fascism
-			has_dlc = "La Resistance"
-		}
+	immediate = { # Agree - Fascism - LaR
+		# name = france.14.a
+		# ai_chance = { 
+		# 	factor = 50 
+		# }
+		# trigger = {
+		# 	has_government = fascism
+		# 	has_dlc = "La Resistance"
+		# }
 		FRA = { 
 			set_cosmetic_tag = FRA_FREE 
 			add_ideas = FRA_defeatism
@@ -1189,16 +1190,16 @@ country_event = {
 					limit = { #set up Vichy continental holdings
 						OR = {
 							# state = 735
-							# state = 21
-							# state = 851
-							# state = 32
+							state = 21
+							state = 851
+							state = 32
 							state = 20
 							state = 26
 							state = 22
 							state = 31
 							state = 25
 							state = 33
-							# state = 1
+							state = 1
 						}
 						CONTROLLER = { 
 							OR = {
@@ -1214,6 +1215,20 @@ country_event = {
 					}
 					add_core_of = PREV
 					event_target:vichy_france = { transfer_state = PREV }
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 20
+							state = 22
+							state = 26
+							state = 25
+							state = 31
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = VIC_refugees
+					}
 				}
 				every_state = { #set up cores for French cores
 					limit = {
@@ -1249,7 +1264,7 @@ country_event = {
 					}
 					
 				}
-				ITA = { transfer_state = 1 } # Italy get Corsica
+				ITA = { transfer_state = 735 }
 				every_owned_state = {
 					limit = {
 						NOT = {
@@ -1269,10 +1284,10 @@ country_event = {
 					elections_allowed = no
 				}
 				set_popularities = {
-					democratic = 22
-					fascism = 46
-					neutrality = 30
-					communism = 2
+					democratic = 34
+					fascism = 36
+					neutrality = 18
+					communism = 12
 				}
 				set_cosmetic_tag = FRA_VICHY
 				FRA = {
@@ -1294,14 +1309,19 @@ country_event = {
 				}
 
 				transfer_advisors_to_vichy = yes
-				
-				add_ideas = FRA_occupation_costs_4
+				set_country_flag = VIC_became_vichy
+
+				add_ideas = {
+					FRA_occupation_costs_4
+					VIC_economic_exploitation_5
+					VIC_trade_exploitation_5
+				}
 				load_focus_tree = vichy_french_focus
 				FRA = {
 					transfer_units_fraction = {
 						target = event_target:vichy_france
 						size = 0.9
-						stockpile_ratio = 0.5 # was 0.7
+						stockpile_ratio = 0.7
 						army_ratio = 0.5
 						navy_ratio = 0.9 # was 0.85
 						air_ratio = 1.0
@@ -1317,6 +1337,7 @@ country_event = {
 			limit = {
 				has_focus_tree = vichy_french_focus
 			}
+
 			GER = {
 				give_guarantee = PREV
 			}

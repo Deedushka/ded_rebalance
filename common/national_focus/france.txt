@@ -1600,6 +1600,7 @@
 					has_completed_focus = FRA_revive_the_national_bloc
 				}
 			}
+			NOT = { has_country_flag = VIC_became_vichy }
 		}
 
 		prerequisite = {}
@@ -3603,6 +3604,7 @@
 					has_completed_focus = FRA_utilize_the_leagues
 				}
 			}
+			NOT = { has_country_flag = VIC_became_vichy }
 		}
 
 		prerequisite = {
@@ -9322,6 +9324,753 @@
 				bonus = 1.0
 				uses = 2
 				category = naval_bomber
+			}
+		}
+	}
+
+	# Vichy after get back Tree
+	focus = {
+		id = FRA_VIC_get_back
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 29
+		y = 0
+		cost = 10
+
+		available_if_capitulated = no
+
+		allow_branch = {
+			has_country_flag = VIC_became_vichy
+		}
+
+		available = {
+		}
+		search_filters = { }
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_take_german_example
+		icon = GFX_focus_GER_integrated_economies
+		prerequisite = { focus = FRA_VIC_get_back }
+		x = -3
+		y = 2
+		cost = 5
+		relative_position_id = FRA_VIC_get_back
+
+		available_if_capitulated = no
+
+		available = {}
+		search_filters = { }
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_tech_bonus = {
+				name = GER_autarky_efforts
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_atom_investing
+		icon = GFX_focus_generic_nuclear_development
+		prerequisite = { focus = FRA_VIC_take_german_example }
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_take_german_example
+
+		available_if_capitulated = no
+
+		available = {}
+		search_filters = { }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+				}
+				add_tech_bonus = {
+					name = FRA_VIC_atom_investing
+					bonus = 3.0
+					uses = 1
+					category = nuclear
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_atom_research
+		icon = GFX_focus_ARG_fascist_researchers
+		prerequisite = { focus = FRA_VIC_atom_investing }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_atom_investing
+
+		available_if_capitulated = no
+
+		available = {}
+		search_filters = { }
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			generate_scientist_character = {
+				traits = { scientist_trait_nuclear_power_expert }
+				skills = {
+					specialization_nuclear = 2
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = { 
+					26 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				26 = {
+					add_building_construction = {
+						type = nuclear_facility
+						level = 1
+						instant_build = yes
+						province = 9748
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = FRA_VIC_nuclear_research
+		}
+	}
+	focus = {
+		id = FRA_VIC_big_bomb
+		icon = GFX_focus_focus_fra_revolution_utmost
+		prerequisite = { focus = FRA_VIC_atom_research }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_atom_research
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = not_has_any_exploitation_tt
+				has_any_trade_exploitation_trigger = no
+				has_any_economic_exploitation_trigger = no
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			add_stability = 0.1
+			hidden_effect = {
+				add_ideas = FRA_VIC_hidden_nuclear_research
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_start_build_autobahn
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = FRA_VIC_take_german_example }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_take_german_example
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_trade_exploitation_5_tt
+				NOT = { has_idea = VIC_trade_exploitation_5 }
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			if ={
+				limit = {
+					has_any_trade_exploitation_trigger = yes
+				}
+				increase_occupation_trade_cost = yes
+			}
+			add_stability = 0.05
+			if = {
+				limit = {
+					16 = { #Paris
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				16 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					24 = { #Orlean
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				24 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					33 = { #Center-South
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				33 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					25 = { #Limusen
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				25 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					31 = { #South
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				31 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_build_autobahn_south
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = FRA_VIC_start_build_autobahn }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_start_build_autobahn
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_trade_exploitation_5_tt
+				NOT = { has_idea = VIC_trade_exploitation_5 }
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			if ={
+				limit = {
+					has_any_trade_exploitation_trigger = yes
+				}
+				increase_occupation_trade_cost = yes
+			}
+			add_stability = 0.05
+			if = {
+				limit = {
+					26 = { #Overan
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				26 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					20 = { #Lion
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				20 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					32 = { #Alps
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				32 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					21 = { #Marseille
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				21 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_build_autobahn_north
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = FRA_VIC_start_build_autobahn }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_start_build_autobahn
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_trade_exploitation_5_tt
+				NOT = { has_idea = VIC_trade_exploitation_5 }
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			if ={
+				limit = {
+					has_any_trade_exploitation_trigger = yes
+				}
+				increase_occupation_trade_cost = yes
+			}
+			add_stability = 0.05
+			if = {
+				limit = {
+					27 = { #Burgundy
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				27 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					17 = { #Burgundy
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				17 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					28 = { #GER Elsase
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				28 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_build_dam
+		icon = GFX_focus_focus_generic_build_dam
+		prerequisite = { focus = FRA_VIC_start_build_autobahn }
+		prerequisite = { focus = FRA_VIC_build_autobahn_south }
+		prerequisite = { focus = FRA_VIC_build_autobahn_north }
+		x = 0
+		y = 2
+		cost = 15
+		relative_position_id = FRA_VIC_start_build_autobahn
+
+		available_if_capitulated = no
+
+		available = {}
+		search_filters = { }
+		completion_reward = {
+			if ={
+				limit = {
+					has_any_trade_exploitation_trigger = yes
+				}
+				reduce_occupation_trade_cost = yes
+			}
+			add_stability = 0.1
+			20 = {
+				add_building_construction = {
+					type = dam_mountain
+					level = 1
+					instant_build = yes
+					province = {
+						id = 11716
+					}
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
+			}
+			if = {
+				limit = {
+					32 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				32 = { set_state_category = city }
+			}
+			if = {
+				limit = {
+					22 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				22 = { set_state_category = city }
+			}
+			if = {
+				limit = {
+					20 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				20 = { set_state_category = metropolis }
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_internal_enemies
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = FRA_VIC_get_back }
+		x = 3
+		y = 2
+		cost = 5
+		relative_position_id = FRA_VIC_get_back
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_economic_exploitation_5_tt
+				NOT = { has_idea = VIC_economic_exploitation_5 }
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			if ={
+				limit = {
+					has_any_economic_exploitation_trigger = yes
+				}
+				increase_occupation_economy_cost = yes
+			}
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = FRA_VIC_german_colonists
+		icon = GFX_focus_generic_worker_administration
+		prerequisite = { focus = FRA_VIC_internal_enemies }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_internal_enemies
+
+		available_if_capitulated = no
+
+		available = {
+		}
+		search_filters = { }
+		completion_reward = {
+			add_stability = -0.05
+			27 = {
+				add_dynamic_modifier = {
+					modifier = FRA_VIC_state_german_colonists
+				}
+			}
+			18 = {
+				add_dynamic_modifier = {
+					modifier = FRA_VIC_state_german_colonists
+				}
+			}
+			17 = {
+				add_dynamic_modifier = {
+					modifier = FRA_VIC_state_german_colonists
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_german_trade
+		icon = GFX_focus_generic_german_trade
+		prerequisite = { focus = FRA_VIC_internal_enemies }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = FRA_VIC_internal_enemies
+
+		available_if_capitulated = no
+
+		available = {
+		}
+		search_filters = { }
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = FRA_VIC_unequal_trade
+		}
+	}
+	focus = {
+		id = FRA_VIC_ask_our_masters
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = FRA_VIC_german_trade }
+		prerequisite = { focus = FRA_VIC_german_colonists }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = FRA_VIC_internal_enemies
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_any_exploitation_tt
+				OR = {
+					has_any_trade_exploitation_trigger = yes
+					has_any_economic_exploitation_trigger = yes
+				}
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			GER = { unlock_decision_tooltip = VIC_cancel_payment }
+		}
+	}
+	focus = {
+		id = FRA_VIC_destroy_opposition
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		prerequisite = { focus = FRA_VIC_ask_our_masters }
+		x = 1
+		y = 1
+		cost = 6
+		relative_position_id = FRA_VIC_ask_our_masters
+
+		available_if_capitulated = no
+
+		available = {
+		}
+		search_filters = { }
+		completion_reward = {
+			add_country_leader_trait = dictator
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.5
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = FRA_VIC_CGQJ_job
+		icon = GFX_focus_generic_immigration
+		prerequisite = { focus = FRA_VIC_ask_our_masters }
+		x = -1
+		y = 1
+		cost = 6
+		relative_position_id = FRA_VIC_ask_our_masters
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_economic_exploitation_5_tt
+				NOT = { has_idea = VIC_economic_exploitation_5 }
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			add_stability = -0.1
+			16 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_manpower = -350000
+					GER = {
+						add_manpower = 100000
+					}
+					ITA = {
+						add_manpower = 100000
+					}
+				}
+			}
+			15 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_manpower = -100000
+					GER = {
+						add_manpower = 30000
+					}
+					ITA = {
+						add_manpower = 20000
+					}
+				}
+			}
+			30 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_manpower = -100000
+					GER = {
+						add_manpower = 30000
+					}
+					ITA = {
+						add_manpower = 20000
+					}
+				}
+			}
+			23 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_manpower = -100000
+					GER = {
+						add_manpower = 30000
+					}
+					ITA = {
+						add_manpower = 20000
+					}
+				}
+			}
+			24 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_manpower = -100000
+					GER = {
+						add_manpower = 30000
+					}
+					ITA = {
+						add_manpower = 20000
+					}
+				}
+			}
+			if ={
+				limit = {
+					has_any_economic_exploitation_trigger = yes
+				}
+				increase_occupation_economy_cost = yes
+			}
+		}
+	}
+	focus = {
+		id = FRA_VIC_organized_nation
+		icon = GFX_focus_fra_le_deluge
+		prerequisite = { focus = FRA_VIC_CGQJ_job }
+		prerequisite = { focus = FRA_VIC_destroy_opposition }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = FRA_VIC_ask_our_masters
+
+		available_if_capitulated = no
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = VIC_economic_exploitation_5_tt
+				NOT = { has_idea = VIC_economic_exploitation_5 }
+			}
+		}
+		search_filters = { }
+		completion_reward = {
+			remove_ideas = FRA_VIC_Bloated_administration
+			if ={
+				limit = {
+					has_any_economic_exploitation_trigger = yes
+				}
+				increase_occupation_economy_cost = yes
 			}
 		}
 	}
