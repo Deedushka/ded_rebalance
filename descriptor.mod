@@ -10,5 +10,5 @@ tags={
 	"Balance"
 }
 name="Dedushka Historical"
-supported_version="1.18.1.0"
+supported_version="1.18.2.0"
 remote_file_id="3713369392"
