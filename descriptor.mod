@@ -9,6 +9,6 @@ tags={
 	"Fixes"
 	"Balance"
 }
-name="Dedushka Historical v1.19.0"
+name="Dedushka Historical"
 supported_version="1.19.*"
 remote_file_id="3713369392"
