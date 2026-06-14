@@ -1182,7 +1182,21 @@ country_event = {
 							is_core_of = SYR
 							is_core_of = ALG
 						}
-						NOT = { state = 539 state = 772 state = 773 state = 660 state = 774 }
+						# Keep French Indochina out of Vichy while Siam's limited war over it is ongoing
+						NOT = {
+							AND = {
+								OR = {
+									is_core_of = VIN
+									is_core_of = CAM
+									is_core_of = LAO
+								}
+								SIA = {
+									has_active_mission = SIA_limited_war_indochina
+									has_variable = limited_war_target
+									var:limited_war_target = { original_tag = FRA }
+								}
+							}
+						}
 					}
 					event_target:vichy_france = { transfer_state = PREV }
 				}

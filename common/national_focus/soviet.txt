@@ -4977,7 +4977,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 5
+		cost = 1
 		dynamic = yes 
 		available = {
 
@@ -4986,7 +4986,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 75
 		}
 	}
 
@@ -8823,7 +8823,6 @@ focus_tree = {
 				tooltip = SOV_no_major_purge_tt		
 				check_variable = { SOV_great_purge_counter < 1 }
 			}
-			always = no
 		}
 		allow_branch = { 
 			always = no
@@ -10070,7 +10069,6 @@ focus_tree = {
 				tooltip = SOV_no_major_purge_tt		
 				check_variable = { SOV_great_purge_counter < 1 }
 			}
-			always = no
 		}
 		                
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -15829,7 +15827,6 @@ ai_will_do = {
 				tooltip = SOV_no_major_purge_tt		
 				check_variable = { SOV_great_purge_counter < 1 }
 			}
-			always = no
 		}
 
 		available_if_capitulated = yes
@@ -16435,6 +16432,10 @@ ai_will_do = {
 					type = send_lend_lease_desire
 					id = SOV
 					value = 300
+				}
+				add_relation_rule_override = {
+					target = SOV
+					can_send_volunteers = yes 
 				}
 			}
 		}

@@ -71,7 +71,7 @@ ability = {
 		duration = 240 
 		
 		unit_modifiers = {
-			combat_defense = 0.2
+			defence = 0.2
 			combat_entrenchment = 0.25
 			org_damage_multiplier = -0.25
 			str_damage_multiplier = 0.6

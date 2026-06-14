@@ -5995,7 +5995,6 @@ focus_tree = {
 					name = ITA_oto_naval_guns
 					bonus = 1.0
 					uses = 2
-					category = cat_ship_medium_battery
 					category = cat_ship_heavy_battery
 				}
 			}
@@ -16798,7 +16797,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = ITA_demand_balearic_islands_bba
+		relative_position_id = ITA_spanish_italian_alliance
 		cost = 5
 		available = {
 			is_in_faction = yes

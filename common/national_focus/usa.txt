@@ -24,6 +24,7 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 1600 }
+	shared_focus = ABDA_abdacom
 	default = no
 #	focus = {
 #		id = USA_
@@ -3969,6 +3970,18 @@ focus_tree = {
 							CONTROLLER = { has_war_with = ROOT }
 						}	
 					}
+					1065 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
+					1031 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
 					326 = {
 						OR = {
 							is_controlled_by = ROOT
@@ -4541,6 +4554,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = { has_dlc = "Man the Guns" }
 				has_completed_focus = USA_continue_the_new_deal
 			}
 		}
@@ -4552,6 +4566,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				has_dlc = "Man the Guns"
 				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}

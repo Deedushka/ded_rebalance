@@ -26,6 +26,15 @@ country_event = {
 					original_tag = SYR
 				}
 				set_cosmetic_tag = SYR_vichy
+				add_country_leader_role = {
+					character = FRA_henri_dentz
+					promote_leader = yes
+					country_leader = {
+						ideology = fascism_ideology
+						expire = "1960.1.1.1" 
+						traits = { eager_collaborator } 
+					}
+				}	
 			}
 			IF = {
 				limit = {
@@ -49,7 +58,11 @@ country_event = {
 				id = GOE_generic_events.2
 				hours = 1
 			}
-			puppet = ROOT
+			puppet = {
+			    target = ROOT
+			    end_wars = yes
+			    end_civil_wars = no 
+			}
 		}
 	}	
 	# # Support Free France
