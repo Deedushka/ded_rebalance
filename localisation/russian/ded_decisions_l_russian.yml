@@ -1,2 +1,4 @@
 ﻿l_russian:
  VIC_cancel_payment: "§RОтменить выплаты от [?VIC.GetNameWithFlag]§!"
+ control_all_france_main_tooltip: "Необходимо закрепиться на севере Франции"
+ control_all_france_non_main_tooltip: "Возвращение Северной Африки"

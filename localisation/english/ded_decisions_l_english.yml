@@ -1,2 +1,4 @@
 ﻿l_english:
  VIC_cancel_payment: "§RCancel payments from [?VIC.GetNameWithFlag]§!"
+ control_all_france_main_tooltip: "Necessary to have an established foothold in northern France"
+ control_all_france_non_main_tooltip: "Reclaiming North Africa"
