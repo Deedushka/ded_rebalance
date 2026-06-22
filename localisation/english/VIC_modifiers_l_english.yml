@@ -1,12 +1,6 @@
 ﻿l_english:
- ITA_extra_resource_give: "Bedouin guides"
- FRA_colonial_capital: "Capital of the French Colony"
  VIC_refugees: "Foreign immigrants"
  FRA_VIC_state_german_colonists: "German colonists"
-
- FRA_allies_help: "Support from Allies"
- FRA_allies_help_desc: "§RThe modifier will be lost when returning back to France§!"
- FRA_allies_help_tt: "§GMakes it possible to establish a special occupation law in all African provinces§!"
 
  FRA_occupation_costs_tt: "§RFrance's economy is completely under the control of our masters§!"
  VIC_economy_block_tt: "§ROur economy is being exploited by our masters§!"

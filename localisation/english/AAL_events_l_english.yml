@@ -1,0 +1,23 @@
+﻿l_english:
+ AAL_SOV.1: "The collapse of the Red Army"
+ AAL_SOV.1.t: "The collapse of the Red Army"
+ AAL_SOV.1.desc: "Our armed forces have been completely defeated by the German armed forces, and part of our army doubts our competence"
+ AAL_SOV.1.a: "We will destroy them"
+ AAL_SOV.2: "Trouble"
+ AAL_SOV.2.t: "Trouble"
+ AAL_SOV.2.desc: "Since we have no ports left, the Navy just sailed to America!"
+ AAL_SOV.2.a: "We can do it without them"
+
+ AAL_JAP.1: "Victory"
+ AAL_JAP.1.t: "Victory"
+ AAL_JAP.1.desc: "We were able to win the conflict."
+ AAL_JAP.1.a: "Finally"
+ AAL_JAP.2: "Defeat"
+ AAL_JAP.2.t: "Defeat"
+ AAL_JAP.2.desc: "We were defeated"
+ AAL_JAP.2.a: "Shame"
+ AAL_JAP.3: "The Japanese intervention"
+ AAL_JAP.3.t: "The Japanese intervention"
+ AAL_JAP.3.desc: "Japan has started a border conflict with our country"
+ AAL_JAP.3.a: "Sadly"
+

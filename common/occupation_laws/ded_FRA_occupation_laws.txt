@@ -1,0 +1,23 @@
+france_autonomy_occupation = {
+	icon = "GFX_modifiers_SOV_invaders_must_die"
+	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+
+	visible = {
+		original_tag = FRA
+		has_focus_tree = free_french_focus
+
+		FROM = {
+			FROM = { capital_scope = { is_on_continent = africa } }
+		}
+	}
+
+	state_modifier = {
+		resistance_target 				= 0.05
+		compliance_gain 				= 0.02
+		required_garrison_factor 		= -0.2
+		resistance_damage_to_garrison 	= -0.1
+		local_factories 				= 0.15
+		local_resources 				= 0.05
+		local_supplies 					= 0.05
+	}
+}

@@ -1,0 +1,13 @@
+ideas = {
+	hidden_ideas = {
+		china_easy_cap = {
+			allowed = {
+				always = no 
+			}
+			modifier = {
+				surrender_limit = -0.25
+				army_attack_factor = -0.1
+			}
+		}
+	}
+}

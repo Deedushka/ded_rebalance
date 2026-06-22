@@ -1,6 +1,6 @@
 ﻿l_russian:
- INTEGRATION_COUNTRY_TO_OVERLORD_AXIS: "£civ_factory Интегрирует промышленность миноров Оси"
- INTEGRATION_COUNTRY_TO_OVERLORD_ALLIES: "£civ_factory Интегрирует промышленность миноров Союзников"
+ INTEGRATION_COUNTRY_TO_OVERLORD_AXIS: "£civ_factory Миноры Оси"
+ INTEGRATION_COUNTRY_TO_OVERLORD_ALLIES: "£civ_factory Миноры Союзников"
  ANNEX_ALL_CHINA: "£territory_icon Объединить Китай"
  OFF_NON_IMPORTANT_AI: "£tank_niche_1  Оптимизация ИИ"
  RULE_GROUP_INTEGRATION_COUNTRIES: "Интегрирует промышленность ИИ миноров в мажоров"
@@ -11,16 +11,16 @@
  OFF: "Отключить"
  ON: "Включить"
 
- RULE_OPTION_INTEGRATION_COUNTRIES_AXIS: "Интеграция промышленности миноров Оси"
- RULE_OPTION_INTEGRATION_COUNTRIES_AXIS_DESC: "Получаешь промышленность: Болгарии, Румыния, Венгрия"
+ RULE_OPTION_INTEGRATION_COUNTRIES_AXIS: "Передать промышленность"
+ RULE_OPTION_INTEGRATION_COUNTRIES_AXIS_DESC: "Передача промышленности: Болгарии, Румынии, Венгрии в Рейх"
 
- RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS: "Не интегрирует промышленности миноров Оси"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS: "Не давать промышленность"
  RULE_OPTION_NO_INTEGRATION_COUNTRIES_AXIS_DESC: "Не интегрирует промышленность"
 
- RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES: "Интеграция промышленности миноров Союзников"
- RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES_DESC: "Получаешь промышленность: Канады, ЮАР, Австралия, Новая Зеландия, Индия"
+ RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES: "Передать промышленность"
+ RULE_OPTION_INTEGRATION_COUNTRIES_ALLIES_DESC: "Передача промышленности: Канады, ЮАР, Австралии, Новой Зеландии, Индии в ВБ"
 
- RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES: "Не интегрирует промышленность миноров Союзников"
+ RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES: "Не давать промышленность"
  RULE_OPTION_NO_INTEGRATION_COUNTRIES_ALLIES_DESC: "Не интегрирует промышленность"
 
  RULE_OPTION_ANNEX_CHINA: "Аннексирует всех варлордов"

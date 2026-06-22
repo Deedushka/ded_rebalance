@@ -89,15 +89,6 @@ ideas = {
 				industrial_capacity_dockyard = -10
 			}
 		}
-		china_easy_cap = {
-			allowed = {
-				always = no 
-			}
-			modifier = {
-				surrender_limit = -0.25
-				army_attack_factor = -0.1
-			}
-		}
 		economy_integration_axis = {
 			allowed = {
 				always = no
