@@ -1,0 +1,467 @@
+AAL_decision_categories = {
+	AAL_barbarossa_mission = {
+		icon = generic_operation
+		allowed = {
+			always = no
+		}
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = 180
+		available = {
+			214 = {
+				is_axis_controlled = yes
+			}
+			219 = {
+				is_axis_controlled = yes
+			}
+			217 = {
+				is_axis_controlled = yes
+			}
+			236 = {
+				is_axis_controlled = yes
+			}
+		}
+		timeout_effect = {
+			deactivate_AAL_missions = yes
+		}
+		complete_effect = {
+			AAL_SOV_peace_deal = yes
+		}
+	}
+	AAL_north_group_1 = { # Baltic
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 808
+			}
+		}
+		available = {
+			808 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_north_group_2 = { # Leningrad
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 195
+			}
+		}
+		available = {
+			195 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_north_group_3 = { # Arkhangelsk
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 214
+			}
+		}
+		available = {
+			214 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_center_group_1 = { # Minsk
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 206
+			}
+		}
+		available = {
+			206 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_center_group_2 = { # Smolensk
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 242
+			}
+		}
+		available = {
+			242 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_center_group_3 = { # Moscow
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219
+			}
+		}
+		available = {
+			219 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_south_group_1 = { # Kiev
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+			}
+		}
+		available = {
+			202 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_south_group_2 = { # Donbass
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 227
+			}
+		}
+		available = {
+			227 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_south_group_3 = { # Stalingrad
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217
+			}
+		}
+		available = {
+			217 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+	AAL_south_group_4 = { # Astrakhan
+		icon = generic_operation
+		fire_only_once = yes
+		is_good = no
+		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
+		on_map_mode = map_only
+		allowed = {
+			always = no
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 236
+			}
+		}
+		available = {
+			236 = {
+				is_axis_controlled = yes
+			}
+		}
+		complete_effect = {
+			AAL_add_days_missions = yes
+		}
+	}
+
+	AAL_SOV_war_status_timer = {
+		icon = generic_operation
+		fire_only_once = yes
+		visible = {
+			SOV = {
+				has_war_with = GER
+			}
+		}
+		days_mission_timeout = 180
+		allowed = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+	}
+	AAL_SOV_war_status_main_cities = {
+		icon = generic_operation
+		allowed = {
+			tag = SOV
+		}
+		fire_only_once = yes
+		on_map_mode = map_only
+		available = {
+			always = no
+		}
+		visible = {
+			ROOT = {
+				has_active_mission = AAL_SOV_war_status_timer
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 214
+				state = 219
+				state = 217
+				state = 236
+			}
+		}
+	}
+	AAL_SOV_war_status_mini_cities = {
+		icon = generic_operation
+		allowed = {
+			tag = SOV
+		}
+		fire_only_once = yes
+		on_map_mode = map_only
+		available = {
+			always = no
+		}
+		visible = {
+			ROOT = {
+				has_active_mission = AAL_SOV_war_status_timer
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 808
+				state = 195
+				state = 214
+				state = 206
+				state = 242
+				state = 219
+				state = 202
+				state = 227
+				state = 217
+				state = 236
+			}
+		}
+	}
+}
+
+SOV_after_AAL_decision_categories = {
+	AAL_SOV_military_coup = {
+		icon = generic_operation
+		allowed = {
+			always = no
+		}
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 60
+		complete_effect = {
+			
+		}
+	}
+	AAL_SOV_central_asia_leave = {
+		icon = generic_operation
+		allowed = {
+			always = no
+		}
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 21
+		timeout_effect = {
+			AAL_SOV_collapse_central_asia = yes
+			activate_mission = AAL_SOV_far_east_leave
+		}
+	}
+	AAL_SOV_far_east_leave = {
+		icon = generic_operation
+		allowed = {
+			always = no
+		}
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 21
+		timeout_effect = {
+			AAL_SOV_collapse_far_east = yes
+			activate_mission = AAL_SOV_Ural_leave
+		}
+	}
+	AAL_SOV_ural_leave = {
+		icon = generic_operation
+		allowed = {
+			always = no
+		}
+		fire_only_once = yes
+		available = {
+			always = no
+		}
+		days_mission_timeout = 21
+		timeout_effect = {
+			AAL_SOV_collapse_ural = yes
+			custom_effect_tooltip = disintegration_red_army_tt
+			hidden_effect = { # TP troops to ussr
+				SOV = {
+					transfer_units_fraction = {
+						target = KAZ
+						size = 1.0
+					}
+				}
+				KAZ = {
+					transfer_units_fraction = {
+						target = SOV
+						size = 1.0
+					}
+				}
+				SOV = { country_event = AAL_SOV.1 }
+			}
+		}
+	}
+}
+
+operations = {
+	AAL_JAP_military_operation = {
+		icon = generic_operation
+		allowed = {
+			tag = JAP
+		}
+		visible = {
+			has_global_flag = AAL_SOV_collapse
+			NOT = { has_full_control_of_state = 655 }
+		}
+		fire_only_once = no
+		available = {
+			655 = {
+				NOT = {
+					controller = {
+						tag = SOV
+					}
+				}	
+			}
+			custom_trigger_tooltip = {
+				tooltip = JAP_AAL_border_tt
+				NOT = { has_country_flag = JAP_AAL_border }
+			}
+		}
+		cost = 50
+		highlight_states = {
+			highlight_state_targets = {
+				state = 655
+				state = 537
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 537
+					num_provinces = 1
+					on_win = AAL_JAP.1
+					on_lose = AAL_JAP.2
+				}
+				defender = {
+					state = 655
+					num_provinces = 1
+					on_win = AAL_JAP.3
+					on_lose = AAL_JAP.3
+				}
+			}
+			hidden_effect = {
+				set_country_flag = {
+					flag = JAP_AAL_border
+					days = 40
+					value = 1
+				}
+			}
+		}
+	}
+}

@@ -28,6 +28,7 @@ country_event = {
 				limit = {
 					NOT = { is_in_array = { array = global.playable_countries value = THIS } }
 					NOT = { is_in_array = { array = global.important_countries value = THIS } }
+					if = { limit = { has_global_flag = AAL_SOV_collapse } AAL_collapse_countries = no }
 					is_ai = yes
 				}
 				set_country_flag = lobotomized

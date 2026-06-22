@@ -1,0 +1,33 @@
+add_namespace = soviet_autonomy
+add_namespace = soviet_autonomy_cap
+
+country_event = {
+	id = soviet_autonomy.1
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			check_autonomies_ideas = yes
+		}
+		else = {
+			log = "soviet_autonomy.1 - Not subject. [?THIS.GetName] [?ROOT.GetName] [?PREV.GetName]"
+		}
+	}
+}
+
+country_event = {
+	id = soviet_autonomy_cap.1
+	title = soviet_autonomy_cap.1.t
+	desc = soviet_autonomy_cap.1.desc
+	picture = GFX_report_event_SOV_UKR_cap
+	is_triggered_only = yes
+
+	option = {
+		name = soviet_autonomy_cap.1.a
+		UKR_relocate_after_cap = yes
+	}
+}

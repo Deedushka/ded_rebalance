@@ -1,0 +1,46 @@
+ideas = {
+	country = {
+		UKR_lack_illiteracy = {
+			picture = PLACEHOLDER_idea_icon
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+		UKR_intensive_urbanization = {
+			picture = PLACEHOLDER_idea_icon
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				global_building_slots_factor = 0.15
+			}
+		}
+		UKR_labor_militarization = {
+			picture = PLACEHOLDER_idea_icon
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		UKR_traces_hunger = {
+			picture = PLACEHOLDER_idea_icon
+			allowed = {
+				always = no
+			}
+			cancel = {
+				date > 1938.1.1
+			}
+			modifier = {
+				monthly_population = -0.25
+			}
+		}
+	}
+}

@@ -1,0 +1,141 @@
+@days_add = 18
+activate_AAL_missions = {
+	add_ideas = {
+		AAL_GER_barbarossa
+	}
+	activate_mission = AAL_barbarossa_mission
+	activate_mission = AAL_north_group_1
+	activate_mission = AAL_north_group_2
+	activate_mission = AAL_north_group_3
+	activate_mission = AAL_center_group_1
+	activate_mission = AAL_center_group_2
+	activate_mission = AAL_center_group_3
+	activate_mission = AAL_south_group_1
+	activate_mission = AAL_south_group_2
+	activate_mission = AAL_south_group_3
+	activate_mission = AAL_south_group_4
+}
+activate_AAL_missions_spectate = {
+	activate_mission = AAL_SOV_war_status_timer
+}
+deactivate_AAL_missions = {
+	custom_effect_tooltip = deactivate_AAL_missions_tt
+	hidden_effect = {
+		remove_ideas = AAL_GER_barbarossa
+		JAP = {
+			clr_country_flag = JAP_in_barb
+		}
+	}
+	add_timed_idea = {
+		idea = AAL_GER_barbarossa_lost
+		days = 160
+	}
+}
+AAL_add_days_missions = {
+	custom_effect_tooltip = AAL_add_days_missions_tt
+	hidden_effect = {
+		add_days_mission_timeout = { mission = AAL_barbarossa_mission days = @days_add }
+		add_days_mission_timeout = { mission = AAL_north_group_1 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_north_group_2 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_north_group_3 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_center_group_1 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_center_group_2 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_center_group_3 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_south_group_1 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_south_group_2 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_south_group_3 days = @days_add }
+		add_days_mission_timeout = { mission = AAL_south_group_4 days = @days_add }
+
+		SOV = { add_days_mission_timeout = { mission = AAL_SOV_war_status_timer days = @days_add } }
+	}
+}
+AAL_SOV_peace_deal = {
+	custom_effect_tooltip = AAL_SOV_peace_deal_tt
+	hidden_effect = {
+		GER = { 
+			white_peace = SOV
+			country_event = AAL.1
+		}
+		JAP = {
+			if = {  
+				limit = {
+					has_country_flag = JAP_in_barb
+				}
+				white_peace = SOV
+				country_event = AAL.2
+			}
+			else = {
+				activate_decision = AAL_JAP_military_operation
+			}
+		}
+	}
+}
+AAL_SOV_collapse_central_asia = {
+	SOV = {
+		release = KAZ
+		release = KYR
+		release = TAJ
+		release = TMS
+		release = UZB
+	}
+}
+AAL_SOV_collapse_far_east = {
+	SOV = {
+		release = VLA
+		release = FER
+		release = YAK
+		release = BYA
+		release = YAM
+		release = TAY
+		release = EVE
+		# New AAL
+		IRK = {
+			add_state_core = 566
+			add_state_core = 567
+			add_state_core = 568
+		}
+		release = IRK
+		ALN = {
+			add_state_core = 569
+			add_state_core = 654
+			add_state_core = 40
+			add_state_core = 570
+		}
+		release = ALN
+		TOM = {
+			add_state_core = 578
+			add_state_core = 577
+		}
+		release = TOM
+		OMS = {
+			add_state_core = 571
+		}
+		release = OMS
+		TYM = {
+			add_state_core = 403
+			add_state_core = 580
+		}
+		release = TYM
+	}
+}
+AAL_SOV_collapse_ural = {
+	SOV = {
+		release = KOM
+		release = NEN
+		release = MEL
+		release = CHU
+		release = TAT
+		release = UDM
+		release = BSK
+		KZO = {
+			add_state_core = 401
+			add_state_core = 251
+			add_state_core = 652
+		}
+		release = KZO
+		KIR = {
+			add_state_core = 400
+		}
+		release = KIR
+	}
+}

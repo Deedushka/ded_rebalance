@@ -1,0 +1,131 @@
+is_axis_controlled = {
+	OR = {
+		is_controlled_by_ROOT_or_ally = yes
+		controller = {
+			original_tag = FIN
+			has_completed_focus = FIN_cooperation_with_germany
+		}
+	}
+}
+
+AAL_states = {
+	OR = {
+		is_core_of = EST
+		is_core_of = LAT
+		is_core_of = LIT
+		is_core_of = BLR
+		is_core_of = UKR
+		is_core_of = MOL
+		AAL_RUS_states = yes
+	}
+}
+
+AAL_RUS_states = {
+	OR = {
+		state = 213
+		state = 215
+		state = 216
+		state = 879
+		state = 214
+		state = 880
+		state = 351
+		state = 264
+		state = 244
+		state = 195
+		state = 208
+		state = 209
+		state = 263
+		state = 210
+		state = 246
+		state = 242
+		state = 219
+		state = 248
+		state = 247
+		state = 253
+		state = 243
+		state = 205
+		state = 223
+		state = 254
+		state = 257
+		state = 258
+		state = 222
+		state = 224
+		state = 220
+		state = 258
+		state = 260
+		state = 240
+		state = 265
+		state = 245
+		state = 217
+		state = 236
+		state = 829
+		state = 239
+		state = 255
+		state = 250
+		state = 252
+		state = 237
+		state = 238
+		state = 218
+		state = 234
+		state = 235
+		state = 232
+		state = 821
+		state = 828
+		state = 827
+		state = 233
+		state = 826
+		state = 231
+		state = 229
+		state = 230
+		state = 137
+	}
+}
+
+AAL_ROM_Transnistria = {
+	OR = {
+		state = 834
+		state = 192
+	}
+}
+
+AAL_asia_states = {
+	OR = {
+		state = 408
+		state = 409
+		state = 655
+		state = 657
+		state = 560
+	}
+}
+
+AAL_collapse_countries = {
+	OR = {
+		tag = KAZ
+		tag = KYR
+		tag = TAJ
+		tag = TMS
+		tag = UZB
+		tag = VLA
+		tag = FER
+		tag = YAK
+		tag = BYA
+		tag = YAM
+		tag = TAY
+		tag = EVE
+		tag = KOM
+		tag = NEN
+		tag = MEL
+		tag = CHU
+		tag = TAT
+		tag = UDM
+		tag = BSK
+		# New AAL
+		tag = IRK
+		tag = ALN
+		tag = TOM
+		tag = OMS
+		tag = TYM
+		tag = KZO
+		tag = KIR
+	}
+}

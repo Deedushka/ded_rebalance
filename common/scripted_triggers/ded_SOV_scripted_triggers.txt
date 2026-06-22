@@ -1,0 +1,14 @@
+has_any_soviet_autonomy = {
+	any_subject_country = {
+		OR = {
+			has_autonomy_state = autonomy_soviet
+			has_autonomy_state = inner_autonomy_soviet
+		}
+	}
+}
+is_soviet_autonomy = {
+	OR = {
+		has_autonomy_state = autonomy_soviet
+		has_autonomy_state = inner_autonomy_soviet
+	}
+}

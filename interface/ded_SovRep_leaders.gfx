@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_Panteleimon_Ponomarenko"
+		textureFile = "gfx/leaders/BLR/portrait_panteleimon_ponomarenko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Nikita_Khrushchev"
+		textureFile = "gfx/leaders/UKR/portrait_nikita_khrushchev.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Nikita_Khrushchev_war"
+		textureFile = "gfx/leaders/UKR/portrait_nikita_khrushchev_war.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Nikita_Khrushchev_war_small"
+		textureFile = "gfx/leaders/UKR/idea_portrait_nikita_khrushchev_war.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_mykhailo_burmystenko"
+		textureFile = "gfx/leaders/UKR/portrait_mykhailo_burmystenko.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Fiodor_Brovko"
+		textureFile = "gfx/leaders/MOL/portrait_fiodor_brovko.dds"
+	}
+}

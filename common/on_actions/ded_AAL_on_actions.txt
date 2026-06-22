@@ -1,0 +1,54 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = GER
+							FROM = { tag = SOV }
+						}
+						AND = {
+							tag = SOV
+							FROM = { tag = GER }
+						}
+					}
+				}
+				hidden_effect = {
+					GER = { 
+						activate_AAL_missions = yes
+					}
+					SOV = {
+						activate_AAL_missions_spectate = yes
+						if = {
+							limit = {
+								NOT = { has_completed_focus = SOV_claims_in_baltic }
+							}
+							complete_national_focus = SOV_claims_in_baltic
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					GER = { has_active_mission = AAL_barbarossa_mission }
+					OR = {
+						AND = {
+							tag = JAP
+							FROM = { tag = SOV }
+						}
+						AND = {
+							tag = SOV
+							FROM = { tag = JAP }
+						}
+					}
+				}
+				hidden_effect = {
+					JAP = { set_country_flag = JAP_in_barb } 
+				}
+			}
+		}
+	}
+}

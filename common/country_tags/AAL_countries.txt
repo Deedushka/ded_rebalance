@@ -1,0 +1,8 @@
+# New AAL countries
+IRK = "countries/Irkutsk.txt"
+ALN = "countries/Altai Novosibirsk.txt"
+TOM = "countries/Tomsk Okrug.txt"
+OMS = "countries/Omsk.txt"
+TYM = "countries/Tyumen Patriarchal.txt"
+KZO = "countries/Orenburg Cossacks.txt"
+KIR = "countries/Kirov Okrug.txt"

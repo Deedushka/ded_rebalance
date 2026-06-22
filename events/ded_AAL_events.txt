@@ -1,0 +1,264 @@
+add_namespace = AAL
+add_namespace = AAL_SOV
+add_namespace = AAL_JAP
+
+# Soviet Cap
+country_event = {
+	id = AAL.1
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_state = {
+			limit = {
+				AAL_states = yes
+				is_controlled_by_ROOT_or_ally = no
+			}
+			transfer_state_to = ROOT
+			if = {
+				limit = {
+					is_core_of = ROM
+				}
+				transfer_state_to = ROM
+			}
+			if = {
+				limit = {
+					is_core_of = HUN
+				}
+				transfer_state_to = HUN
+			}
+			if = {
+				limit = {
+					AAL_ROM_Transnistria = yes
+				}
+				transfer_state_to = MOL
+				if = {
+					limit = {
+						NOT = { is_core_of = MOL }
+					}
+					add_core_of = MOL
+				}
+			}
+			if = {
+				limit = {
+					is_core_of = MOL
+					NOT = { AAL_ROM_Transnistria = yes }
+				}
+				remove_core_of = MOL
+			}
+			if = {
+				limit = {
+					NOt = {
+						is_core_of = SOV
+					}
+				}
+				add_core_of = SOV
+			}
+		}
+		ROM = {
+			set_autonomy = { 
+				target = MOL
+				autonomy_state = autonomy_integrated_puppet 
+			}
+		}
+		MOL = { 
+			set_cosmetic_tag = MOL_transnistria 
+			set_politics = { ruling_party = fascism elections_allowed = no }
+			add_popularity = { ideology = fascism popularity = 1 }
+		}
+
+		SOV = {
+			set_rule = {
+				can_access_market = no
+				can_create_factions = no
+				can_join_factions = no
+				can_not_declare_war = yes
+			}
+			if = { 
+				limit = {
+					NOT = { has_completed_focus = SOV_the_bloc_of_rights_and_trotskyites }
+				}
+				complete_national_focus = SOV_the_bloc_of_rights_and_trotskyites
+			}
+			dismantle_faction = yes
+			activate_mission = AAL_SOV_military_coup
+			activate_mission = AAL_SOV_central_asia_leave
+			set_global_flag = AAL_SOV_collapse
+			if = {
+				limit = {
+					MON = { 
+						is_subject_of = SOV
+					}
+				}
+				set_autonomy = {
+					target = MON
+					autonomy_state = autonomy_free
+				}
+			}
+			if = {
+				limit = {
+					TAN = {
+						exists = yes
+					}
+				}
+				if = {
+					limit = {
+						TAN = {
+							is_subject_of = SOV
+						}
+					}
+					set_autonomy = {
+						target = TAN
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+			else = {
+				release = TAN
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AAL.2
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				MAN = {
+					exists = yes
+					is_puppet_of = ROOT
+				}
+			}
+			set_country_flag = to_MAN
+		}
+		every_state = {
+			limit = {
+				AAL_asia_states = yes
+				is_controlled_by_ROOT_or_ally = no
+			}
+			if = {
+				limit = {
+					ROOT = {
+						has_country_flag = to_MAN
+					}
+					NOT = {
+						state = 655
+					}
+				}
+				transfer_state_to = MAN
+				add_core_of = MAN
+			}
+			else = {
+				transfer_state_to = ROOT
+			}
+		}
+		set_autonomy = {
+			target = MON
+			autonomy_state = autonomy_integrated_puppet
+		}
+		MON = {
+			annex_country = {
+				target = TAN
+			}
+			drop_cosmetic_tag = yes
+		}
+		clr_country_flag = JAP_in_barb
+		clr_country_flag = to_MAN
+	}
+}
+
+country_event = {
+	id = AAL_SOV.1
+	title = AAL_SOV.1.t
+	desc = AAL_SOV.1.desc
+	picture = GFX_report_event_SOV_military_offensive
+	is_triggered_only = yes
+
+	immediate = {
+		SOV = {
+			transfer_navy = {
+				target = USA
+			}
+		}
+		country_event = {
+			id = AAL_SOV.2
+			hours = 8
+			random_days = 1 
+		}
+	}
+	option = {
+		name = AAL_SOV.1.a
+		transfer_units_fraction = {
+			target = KIR
+			size = 0.15
+		}
+		transfer_units_fraction = {
+			target = TOM
+			size = 0.15
+		}
+		transfer_units_fraction = {
+			target = IRK
+			size = 0.1
+		}
+	}
+}
+country_event = {
+	id = AAL_SOV.2
+	title = AAL_SOV.2.t
+	desc = AAL_SOV.2.desc
+	picture = GFX_news_event_french_fleet_scuttled
+	is_triggered_only = yes
+
+	option = {
+		name = AAL_SOV.2.a
+	}
+}
+
+country_event = { # Sakhalin win
+	id = AAL_JAP.1
+	title = AAL_JAP.1.t
+	desc = AAL_JAP.1.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	
+	option = {
+		name = AAL_JAP.1.a
+		add_political_power = 50
+		army_experience = 50
+		hidden_effect = {
+			655 = {
+				transfer_state_to = JAP
+			}
+		}
+	}
+}
+
+country_event = { # Sakhalin lose
+	id = AAL_JAP.2
+	title = AAL_JAP.2.t
+	desc = AAL_JAP.2.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	
+	option = {
+		name = AAL_JAP.2.a
+		add_political_power = -50
+		army_experience = 25
+	}
+}
+
+country_event = { # dummy event
+	id = AAL_JAP.3
+	title = AAL_JAP.3.t
+	desc = AAL_JAP.3.desc
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	
+	option = {
+		name = AAL_JAP.3.a
+	}
+}

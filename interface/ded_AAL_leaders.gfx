@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_TYM_priests"
+		textureFile = "gfx/leaders/AAL/portrait_AAL_TYM_priests.dds"
+	}
+}

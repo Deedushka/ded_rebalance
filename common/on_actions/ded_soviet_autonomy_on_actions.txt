@@ -1,0 +1,12 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = UKR
+				}
+				SOV = { country_event = soviet_autonomy_cap.1 }
+			}
+		}
+	}
+}
