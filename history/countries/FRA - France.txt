@@ -513,6 +513,11 @@ recruit_character = FRA_louis_renault
 recruit_character = FRA_henri_edmond_fouche
 recruit_character = FRA_joseph_bethenod
 
+# Vichy
+recruit_character = FRA_gustave_bertrand
+recruit_character = FRA_emile_mollard
+recruit_character = FRA_charles_delestraint
+
 if = {
 	limit = {
 		OR = {

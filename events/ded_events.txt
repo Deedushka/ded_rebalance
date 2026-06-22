@@ -8,10 +8,16 @@ country_event = {
 	desc = ded
 	is_triggered_only = yes
 	option = {
-		D04 = { load_focus_tree = vichy_french_focus } 
+		GER = {
+			country_event = AAL.1
+		}
 	}
 	option = {
-		reduce_occupation_trade_cost = yes
+		SOV = {
+			transfer_navy = {
+				target = USA
+			}
+		}
 	}
 }
 

@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_Emile_Mollard"
+		textureFile = "gfx/leaders/FRA/portrait_mollard.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Emile_Mollard_small"
+		textureFile = "gfx/leaders/FRA/idea_portrait_mollard.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Charles_Delestraint"
+		textureFile = "gfx/leaders/FRA/portrait_delestraint.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Charles_Delestraint_small"
+		textureFile = "gfx/leaders/FRA/idea_portrait_delestraint.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Gustave_Bertrand"
+		textureFile = "gfx/leaders/FRA/portrait_bertrand.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Gustave_Bertrand_small"
+		textureFile = "gfx/leaders/FRA/idea_portrait_bertrand.dds"
+	}
+}

@@ -340,3 +340,18 @@ remove_occupation_trade_cost = {
 		}
 	}
 }
+recruit_vichy_general_staff = {
+	FRA = {
+		FRA_gustave_bertrand = {
+			set_nationality = event_target:vichy_france	
+		}
+
+		FRA_emile_mollard = {
+			set_nationality = event_target:vichy_france	
+		}
+
+		FRA_charles_delestraint = {
+			set_nationality = event_target:vichy_france	
+		}
+	}
+}

@@ -220,6 +220,7 @@ on_actions = {
 					}
 				}
 				744 = {
+					add_extra_state_shared_building_slots = 10
 					add_building_construction = {
 						type = industrial_complex
 						level = 10
@@ -227,6 +228,7 @@ on_actions = {
 					}
 				}
 				283 = {
+					add_extra_state_shared_building_slots = 9
 					add_building_construction = {
 						type = industrial_complex
 						level = 9
@@ -234,6 +236,7 @@ on_actions = {
 					}
 				}
 				1032 = {
+					add_extra_state_shared_building_slots = 10
 					add_building_construction = {
 						type = industrial_complex
 						level = 10
@@ -241,6 +244,7 @@ on_actions = {
 					}
 				}
 				602 = {
+					add_extra_state_shared_building_slots = 8
 					add_building_construction = {
 						type = arms_factory
 						level = 8
@@ -248,6 +252,7 @@ on_actions = {
 					}
 				}
 				600 = {
+					add_extra_state_shared_building_slots = 8
 					add_building_construction = {
 						type = arms_factory
 						level = 8
@@ -255,12 +260,36 @@ on_actions = {
 					}
 				}
 				749 = {
+					add_extra_state_shared_building_slots = 8
 					add_building_construction = {
 						type = arms_factory
 						level = 8
 						instant_build = yes
 					}
 				}
+			}
+		}
+	}
+
+	# Japan-China war
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = { 
+					tag = JAP
+					FROM = { tag = CHI }
+				}
+				JAP = { set_rule = { can_puppet = no } }
+			}
+		}
+	}
+	on_peace = {
+		effect = {
+			if = {
+				limit = { 
+					original_tag = CHI
+				}
+				JAP = { set_rule = { can_puppet = yes } }
 			}
 		}
 	}

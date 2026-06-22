@@ -307,6 +307,14 @@ FRA_vichy_france = {
 				}
 			}
 			controls_state = 16 #Paris
+			custom_trigger_tooltip = {
+				tooltip = control_all_france_main_tooltip
+				control_all_main_france_trigger = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = control_all_france_non_main_tooltip
+				control_all_non_main_france_trigger = yes
+			}
 		}
 
 		visible = {
@@ -1762,12 +1770,12 @@ VIC_concessions_to_the_germans = {
 		available = {
 			has_idea = VIC_CGQJ
 			NOT = { has_idea = VIC_trade_exploitation_1 }
-			any_controlled_state = {
-				has_dynamic_modifier = VIC_refugees
-			}
 		}
 		visible = {
 			NOT = { has_country_flag = VIC_deportation_immigrants_sended }
+			any_controlled_state = {
+				has_dynamic_modifier = VIC_refugees
+			}
 		}
 		cost = 50
 		ai_will_do = {
@@ -2121,6 +2129,10 @@ FRA_intervention_in_overseas_territories = {
 								state = 286
 								state = 741
 								state = 1017
+								state = 1066 
+								state = 1067 
+								state = 1068 
+								state = 1069 
 							}
 						}
 						add_compliance = 5
@@ -2169,6 +2181,10 @@ FRA_intervention_in_overseas_territories = {
 					state = 286
 					state = 741
 					state = 1017
+					state = 1066 
+					state = 1067 
+					state = 1068 
+					state = 1069 
 				}
 				CONTROLLER = {
 					NOT = {
@@ -2197,6 +2213,10 @@ FRA_intervention_in_overseas_territories = {
 						state = 286
 						state = 741
 						state = 1017
+						state = 1066 
+						state = 1067 
+						state = 1068 
+						state = 1069 
 					}
 					not = { is_controlled_by = ROOT }
 					CONTROLLER = {

@@ -16,3 +16,17 @@ has_any_trade_exploitation_trigger = {
 		has_idea = VIC_trade_exploitation_1
 	}
 }
+control_all_main_france_trigger = {
+	controls_state = 14
+	controls_state = 15
+	controls_state = 19
+	controls_state = 23
+	controls_state = 24
+	controls_state = 29
+	controls_state = 30
+}
+control_all_non_main_france_trigger = {
+	459 = { is_controlled_by_ROOT_or_ally = yes }
+	460 = { is_controlled_by_ROOT_or_ally = yes }
+	513 = { is_controlled_by_ROOT_or_ally = yes }
+}
