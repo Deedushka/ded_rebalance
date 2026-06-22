@@ -12,13 +12,6 @@ country_event = {
 			country_event = AAL.1
 		}
 	}
-	option = {
-		SOV = {
-			transfer_navy = {
-				target = USA
-			}
-		}
-	}
 }
 
 country_event = {

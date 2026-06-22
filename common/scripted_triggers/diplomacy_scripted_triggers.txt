@@ -766,14 +766,6 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 	}
 	if = {
 		limit = {
-			NOT = { original_tag = D75 }
-		}
-		custom_trigger_tooltip = {
-			FROM = { tag = D74 }
-		}
-	}
-	if = {
-		limit = {
 			has_game_rule = {
 				rule = allow_release_nations
 				option = PEACE_ONLY
@@ -956,6 +948,9 @@ DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
 		}
 	}
 
+	custom_trigger_tooltip = {
+		always = no
+	}
 }
 DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 	if = {
