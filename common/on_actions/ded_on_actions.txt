@@ -7,7 +7,9 @@ on_actions = {
 					OR = {
 						original_tag = GER
 						original_tag = ITA
+
 						original_tag = JAP
+						original_tag = SIA
 	
 						original_tag = HUN
 						original_tag = ROM
