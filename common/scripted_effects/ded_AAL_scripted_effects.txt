@@ -82,6 +82,9 @@ AAL_SOV_collapse_central_asia = {
 AAL_SOV_collapse_far_east = {
 	SOV = {
 		release = VLA
+		VLA = {
+			load_oob = "VLA_AAL"
+		}
 		release = FER
 		release = YAK
 		release = BYA

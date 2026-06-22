@@ -2197,17 +2197,98 @@ DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
 	}
 }
 
+# AAL diplomacy
+
 DIPLOMACY_WAR_ENABLE_TRIGGER = {
 	if = {
 		limit = {
-			tag = GER
+			OR = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+			has_global_flag = AAL_SOV_collapse
 		}
 		custom_trigger_tooltip = {
-			tooltip = PREVENT_GER_WAR_ON_SOV
+			tooltip = PREVENT_AFTER_AAL
 			FROM = {
-				NOT = {
-					tag = SOV
-				}
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+		}
+	}
+}
+
+DIPLOMACY_GUARANTEE_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			OR = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+			has_global_flag = AAL_SOV_collapse
+		}
+		custom_trigger_tooltip = {
+			tooltip = PREVENT_AFTER_AAL
+			FROM = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+		}
+	}
+}
+
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			OR = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+			has_global_flag = AAL_SOV_collapse
+		}
+		custom_trigger_tooltip = {
+			tooltip = PREVENT_AFTER_AAL
+			FROM = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+		}
+	}
+}
+
+DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			OR = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+			has_global_flag = AAL_SOV_collapse
+		}
+		custom_trigger_tooltip = {
+			tooltip = PREVENT_AFTER_AAL
+			FROM = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+		}
+	}
+}
+
+DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			OR = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
+			}
+			has_global_flag = AAL_SOV_collapse
+		}
+		custom_trigger_tooltip = {
+			tooltip = PREVENT_AFTER_AAL
+			FROM = {
+				AAL_collapse_countries = no
+				NOT = { tag = SOV }
 			}
 		}
 	}

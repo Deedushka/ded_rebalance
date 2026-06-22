@@ -403,6 +403,9 @@ SOV_after_AAL_decision_categories = {
 					}
 				}
 				SOV = { country_event = AAL_SOV.1 }
+				KAZ = {
+					load_oob = ""
+				}
 			}
 		}
 	}
