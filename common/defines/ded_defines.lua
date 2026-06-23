@@ -53,9 +53,6 @@
 		0,0, -- SAM
 	}
 
-    -- Ground Anti-Air reduce CAS damage
-    NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8
-
 	-- Production
 	NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 30
 

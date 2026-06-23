@@ -1193,6 +1193,11 @@ tactic_search_destroy = {
 			has_unit_type = helicopter_recon
 			has_unit_type = helicopter_transport
 		}
+		OR = {
+			has_unit_type = artillery
+			has_unit_type = artillery_brigade
+			has_unit_type = mot_artillery_brigade
+		}
 	}
 	
 	active = no
@@ -1202,6 +1207,6 @@ tactic_search_destroy = {
 	}
 	picture = tactic_search_destroy
 	
-	attacker = 0.2
+	attacker = 0.25
 	defender = -0.2
 }

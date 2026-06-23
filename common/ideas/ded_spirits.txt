@@ -118,13 +118,4 @@ ideas = {
 			}
 		}
 	}
-	country = {
-		debug_ded_check = {
-			allowed = {
-				always = no
-			}
-			modifier = {
-			}
-		}
-	}
 }

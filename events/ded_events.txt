@@ -1,19 +1,6 @@
 add_namespace = ded
 add_namespace = debug_ded
 
-# Debug events
-country_event = {
-	id = ded.1
-	title = ded
-	desc = ded
-	is_triggered_only = yes
-	option = {
-		GER = {
-			country_event = AAL.1
-		}
-	}
-}
-
 country_event = {
 	id = debug_ded.1
 	title = title

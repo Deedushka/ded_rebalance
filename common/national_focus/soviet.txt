@@ -4977,7 +4977,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 1
+		cost = 5
 		dynamic = yes 
 		available = {
 
@@ -4986,7 +4986,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_political_power = 75
+			add_ideas = SOV_Leningrad_University
 		}
 	}
 
@@ -7035,6 +7035,9 @@ focus_tree = {
 				}
 				NOT = { has_completed_focus = SOV_the_hands_do }
 			}
+			NOT = {
+				has_global_flag = AAL_SOV_collapse
+			}
 		}
 
 		available = {
@@ -7087,13 +7090,6 @@ focus_tree = {
 				NOT = { has_completed_focus = SOV_the_hands_do }
 			}
 		}
-		offset = {
-			x = 5
-			y = 0
-			trigger = {
-				has_global_flag = AAL_SOV_collapse
-			}
-		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
@@ -7121,6 +7117,9 @@ focus_tree = {
 						has_completed_focus = SOV_the_hands_do
 					}
 				}
+			}
+			NOT = {
+				has_global_flag = AAL_SOV_collapse
 			}
 		}
 
@@ -12020,7 +12019,11 @@ focus_tree = {
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
-		
+		allow_branch = {
+			NOT = {
+				has_global_flag = AAL_SOV_collapse
+			}
+		}
 
 		available = {
 
