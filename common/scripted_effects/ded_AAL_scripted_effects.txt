@@ -25,10 +25,15 @@ deactivate_AAL_missions = {
 		JAP = {
 			clr_country_flag = JAP_in_barb
 		}
+		SOV = { remove_mission = AAL_SOV_war_status_timer }
 	}
 	add_timed_idea = {
 		idea = AAL_GER_barbarossa_lost
 		days = 160
+	}
+	SOV = {
+		add_to_variable = { SOV_the_red_army_surrender_limit = 1 }
+		add_to_variable = { SOV_the_red_army_industrial_capacity_factory = 0.1 }
 	}
 }
 AAL_add_days_missions = {
@@ -55,6 +60,7 @@ AAL_SOV_peace_deal = {
 		GER = { 
 			white_peace = SOV
 			country_event = AAL.1
+			set_country_flag = GER_win_barb
 		}
 		JAP = {
 			if = {  
@@ -63,9 +69,6 @@ AAL_SOV_peace_deal = {
 				}
 				white_peace = SOV
 				country_event = AAL.2
-			}
-			else = {
-				activate_decision = AAL_JAP_military_operation
 			}
 		}
 	}
@@ -82,9 +85,6 @@ AAL_SOV_collapse_central_asia = {
 AAL_SOV_collapse_far_east = {
 	SOV = {
 		release = VLA
-		VLA = {
-			load_oob = "VLA_AAL"
-		}
 		release = FER
 		release = YAK
 		release = BYA
@@ -141,4 +141,32 @@ AAL_SOV_collapse_ural = {
 		}
 		release = KIR
 	}
+}
+AAL_SOV_bring_back_democrats = {
+	set_politics = {
+		ruling_party = democratic
+		elections_allowed = no
+	}
+	add_country_leader_role = {
+		character = "SOV_vasily_blyukher"
+		country_leader = {
+			ideology = populism
+			traits = { 
+				socialite_connections	
+				anti_fascist_committee 
+			}
+			expire = "1972.12.23.1"
+		}
+		promote_leader = yes
+	}
+	set_popularities = {
+		democratic = 56
+		neutrality = 21
+		fascism = 3
+		communism = 20
+	}
+	set_cosmetic_tag = SOV_RUS_DEM
+	complete_national_focus = SOV_patriarch_of_all_russia
+	complete_national_focus = SOV_cooperation_against_stalin
+	complete_national_focus = SOV_return_democracy_to_the_party
 }

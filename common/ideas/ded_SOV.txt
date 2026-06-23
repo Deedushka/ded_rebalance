@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+		SOV_Leningrad_University = {
+			picture = PLACEHOLDER_idea_icon
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

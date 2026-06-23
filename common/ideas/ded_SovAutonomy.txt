@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		autonomy_soviet_partisans = {
+			picture = PLACEHOLDER_idea_icon
+			do_effect = {
+				has_government = communism
+				has_autonomy_state = autonomy_soviet
+				has_defensive_war = yes
+			}
+			modifier = {
+				compliance_growth_on_our_occupied_states = -0.25
+				resistance_growth_on_our_occupied_states = 0.25
+				resistance_target_on_our_occupied_states = 0.3
+			}
+		}
+	}
+}

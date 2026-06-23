@@ -19141,6 +19141,340 @@ ai_will_do = {
 			}
 		}
 	}
+
+# AAL Focus Tree
+
+	focus = {
+		id = SOV_AAL_stop_chaos
+		icon = GFX_focus_PLACEHOLDER
+		x = 14
+		y = 0
+		cost = 3
+		relative_position_id = SOV_strengthen_the_mobilization_plan
+		allow_branch = {
+			has_global_flag = AAL_SOV_collapse
+		}
+		available = {
+			NOT = {
+				has_country_leader  = {
+					ruling_only = yes
+					character = SOV_iosif_stalin
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_constitution_federation
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_stop_chaos }
+		x = 1
+		y = 1
+		cost = 3
+		relative_position_id = SOV_AAL_stop_chaos
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_antifa_ideology
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_stop_chaos }
+		x = -1
+		y = 1
+		cost = 3
+		relative_position_id = SOV_AAL_stop_chaos
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_rights_limitation
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_constitution_federation }
+		prerequisite = { focus = SOV_AAL_antifa_ideology }
+		x = -1
+		y = 1
+		cost = 3
+		relative_position_id = SOV_AAL_constitution_federation
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_army_with
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_rights_limitation }
+		x = -3
+		y = 1
+		cost = 3
+		relative_position_id = SOV_AAL_rights_limitation
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_with_own_state
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_rights_limitation }
+		x = 2
+		y = 1
+		cost = 3
+		relative_position_id = SOV_AAL_rights_limitation
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_gulag_reform
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_army_with }
+		x = -2
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_army_with
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_labor_discipline
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_army_with }
+		x = 0
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_army_with
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_geological_exploration
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_labor_discipline focus = SOV_AAL_mobilize_people }
+		prerequisite = { focus = SOV_AAL_gulag_reform }
+		x = 1
+		y = 2
+		cost = 2
+		relative_position_id = SOV_AAL_labor_discipline
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_mobilize_people
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_army_with }
+		x = 2
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_army_with
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_allow_privatization
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_with_own_state }
+		x = -1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_with_own_state
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_allow_trading
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_with_own_state }
+		x = 1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_with_own_state
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_quick_urbanization
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_labor_discipline focus = SOV_AAL_mobilize_people }
+		prerequisite = { focus = SOV_AAL_allow_privatization }
+		x = 0
+		y = 1
+		cost = 3
+		relative_position_id = SOV_AAL_allow_privatization
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_restore_constitutional_order
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_quick_urbanization }
+		prerequisite = { focus = SOV_AAL_geological_exploration }
+		x = -1
+		y = 2
+		cost = 2
+		relative_position_id = SOV_AAL_quick_urbanization
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = SOV_AAL_return_volga_region
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		x = -4
+		y = 1
+		cost = 1
+		relative_position_id = SOV_AAL_restore_constitutional_order
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_integrate_kirov
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		x = -2
+		y = 1
+		cost = 1
+		relative_position_id = SOV_AAL_restore_constitutional_order
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_northern_negotiations
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_return_volga_region }
+		prerequisite = { focus = SOV_AAL_integrate_kirov }
+		x = 1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_return_volga_region
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_help_patriarch
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		x = -1
+		y = 2
+		cost = 2
+		relative_position_id = SOV_AAL_restore_constitutional_order
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_integrate_tomsk
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		x = 1
+		y = 2
+		cost = 2
+		relative_position_id = SOV_AAL_restore_constitutional_order
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_return_siberia_region
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_integrate_tomsk }
+		prerequisite = { focus = SOV_AAL_help_patriarch }
+		x = -1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_integrate_tomsk
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_annul_national_movements
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		x = 2
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_restore_constitutional_order
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_finish_whites
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		x = 4
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_restore_constitutional_order
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_first_SEZ
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_finish_whites }
+		prerequisite = { focus = SOV_AAL_annul_national_movements }
+		x = -1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_finish_whites
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_amendment_to_constitution
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_return_siberia_region }
+		x = -1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_return_siberia_region
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_new_russian
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_return_siberia_region }
+		x = 1
+		y = 1
+		cost = 2
+		relative_position_id = SOV_AAL_return_siberia_region
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_AAL_destroy_nazis
+		icon = GFX_focus_PLACEHOLDER
+		prerequisite = { focus = SOV_AAL_new_russian }
+		prerequisite = { focus = SOV_AAL_amendment_to_constitution }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = SOV_AAL_new_russian
+		completion_reward = {
+			
+		}
+	}
 }
 ###  ###  ##  ###  ##  #  #  ##  #    	   ## ### #  # ### ###         
 #  # #   #     #  #  # ## # #  # #    	  #    #  #  # #   #   {~._.~} 

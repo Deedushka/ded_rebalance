@@ -13,19 +13,22 @@ on_actions = {
 							FROM = { tag = GER }
 						}
 					}
-				}
-				hidden_effect = {
 					GER = { 
-						activate_AAL_missions = yes
-					}
-					SOV = {
-						activate_AAL_missions_spectate = yes
-						if = {
-							limit = {
-								NOT = { has_completed_focus = SOV_claims_in_baltic }
-							}
-							complete_national_focus = SOV_claims_in_baltic
+						NOT = {
+							has_country_flag = GER_win_barb
 						}
+					}
+				}
+				GER = { 
+					activate_AAL_missions = yes
+				}
+				SOV = {
+					activate_AAL_missions_spectate = yes
+					if = {
+						limit = {
+							NOT = { has_completed_focus = SOV_claims_in_baltic }
+						}
+						complete_national_focus = SOV_claims_in_baltic
 					}
 				}
 			}
@@ -45,9 +48,29 @@ on_actions = {
 						}
 					}
 				}
-				hidden_effect = {
-					JAP = { set_country_flag = JAP_in_barb } 
+				JAP = { set_country_flag = JAP_in_barb }
+			}
+		}
+	}
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					has_autonomy_state = autonomy_soviet
+					has_defensive_war = yes
 				}
+				add_ideas = autonomy_soviet_partisans
+			}
+		}
+	}
+	on_peace = {
+		effect = {
+			if = {
+				limit = { 
+					has_autonomy_state = autonomy_soviet
+					has_idea = autonomy_soviet_partisans
+				}
+				remove_ideas = autonomy_soviet_partisans
 			}
 		}
 	}

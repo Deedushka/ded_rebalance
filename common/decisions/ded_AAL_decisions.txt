@@ -1,3 +1,4 @@
+@days_start_missions = 120
 AAL_decision_categories = {
 	AAL_barbarossa_mission = {
 		icon = generic_operation
@@ -6,7 +7,7 @@ AAL_decision_categories = {
 		}
 		fire_only_once = yes
 		is_good = no
-		days_mission_timeout = 180
+		days_mission_timeout = @days_start_missions
 		available = {
 			214 = {
 				is_axis_controlled = yes
@@ -267,7 +268,7 @@ AAL_decision_categories = {
 				has_war_with = GER
 			}
 		}
-		days_mission_timeout = 180
+		days_mission_timeout = @days_start_missions
 		allowed = {
 			always = no
 		}
@@ -332,6 +333,73 @@ AAL_decision_categories = {
 }
 
 SOV_after_AAL_decision_categories = {
+	AAL_SOV_only_peace_deal_debug = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			AAL_SOV_peace_deal = yes
+		}
+	}
+	AAL_SOV_collapse_debug = {
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			AAL_SOV_peace_deal = yes
+			remove_mission = AAL_SOV_military_coup
+			remove_mission = AAL_SOV_central_asia_leave
+			remove_mission = AAL_SOV_far_east_leave
+			remove_mission = AAL_SOV_ural_leave
+			hidden_effect = {
+				AAL_SOV_collapse_central_asia = yes
+				AAL_SOV_collapse_far_east = yes
+				AAL_SOV_collapse_ural = yes
+				
+				SOV = {
+					transfer_units_fraction = {
+						target = KAZ
+						size = 1.0
+					}
+				}
+				KAZ = {
+					transfer_units_fraction = {
+						target = SOV
+						size = 1.0
+					}
+				}
+				SOV = { country_event = AAL_SOV.1 }
+				every_country = {
+					limit = {
+						AAL_collapse_countries = yes
+					}
+					load_oob = "AAL_spawn"
+					random_controlled_state = {
+						create_unit = {
+							division = "division_template = \"Opolchenie\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+							owner = PREV
+							count = 12
+						}
+					}
+					if = {
+						limit = {
+							original_tag = KZO
+						}
+						load_oob = "KZO_spawn"
+						random_controlled_state = {
+							create_unit = {
+								division = "division_template = \"Cossack regiment\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+								owner = PREV
+								count = 18
+							}
+						}
+					}
+				}
+
+				AAL_SOV_bring_back_democrats = yes
+			}
+		}
+	}
 	AAL_SOV_military_coup = {
 		icon = generic_operation
 		allowed = {
@@ -341,9 +409,11 @@ SOV_after_AAL_decision_categories = {
 		available = {
 			always = no
 		}
-		days_mission_timeout = 60
-		complete_effect = {
-			
+		days_mission_timeout = 70
+		timeout_effect = {
+			hidden_effect = {
+				AAL_SOV_bring_back_democrats = yes
+			}
 		}
 	}
 	AAL_SOV_central_asia_leave = {
@@ -403,8 +473,31 @@ SOV_after_AAL_decision_categories = {
 					}
 				}
 				SOV = { country_event = AAL_SOV.1 }
-				KAZ = {
-					load_oob = ""
+				every_country = {
+					limit = {
+						AAL_collapse_countries = yes
+					}
+					load_oob = "AAL_spawn"
+					random_controlled_state = {
+						create_unit = {
+							division = "division_template = \"Opolchenie\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+							owner = PREV
+							count = 12
+						}
+					}
+					if = {
+						limit = {
+							original_tag = KZO
+						}
+						load_oob = "KZO_spawn"
+						random_controlled_state = {
+							create_unit = {
+								division = "division_template = \"Cossack regiment\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+								owner = PREV
+								count = 18
+							}
+						}
+					}
 				}
 			}
 		}
@@ -420,6 +513,9 @@ operations = {
 		visible = {
 			has_global_flag = AAL_SOV_collapse
 			NOT = { has_full_control_of_state = 655 }
+		}
+		ai_will_do = {
+			base = 0
 		}
 		fire_only_once = no
 		available = {

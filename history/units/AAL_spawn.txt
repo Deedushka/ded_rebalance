@@ -1,0 +1,18 @@
+﻿division_template = {
+	name = "Opolchenie"
+	division_names_group = SOV_INF_02
+	template_counter = 38
+	is_locked = yes
+
+	regiments = { 
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+	}
+}

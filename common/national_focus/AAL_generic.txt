@@ -22,7 +22,7 @@
 		icon = GFX_goal_generic_production
 		x = 5
 		y = 0
-		cost = 5
+		cost = 1
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		
@@ -49,7 +49,7 @@
 		x = -1
 		y = 1
 		relative_position_id = AAL_industrial_effort
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -124,7 +124,7 @@
 		x = 1
 		y = 1
 		relative_position_id = AAL_industrial_effort
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -198,7 +198,7 @@
 		x = 0
 		y = 1
 		relative_position_id = AAL_construction_effort
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -272,7 +272,7 @@
 		x = 0
 		y = 1
 		relative_position_id = AAL_production_effort
-		cost = 10
+		cost = 3
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 
@@ -346,7 +346,7 @@
 		x = 0
 		y = 1
 		relative_position_id = AAL_construction_effort_2
-		cost = 5
+		cost = 2
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -446,7 +446,7 @@
 		x = 0
 		y = 1
 		relative_position_id = AAL_production_effort_2
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		
@@ -520,7 +520,7 @@
 		x = -1
 		y = 1
 		relative_position_id = AAL_infrastructure_effort
-		cost = 5
+		cost = 2
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -618,7 +618,7 @@
 		x = 1
 		y = 1
 		relative_position_id = AAL_infrastructure_effort
-		cost = 10
+		cost = 3
 
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 		

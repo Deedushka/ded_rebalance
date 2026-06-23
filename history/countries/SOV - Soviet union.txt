@@ -613,6 +613,10 @@ set_variable = { SOV_the_red_army_dig_in_speed_factor = 0 } # -> Experts in Camo
 set_variable = { SOV_the_red_army_operative_slot  = 0 } # -> Organization of the Partisans
 set_variable = { SOV_the_red_army_max_command_power_mult = 0 } # -> Depoliticize the Military
 
+#AAL BUFFS (ADDED BY DECISIONS)
+set_variable = { SOV_the_red_army_surrender_limit = 0 } # -> Depoliticize the Military
+set_variable = { SOV_the_red_army_industrial_capacity_factory = 0 } # -> Depoliticize the Military
+
 add_dynamic_modifier = { modifier = SOV_the_red_army_dynamic_modifier }
 
 #THE POLITBURO SPIRIT VARS
