@@ -60,3 +60,5 @@
  tactic_masterful_delay: "Умелое сдерживание"
 
  tactic_search_destroy: "Найти и уничтожить"
+ tactic_search_destroy_helicopter_tt: "§YИспользование вертолётов§!"
+ tactic_search_destroy_artillery_tt: "§YИспользовать любую огневую мощь§!"

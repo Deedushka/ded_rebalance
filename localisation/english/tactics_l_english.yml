@@ -60,3 +60,5 @@
  tactic_masterful_delay: "Masterful Delay"
 
  tactic_search_destroy: "Search and destroy"
+ tactic_search_destroy_helicopter_tt: "§YUsing helicopters§!"
+ tactic_search_destroy_artillery_tt: "§YUsing any firepower§!"

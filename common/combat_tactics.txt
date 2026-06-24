@@ -719,6 +719,13 @@ tactic_guerrilla_tactics = { #People's army defender tactic. also for German vol
 			skill > 2
 			has_trait = trickster
 		}
+		OR = {
+			NOT = {
+				is_fighting_in_terrain = desert
+				is_fighting_in_terrain = hills
+				is_fighting_in_terrain = plains
+			}
+		}
 	}
 	
 	active = no
@@ -1187,16 +1194,33 @@ tactic_search_destroy = {
 	trigger = {
 		is_attacker = yes
 		phase = no
-		OR = {
-			has_unit_type = helicopter_brigade
-			has_unit_type = helicopter_field_hospital
-			has_unit_type = helicopter_recon
-			has_unit_type = helicopter_transport
+		custom_trigger_tooltip = {
+			tooltip = tactic_search_destroy_helicopter_tt
+			OR = {
+				has_unit_type = helicopter_brigade
+				has_unit_type = helicopter_field_hospital
+				has_unit_type = helicopter_recon
+				has_unit_type = helicopter_transport
+			}
 		}
-		OR = {
-			has_unit_type = artillery
-			has_unit_type = artillery_brigade
-			has_unit_type = mot_artillery_brigade
+		custom_trigger_tooltip = {
+			tooltip = tactic_search_destroy_artillery_tt
+			OR = {
+				has_unit_type = artillery
+				has_unit_type = artillery_brigade
+				has_unit_type = mot_artillery_brigade
+				has_unit_type = rocket_artillery
+				has_unit_type = rocket_artillery_brigade
+				has_unit_type = heavy_sp_artillery_brigade
+				has_unit_type = light_sp_artillery_brigade
+				has_unit_type = medium_sp_artillery_brigade
+				has_unit_type = modern_sp_artillery_brigade
+				has_unit_type = mot_rocket_artillery_brigade
+				has_unit_type = super_heavy_artillery
+				has_unit_type = super_heavy_sp_artillery_brigade
+				has_unit_type = self_propelled_super_heavy_artillery
+				has_unit_type = field_guns
+			}
 		}
 	}
 	
