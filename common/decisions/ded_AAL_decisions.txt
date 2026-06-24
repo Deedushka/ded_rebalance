@@ -396,7 +396,7 @@ SOV_after_AAL_decision_categories = {
 					}
 				}
 
-				AAL_SOV_bring_back_democrats = yes
+				country_event = AAL_SOV.3
 			}
 		}
 	}
@@ -411,9 +411,7 @@ SOV_after_AAL_decision_categories = {
 		}
 		days_mission_timeout = 70
 		timeout_effect = {
-			hidden_effect = {
-				AAL_SOV_bring_back_democrats = yes
-			}
+			country_event = AAL_SOV.3
 		}
 	}
 	AAL_SOV_central_asia_leave = {
@@ -504,6 +502,433 @@ SOV_after_AAL_decision_categories = {
 	}
 }
 
+SOV_AAL_special_military_operations = {
+	AAL_SOV_rush_to_tatars = {
+		icon = generic_operation
+		available = {
+			has_war = no
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 249
+				state = 399
+				state = 651
+				state = 256
+				state = 833
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = TAT
+				type = annex_everything
+			}
+			UDM = {
+				add_to_war = {
+					targeted_alliance = TAT
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+			BSK = {
+				add_to_war = {
+					targeted_alliance = TAT
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+			MEL = {
+				add_to_war = {
+					targeted_alliance = TAT
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+			CHU = {
+				add_to_war = {
+					targeted_alliance = TAT
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+		}
+	}
+	AAL_SOV_destroy_hetmanate = {
+		icon = generic_operation
+		available = {
+			has_war = no
+			has_full_control_of_state = 249
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 652
+				state = 251
+				state = 401
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = KZO
+				type = annex_everything
+			}
+		}
+	}
+	AAL_SOV_operation_chamomile = {
+		icon = generic_operation
+		available = {
+			has_war = no
+			has_full_control_of_state = 652
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 400
+			}
+		}
+		fire_only_once = yes
+		custom_cost_trigger = {
+			has_army_experience > 45
+		}
+		custom_cost_text = decision_cost_45_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = KIR
+				type = annex_everything
+			}
+		}
+	}
+
+	AAL_SOV_trip_to_east = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				KIR = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 403
+				state = 580
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = TYM
+				type = annex_everything
+			}
+		}
+	}
+	AAL_SOV_destroy_omsk = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				KIR = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+			has_full_control_of_state = 403
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 571
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = OMS
+				type = annex_everything
+			}
+		}
+	}
+	AAL_SOV_destroy_altai = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				KIR = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+			has_full_control_of_state = 571
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 570
+				state = 40
+				state = 569
+				state = 654
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = ALN
+				type = annex_everything
+			}
+		}
+	}
+	AAL_SOV_destroy_tomsk = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				KIR = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+			has_full_control_of_state = 570
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 578
+				state = 577
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 45
+		}
+		custom_cost_text = decision_cost_45_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = TOM
+				type = annex_everything
+			}
+		}
+	}
+	AAL_SOV_pressure_on_north = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				KIR = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+			has_full_control_of_state = 580
+			has_full_control_of_state = 577
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 580
+				state = 577
+				state = 579
+				state = 824
+			}
+		}
+		custom_cost_trigger = {
+			divisions_in_border_state = {
+				size > 5
+				state = 580
+				border_state = 579
+			}
+			divisions_in_border_state = {
+				size > 2
+				state = 577
+				border_state = 579
+			}
+			divisions_in_border_state = {
+				size > 2
+				state = 577
+				border_state = 824
+			}
+		}
+		custom_cost_text = decision_cost_AAL_SOV_pressure_on_north
+		fire_only_once = yes
+		complete_effect = {
+			ROOT = {
+				annex_country = {
+					target = YAM
+					transfer_troops = no
+				}
+			}
+		}
+	}
+
+	AAL_SOV_abolish_national_movements = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				TOM = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 568
+				state = 567
+				state = 566
+				state = 564
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = IRK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BYA
+				type = annex_everything
+			}
+		}
+	}
+	AAL_SOV_dash_to_asia = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				TOM = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+			has_full_control_of_state = 564
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 565
+				state = 563
+				state = 561
+				state = 657
+				state = 560
+				state = 409
+				state = 408
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 25
+		}
+		custom_cost_text = decision_cost_25_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = FER
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = VLA
+				type = annex_everything
+			}
+		}
+	}
+
+	AAL_SOV_restore_constitutional_order = {
+		icon = generic_operation
+		visible = {
+			OR = {
+				VLA = { exists = no }
+				is_debug = yes
+			}
+		}
+		available = {
+			has_war = no
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 583
+				state = 590
+				state = 882
+				state = 588
+				state = 589
+				state = 881
+				state = 402
+				state = 407
+				state = 406
+				state = 587
+				state = 404
+				state = 586
+				state = 732
+				state = 742
+				state = 405
+				state = 830
+				state = 585
+				state = 823
+				state = 831
+				state = 832
+				state = 584
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 45
+		}
+		custom_cost_text = decision_cost_45_army_xp
+		complete_effect = {
+			declare_war_on = {
+				target = KAZ
+				type = annex_everything
+			}
+			TMS = {
+				add_to_war = {
+					targeted_alliance = KAZ
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+			UZB = {
+				add_to_war = {
+					targeted_alliance = KAZ
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+			TAJ = {
+				add_to_war = {
+					targeted_alliance = KAZ
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+			KYR = {
+				add_to_war = {
+					targeted_alliance = KAZ
+					enemy = ROOT
+    				hostility_reason = asked_to_join
+				}
+			}
+		}
+	}
+}
+
 operations = {
 	AAL_JAP_military_operation = {
 		icon = generic_operation
@@ -515,7 +940,7 @@ operations = {
 			NOT = { has_full_control_of_state = 655 }
 		}
 		ai_will_do = {
-			base = 0
+			base = 5
 		}
 		fire_only_once = no
 		available = {
@@ -529,6 +954,11 @@ operations = {
 			custom_trigger_tooltip = {
 				tooltip = JAP_AAL_border_tt
 				NOT = { has_country_flag = JAP_AAL_border }
+			}
+			divisions_in_border_state = {
+				state = 537
+				border_state = 655
+				size > 0
 			}
 		}
 		cost = 50

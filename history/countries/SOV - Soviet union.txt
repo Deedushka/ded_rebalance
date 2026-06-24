@@ -614,8 +614,9 @@ set_variable = { SOV_the_red_army_operative_slot  = 0 } # -> Organization of the
 set_variable = { SOV_the_red_army_max_command_power_mult = 0 } # -> Depoliticize the Military
 
 #AAL BUFFS (ADDED BY DECISIONS)
-set_variable = { SOV_the_red_army_surrender_limit = 0 } # -> Depoliticize the Military
-set_variable = { SOV_the_red_army_industrial_capacity_factory = 0 } # -> Depoliticize the Military
+set_variable = { SOV_the_red_army_surrender_limit = 0 } # -> Surrender limit for receiving buffs
+set_variable = { SOV_the_red_army_industrial_capacity_factory = 0 }
+set_variable = { SOV_the_red_army_production_factory_max_efficiency_factor = 0 }
 
 add_dynamic_modifier = { modifier = SOV_the_red_army_dynamic_modifier }
 
@@ -701,6 +702,19 @@ set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0 } #Victory O
 set_variable = { SOV_planned_economy_industry_repair_factor = 0 } #Victory Over Devastation
 set_variable = { SOV_planned_economy_consumer_goods_factor = 0 } #Victory Over Devastation
 
+# AAL BUFFS
+
+# ADAPTIVE CHAOS
+set_variable = { SOV_adaptive_chaos_production_factory_efficiency_gain_factor = 1 }
+set_variable = { SOV_adaptive_chaos_line_change_production_efficiency_factor = 1 }
+set_variable = { SOV_adaptive_chaos_experience_gain_army = 1 }
+set_variable = { SOV_adaptive_chaos_stability_factor = 1 }
+set_variable = { SOV_adaptive_chaos_political_power_factor = 1 }
+set_variable = { SOV_adaptive_chaos_war_support_factor = 1 }
+set_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = -1 }
+set_variable = { SOV_adaptive_chaos_supply_node_range = 1 }
+set_variable = { SOV_adaptive_chaos_supply_consumption_factor = -1 }
+set_variable = { SOV_adaptive_chaos_enemy_operative_capture_chance_factor = 1 }
 
 #Add synthetic refineries tech
 set_technology = {

@@ -1,16 +1,16 @@
 on_actions = {
-	on_declare_war = {
+	on_war_relation_added = {
 		effect = {
 			if = {
 				limit = {
 					OR = {
 						AND = {
-							tag = GER
-							FROM = { tag = SOV }
+							ROOT = { original_tag = GER }
+							FROM = { original_tag = SOV }
 						}
 						AND = {
-							tag = SOV
-							FROM = { tag = GER }
+							ROOT = { original_tag = SOV }
+							FROM = { original_tag = GER }
 						}
 					}
 					GER = { 
@@ -39,16 +39,82 @@ on_actions = {
 					GER = { has_active_mission = AAL_barbarossa_mission }
 					OR = {
 						AND = {
-							tag = JAP
-							FROM = { tag = SOV }
+							ROOT = { original_tag = JAP }
+							FROM = { original_tag = SOV }
 						}
 						AND = {
-							tag = SOV
-							FROM = { tag = JAP }
+							ROOT = { original_tag = SOV }
+							FROM = { original_tag = JAP }
 						}
 					}
 				}
 				JAP = { set_country_flag = JAP_in_barb }
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { state = 219 }
+					ROOT = {
+						has_active_mission = AAL_barbarossa_mission
+					}
+				}
+				FROM = {
+					kill_country_leader = yes
+					SOV_promote_to_country_leader_beriya = yes
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						AAL_collapse_countries = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { original_tag = VLA }
+					}
+					annex_country = {
+						target = TAY
+						transfer_troops = no
+					}
+					annex_country = {
+						target = EVE
+						transfer_troops = no
+					}
+					annex_country = {
+						target = YAK
+						transfer_troops = no
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+				}
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						AAL_collapse_countries = yes
+					}
+				}
+				FROM = {
+					every_core_state = {
+						add_core_of = ROOT
+					}
+				}
 			}
 		}
 	}

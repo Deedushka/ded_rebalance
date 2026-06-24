@@ -32,8 +32,7 @@ deactivate_AAL_missions = {
 		days = 160
 	}
 	SOV = {
-		add_to_variable = { SOV_the_red_army_surrender_limit = 1 }
-		add_to_variable = { SOV_the_red_army_industrial_capacity_factory = 0.1 }
+		add_to_variable = { SOV_the_red_army_surrender_limit = 0.75 }
 	}
 }
 AAL_add_days_missions = {
@@ -80,13 +79,21 @@ AAL_SOV_collapse_central_asia = {
 		release = TAJ
 		release = TMS
 		release = UZB
+		add_stability = -0.05
 	}
 }
 AAL_SOV_collapse_far_east = {
 	SOV = {
 		release = VLA
-		release = FER
+		YAK = {
+			add_state_core = 562
+			add_state_core = 874
+			add_state_core = 822
+			add_state_core = 637
+			add_state_core = 875
+		}
 		release = YAK
+		release = FER
 		release = BYA
 		release = YAM
 		release = TAY
@@ -119,6 +126,7 @@ AAL_SOV_collapse_far_east = {
 			add_state_core = 580
 		}
 		release = TYM
+		add_stability = -0.1
 	}
 }
 AAL_SOV_collapse_ural = {
@@ -140,15 +148,20 @@ AAL_SOV_collapse_ural = {
 			add_state_core = 400
 		}
 		release = KIR
+		add_stability = -0.1
 	}
 }
 AAL_SOV_bring_back_democrats = {
+	complete_national_focus = SOV_positive_heroism
+	complete_national_focus = SOV_patriarch_of_all_russia
+	complete_national_focus = SOV_cooperation_against_stalin
+	complete_national_focus = SOV_return_democracy_to_the_party
 	set_politics = {
 		ruling_party = democratic
 		elections_allowed = no
 	}
 	add_country_leader_role = {
-		character = "SOV_vasily_blyukher"
+		character = SOV_georgy_zhukov
 		country_leader = {
 			ideology = populism
 			traits = { 
@@ -166,7 +179,4 @@ AAL_SOV_bring_back_democrats = {
 		communism = 20
 	}
 	set_cosmetic_tag = SOV_RUS_DEM
-	complete_national_focus = SOV_patriarch_of_all_russia
-	complete_national_focus = SOV_cooperation_against_stalin
-	complete_national_focus = SOV_return_democracy_to_the_party
 }

@@ -1,0 +1,17 @@
+SOV_adaptive_chaos = {
+	enable = {
+		always = yes
+	}
+	icon = PLACEHOLDER_idea_icon
+
+	production_factory_efficiency_gain_factor = SOV_adaptive_chaos_production_factory_efficiency_gain_factor # maybe 1 or 0.6
+	line_change_production_efficiency_factor = SOV_adaptive_chaos_line_change_production_efficiency_factor # 0.3
+	experience_gain_army = SOV_adaptive_chaos_experience_gain_army # 0.3
+	stability_factor = SOV_adaptive_chaos_stability_factor # 0.1 (Maybe make economic modifier?)
+	political_power_factor = SOV_adaptive_chaos_political_power_factor # 0.2
+	war_support_factor = SOV_adaptive_chaos_war_support_factor # 0.2
+	production_cost_supply_node_factor = SOV_adaptive_chaos_production_cost_supply_node_factor # -0.5
+	supply_node_range = SOV_adaptive_chaos_supply_node_range # maybe 1 or 0.5
+	supply_consumption_factor = SOV_adaptive_chaos_supply_consumption_factor # -0.25 or -0.3
+	enemy_operative_capture_chance_factor = SOV_adaptive_chaos_enemy_operative_capture_chance_factor # 0.25 (Maybe make GRU?)
+}

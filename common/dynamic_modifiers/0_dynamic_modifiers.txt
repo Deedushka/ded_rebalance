@@ -1137,6 +1137,7 @@ SOV_the_red_army_dynamic_modifier = { #NATIONAL SPIRIT
 	# AAL BUFFS
 	surrender_limit = SOV_the_red_army_surrender_limit
 	industrial_capacity_factory = SOV_the_red_army_industrial_capacity_factory
+	production_factory_max_efficiency_factor = SOV_the_red_army_production_factory_max_efficiency_factor
 }
 
 SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
@@ -1176,6 +1177,7 @@ SOV_the_red_army_dynamic_modifier_alt = { #NATIONAL SPIRIT
 	# AAL BUFFS
 	surrender_limit = SOV_the_red_army_surrender_limit
 	industrial_capacity_factory = SOV_the_red_army_industrial_capacity_factory
+	production_factory_max_efficiency_factor = SOV_the_red_army_production_factory_max_efficiency_factor
 }
 
 SOV_the_politburo_good_dynamic_modifier = {

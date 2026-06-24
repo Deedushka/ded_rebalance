@@ -68,6 +68,14 @@ country_event = {
 		}
 
 		SOV = {
+			if = {
+				limit = {
+					has_dynamic_modifier = SOV_the_politburo_good_dynamic_modifier
+				}
+				remove_dynamic_modifier = { modifier = SOV_the_politburo_good_dynamic_modifier }
+			}
+			remove_ideas = home_of_revolution
+			remove_mission = AAL_SOV_war_status_timer
 			set_rule = {
 				can_access_market = no
 				can_create_factions = no
@@ -194,15 +202,33 @@ country_event = {
 		name = AAL_SOV.1.a
 		transfer_units_fraction = {
 			target = KIR
-			size = 0.15
+			army_ratio = 0.15
+			air_ratio = 0.1
+			stockpile_ratio = 0.1
+			navy_ratio = 0
+			keep_unit_leaders = {
+				402 410
+			}
 		}
 		transfer_units_fraction = {
 			target = TOM
-			size = 0.15
+			army_ratio = 0.15
+			air_ratio = 0.1
+			stockpile_ratio = 0.1
+			navy_ratio = 0
+			keep_unit_leaders = {
+				402 410
+			}
 		}
 		transfer_units_fraction = {
 			target = IRK
-			size = 0.1
+			army_ratio = 0.1
+			air_ratio = 0
+			stockpile_ratio = 0
+			navy_ratio = 0
+			keep_unit_leaders = {
+				402 410
+			}
 		}
 	}
 }
@@ -210,11 +236,29 @@ country_event = {
 	id = AAL_SOV.2
 	title = AAL_SOV.2.t
 	desc = AAL_SOV.2.desc
-	picture = GFX_news_event_french_fleet_scuttled
+	picture = GFX_report_event_merchant_ship_01
 	is_triggered_only = yes
 
 	option = {
 		name = AAL_SOV.2.a
+	}
+}
+
+country_event = { # Trial of Beria
+	id = AAL_SOV.3
+	title = AAL_SOV.3.t
+	desc = AAL_SOV.3.desc
+	picture = GFX_report_event_soviet_purge_politicians
+	is_triggered_only = yes
+
+	option = {
+		name = AAL_SOV.3.a
+		kill_country_leader = yes
+		hidden_effect = {
+			AAL_SOV_bring_back_democrats = yes
+			activate_advisor = konstantin_rokossovsky
+			activate_advisor = georgy_zhukov
+		}
 	}
 }
 
