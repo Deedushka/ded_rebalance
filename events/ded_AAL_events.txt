@@ -273,6 +273,7 @@ country_event = { # Trial of Beria
 
 country_event = {
 	id = AAL_SOV.4
+	title = AAL_SOV.4.t
 	is_triggered_only = yes
 	hidden = yes
 
