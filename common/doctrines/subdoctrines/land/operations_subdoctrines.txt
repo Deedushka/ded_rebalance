@@ -627,7 +627,6 @@ guerilla_war = {
     available = {
         always = yes
         has_defensive_war = yes
-        has_doctrine = mass_assault
     }
     visible = {
         has_dlc = "No Compromise, No Surrender"
@@ -656,7 +655,6 @@ guerilla_war = {
     }
 
     # EFFECTS
-    enable_tactic = tactic_guerrilla_tactics
     irregular_infantry = {
         soft_attack = 0.1
         defense = 0.2
@@ -701,6 +699,7 @@ guerilla_war = {
            category_army = {
                 defense = 0.1
             }
+            enable_tactic = tactic_guerrilla_tactics
         }
 
         
