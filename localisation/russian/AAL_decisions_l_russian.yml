@@ -49,5 +49,17 @@
  decision_cost_AAL_SOV_pressure_on_north: "§YМы имеем войска у границы§!"
  decision_cost_AAL_SOV_pressure_on_north_blocked: "§RМы имеем войска у границы§!"
 
+ AAL_SOV_tatar_oil: "Исследовать потенциальные татарские нефтяные месторождения"
+ AAL_SOV_ural_tungsten: "Поиск Уральского Вольфрама"
+ AAL_SOV_magnitogorsk_tungsten: "Изучить новые магнитогорские месторождения Вольфрама"
+ AAL_SOV_chelyabinsk_steel: "Расширение Челябинского металлургического комбината"
+ AAL_SOV_chelyabinsk_coal: "Расширить Челябинские месторождения угля"
+ AAL_SOV_tomsk_steel: "Открытие новых Томских стальных месторождений"
+ AAL_SOV_yeniseisk_steel: "Открыть новые Енисейские шахты"
+ AAL_SOV_krasnoyarsk_coal: "Открытие Красноярских угольных месторождений"
+ AAL_SOV_bratsk_coal: "Расширение Братских шахт"
+ AAL_SOV_khabarovsk_tungsten: "Новые месторождения вольфрама в Хабаровске"
+ AAL_SOV_vladivostok_tungsten: "Расширение шахт Владивостока"
+
  AAL_JAP_military_operation: "Возвращение [655.GetName]"
  JAP_AAL_border_tt: "В последнее время у нас не было пограничных конфликтов"

@@ -11,7 +11,8 @@
  AAL_SOV.3.t: "The trial of [?ROOT.GetCommunistLeader]"
  AAL_SOV.3.desc: "The court has established that, having betrayed the Motherland and acting in the interests of German capital, the defendant [?ROOT.GetCommunistLeader] formed a treasonous group of conspirators hostile to our state.\n\nThe judicial investigation has fully confirmed the data that [?ROOT.GetCommunistLeader] committed treason against the Motherland, engaged in espionage, and maintained secret ties with German intelligence agencies for many years... Back in 1919, while in Baku, Beria committed an act of betrayal by taking a secret agent position in the counterintelligence of the Musavat government in Azerbaijan, which operated under the control of German intelligence agencies.\n\nThe criminal group of conspirators carried out terrorist reprisals against people from whom they feared exposure. As one of the main methods of their activity, the conspirators chose slander, intrigue, provocations, and falsifications against honest party and Soviet workers.\n\nThe Special Military Court has DECIDED:\nTo sentence [?ROOT.GetCommunistLeader] to the highest measure of criminal punishment — execution by firing squad, with the confiscation of all property personally belonging to him, and with the deprivation of military ranks and awards.\nThe verdict is final and is not subject to cassation appeal."
  AAL_SOV.3.a: "So be it"
-
+ AAL_SOV.4: "Russian ultimatum to [?THIS.GetName]"
+ AAL_SOV.4.t: "Russian ultimatum to [?THIS.GetName]"
 
  AAL_JAP.1: "Victory"
  AAL_JAP.1.t: "Victory"

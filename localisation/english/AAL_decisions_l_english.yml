@@ -49,5 +49,17 @@
  decision_cost_AAL_SOV_pressure_on_north: "§YWe have troops at the border§!"
  decision_cost_AAL_SOV_pressure_on_north_blocked: "§RWe have troops at the border§!"
 
+ AAL_SOV_tatar_oil: "Explore potential Tatar oil fields"
+ AAL_SOV_ural_tungsten: "Search for Ural Tungsten"
+ AAL_SOV_magnitogorsk_tungsten: "Explore new Magnitogorsk tungsten deposits"
+ AAL_SOV_chelyabinsk_steel: "Expand the Chelyabinsk Iron and Steel Works"
+ AAL_SOV_chelyabinsk_coal: "Expand Chelyabinsk coal deposits"
+ AAL_SOV_tomsk_steel: "Discover new Tomsk steel deposits"
+ AAL_SOV_yeniseisk_steel: "Discover new Yenisei mines"
+ AAL_SOV_krasnoyarsk_coal: "Discover Krasnoyarsk coal deposits"
+ AAL_SOV_bratsk_coal: "Expand the Bratsk mines"
+ AAL_SOV_khabarovsk_tungsten: "New tungsten deposits in Khabarovsk"
+ AAL_SOV_vladivostok_tungsten: "Expansion of Vladivostok mines"
+
  AAL_JAP_military_operation: "Return of [655.GetName]"
  JAP_AAL_border_tt: "We haven't started a border conflict recently"

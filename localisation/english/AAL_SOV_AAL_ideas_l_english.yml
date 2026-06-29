@@ -1,0 +1,17 @@
+﻿l_english:
+ SOV_adaptive_chaos: "State of the Federation"
+ SOV_adaptive_chaos_modifier_tt: "Modify §Y$SOV_adaptive_chaos$§! by:"
+ SOV_constitution: "Constitution of the Federation"
+ SOV_constitution_modifier_tt: "Modify §Y$SOV_constitution$§! by:"
+ SOV_shock_therapy: "Shock therapy"
+ SOV_shock_therapy_modifier_tt: "Modify §Y$SOV_shock_therapy$§! by:"
+ SOV_residence_of_patriarch: "Residence of the Patriarch"
+ SOV_SEZ: "Special Economic Zone"
+ 
+ SOV_AAL_attack_spirit: "We are Russians"
+ SOV_AAL_patriarchy_loyalty_spirit: "Loyalty of the Patriarch"
+ SOV_AAL_busification: "Busification"
+
+ production_cost_supply_node_factor_tt: " $modifier_production_cost_supply_node_factor$ $RIGHT|+=%1$"
+ SOV_AAL_attack_spirit_tt: "Unlocks $academy_spirit$ §Y$SOV_AAL_attack_spirit$§!, which grants:\n$army_core_attack_factor_tt$§G+10.0%§!\n$army_core_defence_factor_tt$§G+10.0%§!"
+ SOV_AAL_patriarchy_loyalty_spirit_tt: "Unlocks $army_spirit$ §Y$SOV_AAL_patriarchy_loyalty_spirit$§!, which grants:\n$weekly_manpower_tt$§G+250§!"
