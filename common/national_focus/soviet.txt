@@ -474,6 +474,11 @@ focus_tree = {
 			}
 			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
+		allow_branch = {
+			NOT = {
+				has_global_flag = AAL_SOV_collapse
+			}
+		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -1268,6 +1273,7 @@ focus_tree = {
 
 		allow_branch = {
 			NOT = { has_government = communism }
+			NOT = { has_global_flag = AAL_SOV_collapse }
 		}
 
 		available = {
@@ -2086,6 +2092,7 @@ focus_tree = {
 
 		allow_branch = {
 			NOT = { has_government = communism }
+			NOT = { has_global_flag = AAL_SOV_collapse }
 		}
 
 		available = {
@@ -6920,9 +6927,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = SOV_the_red_army_industrial_capacity_factory_increase_tt
-			add_to_variable = { SOV_the_red_army_industrial_capacity_factory = 0.05 }
-			subtract_from_variable = { SOV_the_red_army_surrender_limit = 0.25 }
+			custom_effect_tooltip = modify_the_red_army_tt
+			add_to_variable = { SOV_the_red_army_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SOV_the_red_army_surrender_limit = -0.25 tooltip = surrender_limit_tt }
 		}
 	}
 	focus = {
@@ -6942,9 +6949,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = SOV_the_red_army_production_factory_max_efficiency_factor_increase_tt
-			add_to_variable = { SOV_the_red_army_production_factory_max_efficiency_factor = 0.05 }
-			subtract_from_variable = { SOV_the_red_army_surrender_limit = 0.25 }
+			custom_effect_tooltip = modify_the_red_army_tt
+			add_to_variable = { SOV_the_red_army_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { SOV_the_red_army_surrender_limit = -0.25 tooltip = surrender_limit_tt }
 		}
 	}
 
@@ -19205,9 +19212,9 @@ ai_will_do = {
 			}
 		}
 		completion_reward = {
-			add_dynamic_modifier = {
-				modifier = SOV_adaptive_chaos
-			}
+			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
+			add_to_variable = { SOV_adaptive_chaos_political_power_factor = 0.1 tooltip = political_power_factor_tt }
+			add_to_variable = { SOV_adaptive_chaos_weekly_manpower = 50 tooltip = weekly_manpower_tt }
 		}
 	}
 	focus = {
@@ -19219,7 +19226,9 @@ ai_will_do = {
 		cost = 3
 		relative_position_id = SOV_AAL_stop_chaos
 		completion_reward = {
-			
+			add_dynamic_modifier = {
+				modifier = SOV_constitution
+			}
 		}
 	}
 	focus = {
@@ -19231,7 +19240,7 @@ ai_will_do = {
 		cost = 3
 		relative_position_id = SOV_AAL_stop_chaos
 		completion_reward = {
-			
+			add_country_leader_trait = anti_fascist_committee 
 		}
 	}
 	focus = {
@@ -19244,7 +19253,12 @@ ai_will_do = {
 		cost = 3
 		relative_position_id = SOV_AAL_constitution_federation
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = -0.2 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
+			add_to_variable = { SOV_adaptive_chaos_political_power_factor = 0.1 tooltip = political_power_factor_tt }
+			add_to_variable = { SOV_adaptive_chaos_line_change_production_efficiency_factor = 0.1 tooltip = line_change_production_efficiency_factor_tt }
 		}
 	}
 	focus = {
@@ -19256,7 +19270,13 @@ ai_will_do = {
 		cost = 3
 		relative_position_id = SOV_AAL_rights_limitation
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt			
+			add_to_variable = { SOV_constitution_war_support_factor = 0.1 tooltip = war_support_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
+			add_to_variable = { SOV_adaptive_chaos_experience_gain_army = 0.25 tooltip = experience_gain_army_tt }
+			add_to_variable = { SOV_adaptive_chaos_weekly_manpower = 100 tooltip = weekly_manpower_tt }
+			add_to_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = 0.15 tooltip = production_cost_supply_node_factor_tt }
 		}
 	}
 	focus = {
@@ -19268,7 +19288,13 @@ ai_will_do = {
 		cost = 3
 		relative_position_id = SOV_AAL_rights_limitation
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.1 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
+			add_to_variable = { SOV_adaptive_chaos_experience_gain_army = 0.25 tooltip = experience_gain_army_tt }
+			add_to_variable = { SOV_adaptive_chaos_weekly_manpower = 100 tooltip = weekly_manpower_tt }
+			add_to_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = 0.15 tooltip = production_cost_supply_node_factor_tt }
 		}
 	}
 	focus = {
@@ -19280,19 +19306,31 @@ ai_will_do = {
 		cost = 2
 		relative_position_id = SOV_AAL_army_with
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.1 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
+			add_to_variable = { SOV_adaptive_chaos_supply_node_range = 0.25 tooltip = supply_node_range_tt }
+			add_to_variable = { SOV_adaptive_chaos_supply_consumption_factor = 0.2 tooltip = supply_consumption_factor_tt }
 		}
 	}
 	focus = {
 		id = SOV_AAL_labor_discipline
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_army_with }
+		available = {
+			has_dynamic_modifier = SOV_shock_therapy
+		}
 		x = 0
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_army_with
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_shock_therapy_modifier_tt
+			add_to_variable = { SOV_shock_therapy_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
 		}
 	}
 	focus = {
@@ -19305,19 +19343,28 @@ ai_will_do = {
 		cost = 2
 		relative_position_id = SOV_AAL_labor_discipline
 		completion_reward = {
-			
+			unlock_decision_category_tooltip = prospect_for_resources
 		}
 	}
 	focus = {
 		id = SOV_AAL_mobilize_people
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_army_with }
+		available = {
+			has_dynamic_modifier = SOV_shock_therapy
+		}
 		x = 2
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_army_with
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_war_support_factor = 0.1 tooltip = war_support_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_shock_therapy_modifier_tt
+			add_to_variable = { SOV_shock_therapy_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
 		}
 	}
 	focus = {
@@ -19329,19 +19376,25 @@ ai_will_do = {
 		cost = 2
 		relative_position_id = SOV_AAL_with_own_state
 		completion_reward = {
-			
+			add_dynamic_modifier = {
+				modifier = SOV_shock_therapy
+			}
 		}
 	}
 	focus = {
 		id = SOV_AAL_allow_trading
 		icon = GFX_focus_PLACEHOLDER
-		prerequisite = { focus = SOV_AAL_with_own_state }
+		prerequisite = { focus = SOV_AAL_allow_privatization }
 		x = 1
-		y = 1
+		y = 2
 		cost = 2
-		relative_position_id = SOV_AAL_with_own_state
+		relative_position_id = SOV_AAL_allow_privatization
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_shock_therapy_modifier_tt
+			add_to_variable = { SOV_shock_therapy_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_speed_industrial_complex_factor = 0.15 tooltip = production_speed_industrial_complex_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_factory_efficiency_gain_factor = 0.1 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { SOV_shock_therapy_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
 		}
 	}
 	focus = {
@@ -19354,7 +19407,15 @@ ai_will_do = {
 		cost = 3
 		relative_position_id = SOV_AAL_allow_privatization
 		completion_reward = {
-			
+			653 = {
+				increase_state_category = yes
+			}
+			572 = {
+				increase_state_category = yes
+			}
+			398 = {
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
@@ -19367,7 +19428,7 @@ ai_will_do = {
 		cost = 2
 		relative_position_id = SOV_AAL_quick_urbanization
 		completion_reward = {
-			custom_effect_tooltip = SOV_AAL_special_military_operations_opened_tt
+			unlock_decision_category_tooltip = SOV_AAL_special_military_operations
 		}
 	}
 
@@ -19375,24 +19436,48 @@ ai_will_do = {
 		id = SOV_AAL_return_volga_region
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		available = {
+			has_full_control_of_state = 652
+			has_full_control_of_state = 651
+			has_full_control_of_state = 249
+		}
 		x = -4
 		y = 1
-		cost = 1
+		cost = 2
 		relative_position_id = SOV_AAL_restore_constitutional_order
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.05 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			249 = {
+				increase_state_category = yes
+			}
+			651 = {
+				increase_state_category = yes
+			}
+			652 = {
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
 		id = SOV_AAL_integrate_kirov
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		available = {
+			has_full_control_of_state = 400
+		}
 		x = -2
 		y = 1
-		cost = 1
+		cost = 2
 		relative_position_id = SOV_AAL_restore_constitutional_order
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.05 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			400 = {
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
@@ -19405,31 +19490,56 @@ ai_will_do = {
 		cost = 2
 		relative_position_id = SOV_AAL_return_volga_region
 		completion_reward = {
-			
+			KOM = {
+				country_event = { id = AAL_SOV.4 hours = 12 random_hours = 8 }
+			}
+			NEN = {
+				country_event = { id = AAL_SOV.4 hours = 12 random_hours = 8 }
+			}
 		}
 	}
 	focus = {
 		id = SOV_AAL_help_patriarch
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		available = {
+			has_full_control_of_state = 403
+		}
 		x = -1
 		y = 2
 		cost = 2
 		relative_position_id = SOV_AAL_restore_constitutional_order
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.05 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			403 = {
+				add_dynamic_modifier = {
+					modifier = SOV_residence_of_patriarch
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
 		id = SOV_AAL_integrate_tomsk
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		available = {
+			has_full_control_of_state = 578
+		}
 		x = 1
 		y = 2
 		cost = 2
 		relative_position_id = SOV_AAL_restore_constitutional_order
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.05 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			578 = {
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
@@ -19437,36 +19547,64 @@ ai_will_do = {
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_integrate_tomsk }
 		prerequisite = { focus = SOV_AAL_help_patriarch }
+		available = {
+			has_full_control_of_state = 408
+		}
 		x = -1
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_integrate_tomsk
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = -0.1 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_tooltip = AAL_SOV_restore_constitutional_order
 		}
 	}
 	focus = {
 		id = SOV_AAL_annul_national_movements
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		available = {
+			has_full_control_of_state = 570
+		}
 		x = 2
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_restore_constitutional_order
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.05 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			570 = {
+				increase_state_category = yes
+			}
+			569 = {
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
 		id = SOV_AAL_finish_whites
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
+		available = {
+			has_full_control_of_state = 566
+		}
 		x = 4
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_restore_constitutional_order
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.05 tooltip = stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			566 = {
+				increase_state_category = yes
+			}
+			564 = {
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
@@ -19474,36 +19612,67 @@ ai_will_do = {
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_finish_whites }
 		prerequisite = { focus = SOV_AAL_annul_national_movements }
+		available = {
+			has_full_control_of_state = 408
+		}
 		x = -1
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_finish_whites
 		completion_reward = {
-			
+			408 = {
+				add_dynamic_modifier = {
+					modifier = SOV_SEZ
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				increase_state_category = yes
+			}
 		}
 	}
 	focus = {
 		id = SOV_AAL_amendment_to_constitution
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_return_siberia_region }
+		available = {
+			OR = {
+				has_war_with = KAZ
+				AND = {
+					has_full_control_of_state = 583
+					has_full_control_of_state = 590
+					has_full_control_of_state = 882
+				}
+			}
+		}
 		x = -1
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_return_siberia_region
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_stability_factor = 0.1 tooltip = stability_factor_tt }
+			add_to_variable = { SOV_constitution_war_support_factor = 0.1 tooltip = war_support_factor_tt }
 		}
 	}
 	focus = {
 		id = SOV_AAL_new_russian
 		icon = GFX_focus_PLACEHOLDER
 		prerequisite = { focus = SOV_AAL_return_siberia_region }
+		available = {
+			has_completed_focus = SOV_AAL_amendment_to_constitution
+		}
 		x = 1
 		y = 1
 		cost = 2
 		relative_position_id = SOV_AAL_return_siberia_region
 		completion_reward = {
-			
+			custom_effect_tooltip = SOV_constitution_modifier_tt
+			add_to_variable = { SOV_constitution_offensive_war_stability_factor = 0.5 tooltip = offensive_war_stability_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_shock_therapy_modifier_tt
+			add_to_variable = { SOV_shock_therapy_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
+			add_to_variable = { SOV_adaptive_chaos_weekly_manpower = 250 tooltip = weekly_manpower_tt }
 		}
 	}
 	focus = {
@@ -19516,7 +19685,19 @@ ai_will_do = {
 		cost = 5
 		relative_position_id = SOV_AAL_new_russian
 		completion_reward = {
-			
+			hidden_effect = {
+				set_rule = {
+					can_access_market = yes
+					can_create_factions = yes
+					can_join_factions = yes
+					can_not_declare_war = no
+				}
+			}
+			clr_global_flag = AAL_SOV_collapse
+			declare_war_on = {
+				target = GER
+				type = take_core_state
+			}
 		}
 	}
 }

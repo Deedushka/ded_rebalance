@@ -74,6 +74,15 @@ country_event = {
 				}
 				remove_dynamic_modifier = { modifier = SOV_the_politburo_good_dynamic_modifier }
 			}
+			if = {
+				limit = {
+					has_dynamic_modifier = SOV_second_five_year_plan_dynamic_modifier
+				}
+				remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
+			}
+			add_dynamic_modifier = {
+				modifier = SOV_adaptive_chaos
+			}
 			remove_ideas = home_of_revolution
 			remove_mission = AAL_SOV_war_status_timer
 			set_rule = {
@@ -258,6 +267,21 @@ country_event = { # Trial of Beria
 			AAL_SOV_bring_back_democrats = yes
 			activate_advisor = konstantin_rokossovsky
 			activate_advisor = georgy_zhukov
+		}
+	}
+}
+
+country_event = {
+	id = AAL_SOV.4
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		SOV = {
+			annex_country = {
+				target = THIS
+				transfer_troops = no
+			}
 		}
 	}
 }

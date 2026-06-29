@@ -705,16 +705,25 @@ set_variable = { SOV_planned_economy_consumer_goods_factor = 0 } #Victory Over D
 # AAL BUFFS
 
 # ADAPTIVE CHAOS
-set_variable = { SOV_adaptive_chaos_production_factory_efficiency_gain_factor = 1 }
-set_variable = { SOV_adaptive_chaos_line_change_production_efficiency_factor = 1 }
-set_variable = { SOV_adaptive_chaos_experience_gain_army = 1 }
-set_variable = { SOV_adaptive_chaos_stability_factor = 1 }
-set_variable = { SOV_adaptive_chaos_political_power_factor = 1 }
-set_variable = { SOV_adaptive_chaos_war_support_factor = 1 }
-set_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = -1 }
-set_variable = { SOV_adaptive_chaos_supply_node_range = 1 }
-set_variable = { SOV_adaptive_chaos_supply_consumption_factor = -1 }
-set_variable = { SOV_adaptive_chaos_enemy_operative_capture_chance_factor = 1 }
+set_variable = { SOV_adaptive_chaos_line_change_production_efficiency_factor = 0 }
+set_variable = { SOV_adaptive_chaos_experience_gain_army = 0 }
+set_variable = { SOV_adaptive_chaos_political_power_factor = -0.1 }
+set_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = 0 }
+set_variable = { SOV_adaptive_chaos_supply_node_range = 0 }
+set_variable = { SOV_adaptive_chaos_supply_consumption_factor = 0 }
+set_variable = { SOV_adaptive_chaos_weekly_manpower = 50 }
+
+set_variable = { SOV_constitution_stability_factor = -0.1 }
+set_variable = { SOV_constitution_war_support_factor = -0.1 }
+set_variable = { SOV_constitution_offensive_war_stability_factor = 0 }
+
+set_variable = { SOV_shock_therapy_consumer_goods_factor = 0.1 }
+set_variable = { SOV_shock_therapy_production_speed_arms_factory_factor = 0 }
+set_variable = { SOV_shock_therapy_production_speed_industrial_complex_factor = 0 }
+set_variable = { SOV_shock_therapy_production_factory_efficiency_gain_factor = 0 }
+set_variable = { SOV_shock_therapy_production_factory_max_efficiency_factor = 0 }
+set_variable = { SOV_shock_therapy_industrial_capacity_factory = 0 }
+
 
 #Add synthetic refineries tech
 set_technology = {

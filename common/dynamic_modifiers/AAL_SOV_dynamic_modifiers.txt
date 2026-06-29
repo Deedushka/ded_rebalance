@@ -1,17 +1,59 @@
+# Country Ideas
 SOV_adaptive_chaos = {
 	enable = {
 		always = yes
 	}
 	icon = PLACEHOLDER_idea_icon
 
-	production_factory_efficiency_gain_factor = SOV_adaptive_chaos_production_factory_efficiency_gain_factor # maybe 1 or 0.6
-	line_change_production_efficiency_factor = SOV_adaptive_chaos_line_change_production_efficiency_factor # 0.3
-	experience_gain_army = SOV_adaptive_chaos_experience_gain_army # 0.3
-	stability_factor = SOV_adaptive_chaos_stability_factor # 0.1 (Maybe make economic modifier?)
-	political_power_factor = SOV_adaptive_chaos_political_power_factor # 0.2
-	war_support_factor = SOV_adaptive_chaos_war_support_factor # 0.2
-	production_cost_supply_node_factor = SOV_adaptive_chaos_production_cost_supply_node_factor # -0.5
-	supply_node_range = SOV_adaptive_chaos_supply_node_range # maybe 1 or 0.5
-	supply_consumption_factor = SOV_adaptive_chaos_supply_consumption_factor # -0.25 or -0.3
-	enemy_operative_capture_chance_factor = SOV_adaptive_chaos_enemy_operative_capture_chance_factor # 0.25 (Maybe make GRU?)
+	line_change_production_efficiency_factor = SOV_adaptive_chaos_line_change_production_efficiency_factor
+	experience_gain_army = SOV_adaptive_chaos_experience_gain_army
+	political_power_factor = SOV_adaptive_chaos_political_power_factor 
+	production_cost_supply_node_factor = SOV_adaptive_chaos_production_cost_supply_node_factor 
+	supply_node_range = SOV_adaptive_chaos_supply_node_range
+	supply_consumption_factor = SOV_adaptive_chaos_supply_consumption_factor
+	weekly_manpower = SOV_adaptive_chaos_weekly_manpower
+}
+SOV_constitution = {
+	enable = {
+		always = yes
+	}
+	icon = PLACEHOLDER_idea_icon
+
+	stability_factor = SOV_constitution_stability_factor 
+	war_support_factor = SOV_constitution_war_support_factor 
+	offensive_war_stability_factor = SOV_constitution_offensive_war_stability_factor
+}
+SOV_shock_therapy = {
+	enable = {
+		always = yes
+	}
+	icon = PLACEHOLDER_idea_icon
+
+	consumer_goods_factor = SOV_shock_therapy_consumer_goods_factor 
+	production_speed_arms_factory_factor = SOV_shock_therapy_production_speed_arms_factory_factor 
+	production_speed_industrial_complex_factor = SOV_shock_therapy_production_speed_industrial_complex_factor 
+	production_factory_efficiency_gain_factor = SOV_shock_therapy_production_factory_efficiency_gain_factor 
+	production_factory_max_efficiency_factor = SOV_shock_therapy_production_factory_max_efficiency_factor 
+	industrial_capacity_factory = SOV_shock_therapy_industrial_capacity_factory 
+}
+
+# State Ideas
+SOV_residence_of_patriarch = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_decision_generic_PLACEHOLDER
+
+	local_building_slots = 4
+	mobilization_speed = 0.75
+	recruitable_population_factor = 0.25
+}
+SOV_SEZ = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_decision_generic_PLACEHOLDER
+
+	local_building_slots = 8
+	state_production_speed_buildings_factor = 0.25
 }

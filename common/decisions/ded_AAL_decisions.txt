@@ -861,6 +861,7 @@ SOV_AAL_special_military_operations = {
 		}
 		available = {
 			has_war = no
+			has_completed_focus = SOV_AAL_return_siberia_region
 		}
 		fire_only_once = yes
 		highlight_states = {
@@ -927,6 +928,10 @@ SOV_AAL_special_military_operations = {
 			}
 		}
 	}
+}
+
+prospect_for_resources = {
+ # TODO
 }
 
 operations = {

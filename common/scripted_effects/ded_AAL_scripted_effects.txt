@@ -32,7 +32,7 @@ deactivate_AAL_missions = {
 		days = 160
 	}
 	SOV = {
-		add_to_variable = { SOV_the_red_army_surrender_limit = 0.75 }
+		add_to_variable = { SOV_the_red_army_surrender_limit = 0.5 }
 	}
 }
 AAL_add_days_missions = {
@@ -165,8 +165,7 @@ AAL_SOV_bring_back_democrats = {
 		country_leader = {
 			ideology = populism
 			traits = { 
-				socialite_connections	
-				anti_fascist_committee 
+				socialite_connections
 			}
 			expire = "1972.12.23.1"
 		}
