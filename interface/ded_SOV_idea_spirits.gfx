@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_SOV_AAL_busification_icon"
+		texturefile = "gfx/interface/ideas/idea_SOV_AAL_busification.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_adaptive_chaos_icon"
+		texturefile = "gfx/interface/ideas/idea_SOV_adaptive_chaos.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_constitution_icon"
+		texturefile = "gfx/interface/ideas/idea_SOV_constitution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_shock_therapy_icon"
+		texturefile = "gfx/interface/ideas/idea_SOV_shock_therapy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_residence_of_patriarch_icon"
+		texturefile = "gfx/interface/state_modifiers/modifiers_SOV_capital_of_the_tsars.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_SEZ_icon"
+		texturefile = "gfx/interface/state_modifiers/modifiers_SOV_SEZ.dds"
+	}
+}

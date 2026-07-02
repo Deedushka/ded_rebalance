@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_AAL_GER_barbarossa_lost"
+		texturefile = "gfx/interface/ideas/idea_AAL_GER_barbarossa_lost.dds"
+	}
+}

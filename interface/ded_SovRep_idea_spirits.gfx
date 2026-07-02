@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_BLR_lack_illiteracy"
+		textureFile = "gfx/interface/ideas/idea_lack_illiteracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLR_intensive_urbanization"
+		textureFile = "gfx/interface/ideas/idea_intensive_urbanization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLR_collectivization_consequences"
+		textureFile = "gfx/interface/ideas/idea_BLR_collectivization_consequences.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BLR_military_position"
+		textureFile = "gfx/interface/ideas/idea_PRC_factory_617.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_lack_illiteracy"
+		textureFile = "gfx/interface/ideas/idea_lack_illiteracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_intensive_urbanization"
+		textureFile = "gfx/interface/ideas/idea_intensive_urbanization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_labor_militarization"
+		textureFile = "gfx/interface/ideas/idea_PRC_factory_617.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_traces_hunger"
+		textureFile = "gfx/interface/ideas/idea_UKR_traces_hunger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_Insurgent_Army"
+		textureFile = "gfx/interface/state_modifiers/modifiers_UKR_Insurgent_Army.dds"
+	}
+}

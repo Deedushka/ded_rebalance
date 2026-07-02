@@ -280,8 +280,11 @@ country_event = {
 	immediate = {
 		SOV = {
 			annex_country = {
-				target = THIS
+				target = ROOT
 				transfer_troops = no
+			}
+			hidden_effect = {
+				add_popularity = { ideology = democratic popularity = 0.08 }
 			}
 		}
 	}

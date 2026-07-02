@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		BLR_lack_illiteracy = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_BLR_lack_illiteracy
 			allowed = {
 				always = no
 			}
@@ -10,7 +10,7 @@ ideas = {
 			}
 		}
 		BLR_intensive_urbanization = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_BLR_intensive_urbanization
 			allowed = {
 				always = no
 			}
@@ -20,7 +20,7 @@ ideas = {
 			}
 		}
 		BLR_collectivization_consequences = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_BLR_collectivization_consequences
 			allowed = {
 				always = no
 			}
@@ -32,7 +32,7 @@ ideas = {
 			}
 		}
 		BLR_military_position = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_BLR_military_position
 			allowed = {
 				always = no
 			}

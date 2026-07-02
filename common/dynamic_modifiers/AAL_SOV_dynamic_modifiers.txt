@@ -3,7 +3,7 @@ SOV_adaptive_chaos = {
 	enable = {
 		always = yes
 	}
-	icon = PLACEHOLDER_idea_icon
+	icon = GFX_idea_SOV_adaptive_chaos_icon
 
 	line_change_production_efficiency_factor = SOV_adaptive_chaos_line_change_production_efficiency_factor
 	experience_gain_army = SOV_adaptive_chaos_experience_gain_army
@@ -17,7 +17,7 @@ SOV_constitution = {
 	enable = {
 		always = yes
 	}
-	icon = PLACEHOLDER_idea_icon
+	icon = GFX_idea_SOV_constitution_icon
 
 	stability_factor = SOV_constitution_stability_factor 
 	war_support_factor = SOV_constitution_war_support_factor 
@@ -27,7 +27,7 @@ SOV_shock_therapy = {
 	enable = {
 		always = yes
 	}
-	icon = PLACEHOLDER_idea_icon
+	icon = GFX_idea_SOV_shock_therapy_icon
 
 	consumer_goods_factor = SOV_shock_therapy_consumer_goods_factor 
 	production_speed_arms_factory_factor = SOV_shock_therapy_production_speed_arms_factory_factor 
@@ -42,7 +42,7 @@ SOV_residence_of_patriarch = {
 	enable = {
 		always = yes
 	}
-	icon = GFX_decision_generic_PLACEHOLDER
+	icon = GFX_idea_SOV_residence_of_patriarch_icon
 
 	local_building_slots = 4
 	mobilization_speed = 0.75
@@ -52,7 +52,7 @@ SOV_SEZ = {
 	enable = {
 		always = yes
 	}
-	icon = GFX_decision_generic_PLACEHOLDER
+	icon = GFX_idea_SOV_SEZ_icon
 
 	local_building_slots = 8
 	state_production_speed_buildings_factor = 0.25

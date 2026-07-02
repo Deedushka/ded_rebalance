@@ -1,0 +1,107 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_stop_chaos"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_stop_chaos.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_antifa_ideology"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_antifa_ideology.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_constitution_federation"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_constitution_federation.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_rights_limitation"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_rights_limitation.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_army_with"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_army_with.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_with_own_state"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_with_own_state.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_gulag_reform"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_gulag_reform.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_labor_discipline"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_labor_discipline.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_mobilize_people"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_mobilize_people.dds"			
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_allow_privatization"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_allow_privatization.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_geological_exploration"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_geological_exploration.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_quick_urbanization"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_quick_urbanization.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_allow_trading"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_allow_trading.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_restore_constitutional_order"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_restore_constitutional_order.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_return_volga_region"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_return_volga_region.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_integrate_kirov"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_integrate_kirov.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_northern_negotiations"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_northern_negotiations.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_help_patriarch"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_help_patriarch.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_integrate_tomsk"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_integrate_tomsk.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_annul_national_movements"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_annul_national_movements.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_finish_whites"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_finish_whites.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_return_siberia_region"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_return_siberia_region.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_first_SEZ"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_first_SEZ.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_amendment_to_constitution"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_amendment_to_constitution.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_new_russian"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_new_russian.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_AAL_destroy_nazis"
+		texturefile = "gfx/interface/goals/focus_SOV_AAL_destroy_nazis.dds"
+	}
+}

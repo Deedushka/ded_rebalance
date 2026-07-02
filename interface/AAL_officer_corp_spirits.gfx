@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_SOV_AAL_attack_spirit"
+		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_SOV_AAL_attack.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_AAL_patriarchy_loyalty_spirit"
+		texturefile = "gfx/interface/officer_corp/spirits/spirit_idea_SOV_AAL_patriarchy_loyalty.dds"
+	}
+	
+}

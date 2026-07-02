@@ -1,12 +1,50 @@
 ideas = {
 	country = {
-		SOV_Leningrad_University = {
-			picture = PLACEHOLDER_idea_icon
+		SOV_AAL_busification = {
+			picture = SOV_AAL_busification_icon
 			allowed = {
 				always = no
 			}
 			modifier = {
-				research_speed_factor = 0.05
+				production_speed_buildings_factor = -0.2
+				weekly_manpower = 500
+			}
+		}
+	}
+	academy_spirit = {
+		SOV_AAL_attack_spirit = {
+			ledger = army
+			visible = {
+				original_tag = SOV
+				has_government = democratic
+			}
+			available = {
+				has_completed_focus = SOV_AAL_new_russian
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+	army_spirit = {
+		SOV_AAL_patriarchy_loyalty_spirit = {
+			visible = {
+				original_tag = SOV
+				has_government = democratic
+			}
+			available = {
+				has_completed_focus = SOV_AAL_help_patriarch
+			}
+			ledger = army
+			modifier = {
+				weekly_manpower = 250
+			}
+			ai_will_do = {
+				factor = 2
 			}
 		}
 	}

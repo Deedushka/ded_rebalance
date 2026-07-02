@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		autonomy_soviet_partisans = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_SOV_war_heroes
 			do_effect = {
 				has_government = communism
 				has_autonomy_state = autonomy_soviet

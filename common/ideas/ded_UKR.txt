@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		UKR_lack_illiteracy = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_UKR_lack_illiteracy
 			allowed = {
 				always = no
 			}
@@ -10,7 +10,7 @@ ideas = {
 			}
 		}
 		UKR_intensive_urbanization = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_UKR_intensive_urbanization
 			allowed = {
 				always = no
 			}
@@ -20,7 +20,7 @@ ideas = {
 			}
 		}
 		UKR_labor_militarization = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_UKR_labor_militarization
 			allowed = {
 				always = no
 			}
@@ -31,7 +31,7 @@ ideas = {
 			}
 		}
 		UKR_traces_hunger = {
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_UKR_traces_hunger
 			allowed = {
 				always = no
 			}

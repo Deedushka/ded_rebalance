@@ -4994,7 +4994,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 5
+		cost = 10
 		dynamic = yes 
 		available = {
 
@@ -5003,7 +5003,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_ideas = SOV_Leningrad_University
+			add_research_slot = 1
 		}
 	}
 
@@ -6922,7 +6922,7 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_increase_industrial_capacity
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_mass_production
 		prerequisite = { focus = SOV_swap_to_political_advisors focus = SOV_keep_commissars_organization }
 		cost = 5
 		relative_position_id = SOV_swap_to_political_advisors
@@ -6944,7 +6944,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_increase_max_efficiency
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = SOV_swap_to_political_advisors focus = SOV_keep_commissars_organization }
 		cost = 5
 		relative_position_id = SOV_keep_commissars_organization
@@ -19208,7 +19208,7 @@ ai_will_do = {
 
 	focus = {
 		id = SOV_AAL_stop_chaos
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_stop_chaos
 		x = 14
 		y = 0
 		cost = 3
@@ -19230,7 +19230,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_constitution_federation
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_constitution_federation
 		prerequisite = { focus = SOV_AAL_stop_chaos }
 		x = 1
 		y = 1
@@ -19244,7 +19244,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_antifa_ideology
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_antifa_ideology
 		prerequisite = { focus = SOV_AAL_stop_chaos }
 		x = -1
 		y = 1
@@ -19256,7 +19256,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_rights_limitation
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_rights_limitation
 		prerequisite = { focus = SOV_AAL_constitution_federation }
 		prerequisite = { focus = SOV_AAL_antifa_ideology }
 		x = -1
@@ -19274,7 +19274,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_army_with
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_army_with
 		prerequisite = { focus = SOV_AAL_rights_limitation }
 		x = -3
 		y = 1
@@ -19288,14 +19288,14 @@ ai_will_do = {
 			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
 			add_to_variable = { SOV_adaptive_chaos_experience_gain_army = 0.25 tooltip = experience_gain_army_tt }
 			add_to_variable = { SOV_adaptive_chaos_weekly_manpower = 100 tooltip = weekly_manpower_tt }
-			add_to_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = 0.15 tooltip = production_cost_supply_node_factor_tt }
+			add_to_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = -0.15 tooltip = production_cost_supply_node_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			army_experience = 50
 		}
 	}
 	focus = {
 		id = SOV_AAL_with_own_state
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_with_own_state
 		prerequisite = { focus = SOV_AAL_rights_limitation }
 		x = 2
 		y = 1
@@ -19309,14 +19309,14 @@ ai_will_do = {
 			custom_effect_tooltip = SOV_adaptive_chaos_modifier_tt
 			add_to_variable = { SOV_adaptive_chaos_experience_gain_army = 0.25 tooltip = experience_gain_army_tt }
 			add_to_variable = { SOV_adaptive_chaos_weekly_manpower = 100 tooltip = weekly_manpower_tt }
-			add_to_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = 0.15 tooltip = production_cost_supply_node_factor_tt }
+			add_to_variable = { SOV_adaptive_chaos_production_cost_supply_node_factor = -0.15 tooltip = production_cost_supply_node_factor_tt }
 			custom_effect_tooltip = generic_skip_one_line_tt
 			army_experience = 50
 		}
 	}
 	focus = {
 		id = SOV_AAL_gulag_reform
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_gulag_reform
 		prerequisite = { focus = SOV_AAL_army_with }
 		x = -2
 		y = 1
@@ -19333,7 +19333,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_labor_discipline
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_labor_discipline
 		prerequisite = { focus = SOV_AAL_army_with }
 		available = {
 			has_dynamic_modifier = SOV_shock_therapy
@@ -19352,7 +19352,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_geological_exploration
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_geological_exploration
 		prerequisite = { focus = SOV_AAL_labor_discipline focus = SOV_AAL_mobilize_people }
 		prerequisite = { focus = SOV_AAL_gulag_reform }
 		x = 1
@@ -19365,7 +19365,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_mobilize_people
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_mobilize_people
 		prerequisite = { focus = SOV_AAL_army_with }
 		available = {
 			has_dynamic_modifier = SOV_shock_therapy
@@ -19391,7 +19391,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_allow_privatization
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_allow_privatization
 		prerequisite = { focus = SOV_AAL_with_own_state }
 		x = -1
 		y = 1
@@ -19406,7 +19406,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_allow_trading
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_allow_trading
 		prerequisite = { focus = SOV_AAL_allow_privatization }
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		x = 1
@@ -19425,7 +19425,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_quick_urbanization
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_quick_urbanization
 		prerequisite = { focus = SOV_AAL_labor_discipline focus = SOV_AAL_mobilize_people }
 		prerequisite = { focus = SOV_AAL_allow_privatization }
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -19447,7 +19447,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_restore_constitutional_order
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_restore_constitutional_order
 		prerequisite = { focus = SOV_AAL_quick_urbanization }
 		prerequisite = { focus = SOV_AAL_geological_exploration }
 		x = -1
@@ -19461,7 +19461,7 @@ ai_will_do = {
 
 	focus = {
 		id = SOV_AAL_return_volga_region
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_return_volga_region
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
 		available = {
 			has_full_control_of_state = 652
@@ -19489,7 +19489,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_integrate_kirov
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_integrate_kirov
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
 		available = {
 			has_full_control_of_state = 400
@@ -19509,7 +19509,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_northern_negotiations
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_northern_negotiations
 		prerequisite = { focus = SOV_AAL_return_volga_region }
 		prerequisite = { focus = SOV_AAL_integrate_kirov }
 		x = 1
@@ -19527,7 +19527,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_help_patriarch
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_help_patriarch
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
 		available = {
 			has_full_control_of_state = 403
@@ -19553,7 +19553,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_integrate_tomsk
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_integrate_tomsk
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
 		available = {
 			has_full_control_of_state = 578
@@ -19573,7 +19573,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_return_siberia_region
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_return_siberia_region
 		prerequisite = { focus = SOV_AAL_integrate_tomsk }
 		prerequisite = { focus = SOV_AAL_help_patriarch }
 		available = {
@@ -19592,7 +19592,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_annul_national_movements
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_annul_national_movements
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
 		available = {
 			has_full_control_of_state = 570
@@ -19615,7 +19615,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_finish_whites
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_finish_whites
 		prerequisite = { focus = SOV_AAL_restore_constitutional_order }
 		available = {
 			has_full_control_of_state = 566
@@ -19638,7 +19638,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_first_SEZ
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_first_SEZ
 		prerequisite = { focus = SOV_AAL_finish_whites }
 		prerequisite = { focus = SOV_AAL_annul_national_movements }
 		available = {
@@ -19660,7 +19660,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_amendment_to_constitution
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_amendment_to_constitution
 		prerequisite = { focus = SOV_AAL_return_siberia_region }
 		available = {
 			OR = {
@@ -19684,7 +19684,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_new_russian
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_new_russian
 		prerequisite = { focus = SOV_AAL_return_siberia_region }
 		available = {
 			has_completed_focus = SOV_AAL_amendment_to_constitution
@@ -19709,7 +19709,7 @@ ai_will_do = {
 	}
 	focus = {
 		id = SOV_AAL_destroy_nazis
-		icon = GFX_focus_PLACEHOLDER
+		icon = GFX_focus_SOV_AAL_destroy_nazis
 		prerequisite = { focus = SOV_AAL_new_russian }
 		prerequisite = { focus = SOV_AAL_amendment_to_constitution }
 		x = -1
@@ -19732,6 +19732,9 @@ ai_will_do = {
 			}
 		}
 	}
+	# TODO: Add translation to focuses
+	# TODO: ALL GFX. AND gfx\interface\officer_corp\spirits in army ideas
+	# TODO: SUPER EVENT. MUST BE
 }
 ###  ###  ##  ###  ##  #  #  ##  #    	   ## ### #  # ### ###         
 #  # #   #     #  #  # ## # #  # #    	  #    #  #  # #   #   {~._.~} 

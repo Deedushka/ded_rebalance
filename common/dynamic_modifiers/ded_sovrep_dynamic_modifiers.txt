@@ -2,7 +2,7 @@ UKR_Insurgent_Army = {
 	enable = {
 		always = yes
 	}
-	icon = GFX_decision_generic_PLACEHOLDER
+	icon = GFX_idea_UKR_Insurgent_Army
 	disable_strategic_redeployment = 1
 	local_org_regain = -0.05
 	compliance_growth = -0.05
