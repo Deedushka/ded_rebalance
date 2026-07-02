@@ -23,7 +23,7 @@ autonomy_state = {
 		cic_to_overlord_factor = 1.0
 		mic_to_overlord_factor = 1.0
 		peace_score_ratio_transferred_to_overlord = 1.0
-		surrender_limit = 1
+		surrender_limit = 2
 	}
 	
 	ai_overlord_wants_lower = {
