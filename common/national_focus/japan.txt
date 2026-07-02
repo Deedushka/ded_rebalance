@@ -12967,6 +12967,7 @@ focus_tree = {
 						state = 737
 						state = 634
 						state = 669
+						state = 1070
 						state = 734
 						state = 635
 					}
@@ -13883,7 +13884,10 @@ focus_tree = {
 
 		bypass = {
 			SIA = {
-				has_war_with = ROOT
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
 			}
 		}
 
@@ -31056,7 +31060,6 @@ focus_tree = {
 
 			JAP_add_or_modify_imperial_navy = yes
 			add_to_variable = { JAP_navy_naval_invasion_prep_speed = 0.15 tooltip = naval_invasion_prep_speed_tt }
-			add_ideas = JAP_convoy_ic_reduce
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

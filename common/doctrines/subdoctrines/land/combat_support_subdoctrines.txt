@@ -302,9 +302,9 @@ air_cavalry = {
         }
     }
 
-    enable_tactic = tactic_search_destroy
+    
 
-     rewards = {
+    rewards = {
         airborne_observers = { 
             helicopter_recon = {
                 battalion_mult = {
@@ -352,6 +352,7 @@ air_cavalry = {
                 max_organisation = 10
                 
             }
+            enable_tactic = tactic_search_destroy
         }
  
 

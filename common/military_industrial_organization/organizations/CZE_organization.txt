@@ -1560,33 +1560,24 @@ CZE_ceska_zbrojovka_uhersky_brod_organization = {
 	}
 
 	visible = {
-		OR = {
+		if = {
+			limit = {
+				FROM = {
+					original_tag = GER
+				}
+			}
 			FROM = {
-				OR = {
-					original_tag = CZE
-					original_tag = SLO
-				}
-				
+				has_completed_focus = GER_integrate_czech_manufacturers
 			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = GER
-					}
-				}
+		}
+		if = {
+			limit = {
 				FROM = {
-					has_completed_focus = GER_integrate_czech_manufacturers
+					original_tag = POL
 				}
 			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = POL
-					}
-				}
-				FROM = {
-					has_completed_focus = POL_join_CZE_military
-				}
+			FROM = {
+				has_completed_focus = POL_join_CZE_military
 			}
 		}
 	}

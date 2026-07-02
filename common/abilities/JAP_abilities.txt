@@ -25,7 +25,7 @@ ability = {
 		unit_modifiers = {
 			defence = 0.2
 			combat_entrenchment = 0.25
-			org_damage_multiplier = -0.25
+			org_damage_multiplier = -0.5
 			str_damage_multiplier = 0.6
 			# cannot_retreat_while_defending = 1.0
 		}
@@ -73,7 +73,7 @@ ability = {
 		unit_modifiers = {
 			defence = 0.2
 			combat_entrenchment = 0.25
-			org_damage_multiplier = -0.25
+			org_damage_multiplier = -0.5
 			str_damage_multiplier = 0.6
 			# cannot_retreat_while_defending = 1.0
 		}

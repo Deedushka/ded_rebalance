@@ -4554,6 +4554,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				NOT = { has_dlc = "Man the Guns" }
 				has_completed_focus = USA_continue_the_new_deal
 			}
 		}
@@ -4565,6 +4566,7 @@ focus_tree = {
 					rule = obsolete_focus_branches_visibility
 					option = HIDE
 				}
+				has_dlc = "Man the Guns"
 				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}

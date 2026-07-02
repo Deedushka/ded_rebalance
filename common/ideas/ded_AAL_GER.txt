@@ -30,7 +30,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = PLACEHOLDER_idea_icon
+			picture = GFX_idea_AAL_GER_barbarossa_lost
 
 			targeted_modifier = {
 				tag = SOV

@@ -9266,7 +9266,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
 			add_political_power = 50
@@ -9277,6 +9277,8 @@ focus_tree = {
 			}
 
 			ITA_bop_very_low_increase_effect = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_research_slot = 1
 		}
 	}
 

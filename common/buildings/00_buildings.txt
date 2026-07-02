@@ -242,12 +242,12 @@ buildings = {
 	
 	anti_air_building = {
 		show_on_map = 3
-		base_cost = 1000
+		base_cost = 2500
 		icon_frame = 9
 		anti_air = yes
 		disabled_in_dmz = yes
 		air_defence = 1
-		damage_factor = 0.05
+		damage_factor = 0.1
 		value = 1
 		infrastructure_construction_effect = yes
 		level_cap = {
@@ -257,7 +257,7 @@ buildings = {
 
 	synthetic_refinery = {
 		show_on_map = 1
-		base_cost = 6700
+		base_cost = 10500
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
 		local_resources_rubber = 1 # May use local_resources_ + any resource name
@@ -281,7 +281,7 @@ buildings = {
 
 	fuel_silo = {
 		show_on_map = 1
-		base_cost = 620
+		base_cost = 5000
 		icon_frame = 14
 		value = 5
 		infrastructure_construction_effect = yes
@@ -304,7 +304,7 @@ buildings = {
 		base_cost = 3375
 		icon_frame = 11
 		radar = yes
-		damage_factor = 0.01
+		damage_factor = 0.05
 		value = 4
 		centered = yes
 		allied_build = yes
@@ -710,7 +710,7 @@ buildings = {
 	#### Energy
 	
 	energy_infrastructure = {
-		base_cost = 10000
+		base_cost = 12000
 		icon_frame = 30
 		value = 1
 
@@ -729,7 +729,7 @@ buildings = {
 	}
 	
 	industrial_infrastructure = {
-		base_cost = 10000
+		base_cost = 12000
 		icon_frame = 31
 		value = 1
 
