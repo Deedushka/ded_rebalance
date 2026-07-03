@@ -609,10 +609,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_trip_to_east = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				KIR = { exists = no }
-				is_debug = yes
-			}
+			KIR = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -638,10 +635,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_destroy_omsk = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				KIR = { exists = no }
-				is_debug = yes
-			}
+			KIR = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -667,10 +661,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_destroy_altai = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				KIR = { exists = no }
-				is_debug = yes
-			}
+			KIR = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -699,10 +690,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_destroy_tomsk = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				KIR = { exists = no }
-				is_debug = yes
-			}
+			KIR = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -729,10 +717,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_pressure_on_north = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				KIR = { exists = no }
-				is_debug = yes
-			}
+			KIR = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -779,10 +764,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_abolish_national_movements = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				TOM = { exists = no }
-				is_debug = yes
-			}
+			TOM = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -814,10 +796,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_dash_to_asia = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				TOM = { exists = no }
-				is_debug = yes
-			}
+			TOM = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -854,10 +833,7 @@ SOV_AAL_special_military_operations = {
 	AAL_SOV_restore_constitutional_order = {
 		icon = generic_operation
 		visible = {
-			OR = {
-				VLA = { exists = no }
-				is_debug = yes
-			}
+			VLA = { exists = no }
 		}
 		available = {
 			has_war = no
@@ -934,10 +910,7 @@ prospect_for_resources = {
 	AAL_SOV_tatar_oil = {
 		icon = oil
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 249
 			controls_state = 249
 		}
@@ -970,10 +943,7 @@ prospect_for_resources = {
 	AAL_SOV_ural_tungsten = {
 		icon = tungsten
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 573
 			controls_state = 573
 		}
@@ -1006,10 +976,7 @@ prospect_for_resources = {
 	AAL_SOV_magnitogorsk_tungsten = {
 		icon = tungsten
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 582
 			controls_state = 582
 		}
@@ -1042,10 +1009,7 @@ prospect_for_resources = {
 	AAL_SOV_chelyabinsk_steel = {
 		icon = steel
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 572
 			controls_state = 572
 		}
@@ -1078,10 +1042,7 @@ prospect_for_resources = {
 	AAL_SOV_chelyabinsk_coal = {
 		icon = coal
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 572
 			controls_state = 572
 		}
@@ -1114,10 +1075,7 @@ prospect_for_resources = {
 	AAL_SOV_tomsk_steel = {
 		icon = steel
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 578
 			controls_state = 578
 		}
@@ -1150,10 +1108,7 @@ prospect_for_resources = {
 	AAL_SOV_yeniseisk_steel = {
 		icon = steel
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 576
 			controls_state = 576
 		}
@@ -1186,10 +1141,7 @@ prospect_for_resources = {
 	AAL_SOV_krasnoyarsk_coal = {
 		icon = coal
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 568
 			controls_state = 568
 		}
@@ -1222,10 +1174,7 @@ prospect_for_resources = {
 	AAL_SOV_bratsk_coal = {
 		icon = coal
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 567
 			controls_state = 567
 		}
@@ -1258,10 +1207,7 @@ prospect_for_resources = {
 	AAL_SOV_khabarovsk_tungsten = {
 		icon = tungsten
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 409
 			controls_state = 409
 		}
@@ -1294,10 +1240,7 @@ prospect_for_resources = {
 	AAL_SOV_vladivostok_tungsten = {
 		icon = tungsten
 		visible = {
-			OR = {
-				has_completed_focus = SOV_AAL_geological_exploration
-				is_debug = yes
-			}
+			has_completed_focus = SOV_AAL_geological_exploration
 			owns_state = 408
 			controls_state = 408
 		}

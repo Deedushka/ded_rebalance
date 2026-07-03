@@ -9,4 +9,25 @@ on_actions = {
 			}
 		}
 	}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					is_soviet_autonomy = yes
+				}
+				every_controlled_state = {
+					limit = {
+						state_has_any_resource = yes
+					}
+					PREV = {
+						give_resource_rights = {
+							receiver = OVERLORD
+							state = PREV
+						}
+						# log = "GET NAMES NOW: [?THIS.GetName] [?ROOT.GetName] [?FROM.GetName] [?PREV.GetName]"
+					}
+				}
+			}
+		}
+	}
 }

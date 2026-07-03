@@ -28,10 +28,7 @@ SOV_AAL_special_military_operations = {
 		original_tag = SOV
 	}
 	visible = {
-		OR = {
-			is_debug = yes
-			has_completed_focus = SOV_AAL_restore_constitutional_order
-		}
+		has_completed_focus = SOV_AAL_restore_constitutional_order
 		has_global_flag = AAL_SOV_collapse
 	}
 }
