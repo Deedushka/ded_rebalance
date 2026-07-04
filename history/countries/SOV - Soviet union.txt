@@ -902,6 +902,7 @@ add_ideas = {
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
+	partial_economic_mobilisation
 
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
