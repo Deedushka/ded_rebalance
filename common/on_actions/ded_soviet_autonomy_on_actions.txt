@@ -29,5 +29,26 @@ on_actions = {
 				}
 			}
 		}
+		effect = {
+			every_state = {
+				limit = {
+					is_UKR_Insurgent_army = yes
+				}
+				set_variable = { UKR_Insurgent_Army_local_org_regain = -0.1 }
+				set_variable = { UKR_Insurgent_Army_compliance_growth = -0.1 }
+				set_variable = { UKR_Insurgent_Army_resistance_growth = 0.1 }
+				set_variable = { UKR_Insurgent_Army_resistance_target = 0.3 }
+				set_variable = { UKR_Insurgent_Army_resistance_decay = -0.3 }
+				set_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0.1 }
+				add_dynamic_modifier = {
+					modifier = UKR_Insurgent_Army
+				}
+				remove_core_of = OWNER
+				add_core_of = UPA
+				start_resistance = UPA
+				add_resistance = 20
+				add_compliance = 70
+			}
+		}
 	}
 }

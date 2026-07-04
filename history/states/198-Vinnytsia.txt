@@ -10,9 +10,6 @@ state = {
 		victory_points = {
 			476 3
 		}
-		add_dynamic_modifier = {
-			modifier = UKR_Insurgent_Army
-		}
 		owner = UKR
 		buildings = {
 			infrastructure = 3 #was: 5

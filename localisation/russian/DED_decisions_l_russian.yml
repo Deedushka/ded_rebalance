@@ -1,0 +1,4 @@
+﻿l_russian:
+ anti_partisan_decision_categories: "Уничтожить партизанские движения"
+ low_partisan_strength: "Уничтожить партизан в [?FROM.GetName]"
+ low_partisan_strength_desc: "Мы можем использовать сдавшихся в качестве рабочей силы для укрепления нашей нации"

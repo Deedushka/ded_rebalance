@@ -9,9 +9,6 @@ state={
 		#victory_points = {
 		#	572 5
 		#}
-		add_dynamic_modifier = {
-			modifier = UKR_Insurgent_Army
-		}
 		victory_points = {
 			422 3
 		}

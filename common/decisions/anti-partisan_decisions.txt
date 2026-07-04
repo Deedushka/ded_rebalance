@@ -1,0 +1,67 @@
+anti_partisan_decision_categories = {
+	low_partisan_strength = {
+		icon = GFX_decision_generic_ignite_civil_war
+		on_map_mode = map_and_decisions_view
+		available = {
+		}
+		state_target = yes
+		targets = {
+			201 198 199 93 91 89
+		}
+		target_trigger = {
+			FROM = {
+				is_controlled_by_ROOT_or_subject = yes
+				has_dynamic_modifier = UKR_Insurgent_Army
+				NOT = { has_state_flag = low_partisan_strength_flag }
+			}
+		}
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+		days_remove = 45
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		custom_cost_text = BRA_decision_cost_cangaceiro
+		fire_only_once = no
+		remove_effect = {
+			FROM = {
+				set_UKR_Insurgent_Army_down = yes
+				set_state_flag = { flag = low_partisan_strength_flag value = 1 days = 21 }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				get_new_workers_in_random_core = yes
+			}
+			else = {
+				FROM = {
+					add_manpower = -5000
+				}
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				state_is_fully_controlled_by_ROOT_or_subject = no
+				NOT = { has_dynamic_modifier = UKR_Insurgent_Army }
+			}
+		}
+		cancel_effect = {
+			hidden_effect = {
+				add_command_power = 25
+				FROM = {
+					clr_state_flag = low_partisan_strength_flag
+				}
+			}
+		}
+	}
+}

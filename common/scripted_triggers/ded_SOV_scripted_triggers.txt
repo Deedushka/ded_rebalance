@@ -12,3 +12,20 @@ is_soviet_autonomy = {
 		has_autonomy_state = inner_autonomy_soviet
 	}
 }
+is_UKR_Insurgent_army = {
+	OR = {
+		state = 201
+		state = 198
+		state = 199
+		state = 93
+		state = 91
+		state = 89
+	}
+}
+is_UKR_Insurgent_army_POL = {
+	OR = {
+		state = 93
+		state = 91
+		state = 89
+	}
+}

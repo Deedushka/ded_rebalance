@@ -1,0 +1,4 @@
+﻿l_english:
+ anti_partisan_decision_categories: "Destroy partisan movements"
+ low_partisan_strength: "Destroy partisans in [?FROM.GetName]"
+ low_partisan_strength_desc: "We can use the surrendered as a labor force to strengthen our nation"

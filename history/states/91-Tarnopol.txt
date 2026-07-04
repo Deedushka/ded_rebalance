@@ -13,9 +13,6 @@ state={
 		#victory_points = {
 		#	3483 5
 		#}
-		add_dynamic_modifier = {
-			modifier = UKR_Insurgent_Army
-		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 3
