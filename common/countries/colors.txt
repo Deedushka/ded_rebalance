@@ -1298,3 +1298,7 @@ KIR = {
 	color_ui = rgb { 106 52 53 }
 }
 
+UPA = {
+	color = rgb { 64 34 37 }
+	color_ui = rgb { 64 34 37 }
+}
