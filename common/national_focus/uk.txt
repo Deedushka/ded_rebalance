@@ -10159,7 +10159,7 @@ focus_tree = {
 		will_lead_to_war_with = IRQ
 		prerequisite = { focus = ENG_home_defence }
 		icon = GFX_focus_generic_attack_iraq
-		x = -6
+		x = -2
 		y = 1
 		offset = {
 			x = 1
