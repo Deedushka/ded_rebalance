@@ -6939,7 +6939,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = modify_the_red_army_tt
 			add_to_variable = { SOV_the_red_army_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { SOV_the_red_army_surrender_limit = -0.25 tooltip = surrender_limit_tt }
+			add_to_variable = { SOV_the_red_army_surrender_limit = -0.15 tooltip = surrender_limit_tt }
 		}
 	}
 	focus = {
@@ -6961,7 +6961,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = modify_the_red_army_tt
 			add_to_variable = { SOV_the_red_army_production_factory_max_efficiency_factor = 0.1 tooltip = production_factory_max_efficiency_factor_tt }
-			add_to_variable = { SOV_the_red_army_surrender_limit = -0.25 tooltip = surrender_limit_tt }
+			add_to_variable = { SOV_the_red_army_surrender_limit = -0.15 tooltip = surrender_limit_tt }
 		}
 	}
 
