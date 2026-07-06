@@ -1,4 +1,4 @@
-@days_mission = 180
+@days_mission = 120
 AAL_decision_categories = {
 	AAL_barbarossa_mission = {
 		icon = generic_operation
