@@ -5927,17 +5927,17 @@ country_event = { #For FROM, time to go after RUT
 		}
 	}
 
-	option = { #We should wait
-		name = MUN_the_fall_of_the_republic.4.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				is_historical_focus_on = no
-				factor = 2
-			}
-		}
-		add_political_power = -25
-	}
+	# option = { #We should wait
+	# 	name = MUN_the_fall_of_the_republic.4.b
+	# 	ai_chance = {
+	# 		base = 1
+	# 		modifier = {
+	# 			is_historical_focus_on = no
+	# 			factor = 2
+	# 		}
+	# 	}
+	# 	add_political_power = -25
+	# }
 }
 
 country_event = { #For RUT if to give into FROM or resist
