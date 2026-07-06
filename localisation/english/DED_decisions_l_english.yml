@@ -2,6 +2,9 @@
  anti_partisan_decision_categories: "Destroy partisan movements"
  low_partisan_strength: "Destroy partisans in [?FROM.GetName]"
  low_partisan_strength_desc: "We can use the surrendered as a labor force to strengthen our nation"
+ hide_events_about_partisans: "[GetStatusAboutPartisans]"
+ hide_events_about_partisans_hide: "§YHide§! partisan events"
+ hide_events_about_partisans_un_hide: "§YReveal§! partisan events"
 
  anti_partisan.1.t: "§GHuge victory§!"
  anti_partisan.1.d: "During the confrontation with the UPA, our unit was able to destroy a large formation"

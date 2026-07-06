@@ -2,6 +2,9 @@
  anti_partisan_decision_categories: "Уничтожить партизанские движения"
  low_partisan_strength: "Уничтожить партизан в [?FROM.GetName]"
  low_partisan_strength_desc: "Мы можем использовать сдавшихся в качестве рабочей силы для укрепления нашей нации"
+ hide_events_about_partisans: "[GetStatusAboutPartisans]"
+ hide_events_about_partisans_hide: "§YСпрятать§! события связанные с партизанами"
+ hide_events_about_partisans_un_hide: "§YРаскрыть§! события связанные с партизанами"
 
  anti_partisan.1.t: "§GОгромная победа§!"
  anti_partisan.1.d: "В ходе противостояния с УПА наше подразделение смогло уничтожить крупное формирование"

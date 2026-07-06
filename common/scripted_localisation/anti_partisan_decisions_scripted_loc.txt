@@ -1,0 +1,17 @@
+defined_text = {
+    name = GetStatusAboutPartisans
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = anti_partisan_hidden_flag
+            }
+        }
+        localization_key = hide_events_about_partisans_hide
+    }
+    text = {
+        trigger = {
+            has_country_flag = anti_partisan_hidden_flag
+        }
+        localization_key = hide_events_about_partisans_un_hide
+    }
+}

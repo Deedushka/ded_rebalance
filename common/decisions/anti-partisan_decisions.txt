@@ -1,4 +1,18 @@
 anti_partisan_decision_categories = {
+	hide_events_about_partisans = {
+		icon = generic_operation
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = anti_partisan_hidden_flag }
+				}
+				set_country_flag = anti_partisan_hidden_flag
+			}
+			else = {
+				clr_country_flag = anti_partisan_hidden_flag
+			}
+		}
+	}
 	low_partisan_strength = {
 		icon = GFX_decision_generic_ignite_civil_war
 		on_map_mode = map_and_decisions_view
@@ -47,45 +61,111 @@ anti_partisan_decision_categories = {
 							has_government = fascism
 						}
 					}
-					FROM = {
-						save_event_target_as = state_target
+					if = {
+						limit = {
+							NOT = { has_country_flag = anti_partisan_hidden_flag }
+						}
+						FROM = {
+							save_event_target_as = state_target
+						}
+						country_event = anti_partisan.5
 					}
-					country_event = anti_partisan.5
+					else = {
+						FROM = {
+							save_event_target_as = state_target
+						}
+						country_event = anti_partisan_hidden.5
+					}
 				}
 				else = {
 					random_list = {
 						40 = {
-							FROM = {
-								save_event_target_as = state_target
+							if = {
+								limit = {
+									NOT = { has_country_flag = anti_partisan_hidden_flag }
+								}
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan.1
 							}
-							country_event = anti_partisan.1
+							else = {
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan_hidden.1
+							}
 						}
 						30 = {
-							FROM = {
-								save_event_target_as = state_target
+							if = {
+								limit = {
+									NOT = { has_country_flag = anti_partisan_hidden_flag }
+								}
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan.2
 							}
-							country_event = anti_partisan.2
+							else = {
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan_hidden.2
+							}
 						}
 						20 = {
-							FROM = {
-								save_event_target_as = state_target
+							if = {
+								limit = {
+									NOT = { has_country_flag = anti_partisan_hidden_flag }
+								}
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan.3
 							}
-							country_event = anti_partisan.3
+							else = {
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan_hidden.3
+							}
 						}
 						10 = {
-							FROM = {
-								save_event_target_as = state_target
+							if = {
+								limit = {
+									NOT = { has_country_flag = anti_partisan_hidden_flag }
+								}
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan.4
 							}
-							country_event = anti_partisan.4
+							else = {
+								FROM = {
+									save_event_target_as = state_target
+								}
+								country_event = anti_partisan_hidden.4
+							}
 						}
 					}
 				}
 			}
 			else = {
-				FROM = {
-					save_event_target_as = state_target
+				if = {
+					limit = {
+						NOT = { has_country_flag = anti_partisan_hidden_flag }
+					}
+					FROM = {
+						save_event_target_as = state_target
+					}
+					country_event = anti_partisan.6
 				}
-				country_event = anti_partisan.6
+				else = {
+					FROM = {
+						save_event_target_as = state_target
+					}
+					country_event = anti_partisan_hidden.6
+				}
 			}
 		}
 		cancel_trigger = {
