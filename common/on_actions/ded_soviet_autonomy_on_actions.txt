@@ -34,26 +34,28 @@ on_actions = {
 				limit = {
 					is_UKR_Insurgent_army = yes
 				}
-				set_variable = { UKR_Insurgent_Army_local_org_regain = -0.1 }
-				set_variable = { UKR_Insurgent_Army_compliance_growth = -0.1 }
-				set_variable = { UKR_Insurgent_Army_resistance_growth = 0.1 }
-				set_variable = { UKR_Insurgent_Army_resistance_target = 0.3 }
-				set_variable = { UKR_Insurgent_Army_resistance_decay = -0.3 }
-				set_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0.1 }
+				every_country = {
+					limit = {
+						PREV = {
+							is_core_of = PREV
+						}
+					}
+					PREV = {
+						remove_core_of = PREV
+					}
+					add_to_array = {
+						array = PREV.core_array
+						value = THIS
+					}
+				}
+				get_dynamic_population_partisans_on_states = yes
 				add_dynamic_modifier = {
 					modifier = UKR_Insurgent_Army
 				}
-				remove_core_of = OWNER
-				if = {
-					limit = {
-						is_core_of = UKR
-					}
-					remove_core_of = UKR
-				}
 				add_core_of = UPA
 				start_resistance = UPA
-				add_resistance = 20
-				add_compliance = 70
+				add_resistance = 30
+				add_compliance = 50
 				add_to_array = {
 					array = global.is_UKR_Insurgent_army
 				}

@@ -13,7 +13,7 @@ anti_partisan_decision_categories = {
 		custom_cost_trigger = {
 			command_power > 24.9
 		}
-		days_remove = 45
+		days_remove = 42
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -25
@@ -25,22 +25,67 @@ anti_partisan_decision_categories = {
 		custom_cost_text = BRA_decision_cost_cangaceiro
 		fire_only_once = no
 		remove_effect = {
-			FROM = {
-				set_UKR_Insurgent_Army_down = yes
-			}
 			if = {
 				limit = {
-					OR = {
-						has_government = communism
-						has_government = fascism
+					FROM = {
+						NOT = {
+							AND = {
+								check_variable = { UKR_Insurgent_Army_local_org_regain = 0 }
+								check_variable = { UKR_Insurgent_Army_compliance_growth = 0 }
+								check_variable = { UKR_Insurgent_Army_resistance_growth = 0 }
+								check_variable = { UKR_Insurgent_Army_resistance_target = 0 }
+								check_variable = { UKR_Insurgent_Army_resistance_decay = 0 }
+								check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0 }
+							}
+						}
 					}
 				}
-				get_new_workers_in_random_core = yes
+				if = {
+					limit = {
+						NOT = {
+							has_government = communism
+							has_government = fascism
+						}
+					}
+					FROM = {
+						save_event_target_as = state_target
+					}
+					country_event = anti_partisan.5
+				}
+				else = {
+					random_list = {
+						40 = {
+							FROM = {
+								save_event_target_as = state_target
+							}
+							country_event = anti_partisan.1
+						}
+						30 = {
+							FROM = {
+								save_event_target_as = state_target
+							}
+							country_event = anti_partisan.2
+						}
+						20 = {
+							FROM = {
+								save_event_target_as = state_target
+							}
+							country_event = anti_partisan.3
+						}
+						10 = {
+							FROM = {
+								save_event_target_as = state_target
+							}
+							country_event = anti_partisan.4
+						}
+					}
+				}
 			}
 			else = {
 				FROM = {
-					add_manpower = -5000
+					save_event_target_as = state_target
 				}
+				country_event = anti_partisan.6
 			}
 		}
 		cancel_trigger = {

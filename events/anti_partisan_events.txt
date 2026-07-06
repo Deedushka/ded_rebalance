@@ -1,0 +1,124 @@
+add_namespace = anti_partisan
+
+country_event = {
+	id = anti_partisan.1 # Big win
+	title = anti_partisan.1.t
+	desc = anti_partisan.1.d
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:state_target = {
+			set_UKR_Insurgent_Army_down = yes
+		}
+	}
+
+	option = {
+		name = anti_partisan.1.a
+		get_new_workers_in_random_core = yes
+	}
+}
+country_event = {
+	id = anti_partisan.2 # Small win
+	title = anti_partisan.2.t
+	desc = anti_partisan.2.d
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:state_target = {
+			set_UKR_Insurgent_Army_down = yes
+		}
+	}
+
+	option = {
+		name = anti_partisan.2.a
+	}
+}
+country_event = {
+	id = anti_partisan.3 # Small lose
+	title = anti_partisan.3.t
+	desc = anti_partisan.3.d
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:state_target = {
+			set_variable_to_random = {
+				var = random_up
+				min = 1
+				max = 1.25
+				integer = no
+			}
+			set_UKR_Insurgent_Army_up = yes
+		}
+	}
+
+	option = {
+		name = anti_partisan.3.a
+	}
+}
+country_event = {
+	id = anti_partisan.4 # Big lose
+	title = anti_partisan.4.t
+	desc = anti_partisan.4.d
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:state_target = {
+			set_variable_to_random = {
+				var = random_up
+				min = 1.25
+				max = 1.5
+				integer = no
+			}
+			set_UKR_Insurgent_Army_up = yes
+			add_manpower = -2000
+		}
+	}
+
+	option = {
+		name = anti_partisan.4.a
+		effect_tooltip = {
+			event_target:state_target = {
+				add_manpower = -2000
+			}
+		}
+	}
+}
+country_event = {
+	id = anti_partisan.5 # Non dictatorships event
+	title = anti_partisan.5.t
+	desc = anti_partisan.5.d
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:state_target = {
+			set_UKR_Insurgent_Army_down = yes
+			add_manpower = -5000
+		}
+	}
+
+	option = {
+		name = anti_partisan.5.a
+		effect_tooltip = {
+			event_target:state_target = {
+				add_manpower = -5000
+			}
+		}
+	}
+}
+country_event = {
+	id = anti_partisan.6 # Remove modifier
+	title = anti_partisan.6.t
+	desc = anti_partisan.6.d
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:state_target = {
+			set_UKR_Insurgent_Army_down = yes
+		}
+	}
+
+	option = {
+		name = anti_partisan.6.a
+		get_new_workers_in_random_core = yes
+	}
+}

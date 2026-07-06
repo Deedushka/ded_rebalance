@@ -3,12 +3,13 @@ UKR_Insurgent_Army = {
 		always = yes
 	}
 	icon = GFX_idea_UKR_Insurgent_Army
-	local_org_regain = UKR_Insurgent_Army_local_org_regain #-0.1
-	compliance_growth = UKR_Insurgent_Army_compliance_growth #-0.1
-	resistance_growth = UKR_Insurgent_Army_resistance_growth #0.10
-	resistance_target = UKR_Insurgent_Army_resistance_target #0.30
-	resistance_decay = UKR_Insurgent_Army_resistance_decay #-0.30
-	resistance_damage_to_garrison = UKR_Insurgent_Army_resistance_damage_to_garrison #0.10
+	local_org_regain = UKR_Insurgent_Army_local_org_regain
+	compliance_growth = UKR_Insurgent_Army_compliance_growth
+	resistance_growth = UKR_Insurgent_Army_resistance_growth
+	resistance_target = UKR_Insurgent_Army_resistance_target
+	resistance_decay = UKR_Insurgent_Army_resistance_decay
+	resistance_damage_to_garrison = UKR_Insurgent_Army_resistance_damage_to_garrison
+	disable_strategic_redeployment = 1
 }
 A_new_workforce = {
 	enable = {

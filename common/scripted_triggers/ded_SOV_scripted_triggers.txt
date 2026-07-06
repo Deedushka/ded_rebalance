@@ -22,10 +22,3 @@ is_UKR_Insurgent_army = {
 		state = 89
 	}
 }
-is_UKR_Insurgent_army_POL = {
-	OR = {
-		state = 93
-		state = 91
-		state = 89
-	}
-}

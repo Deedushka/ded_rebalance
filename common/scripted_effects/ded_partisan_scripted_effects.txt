@@ -1,66 +1,211 @@
-@temp_x3 = 0.06
-@temp_x1 = 0.02
+@subtraction_var = 0.02
 set_UKR_Insurgent_Army_down = {
 	if = {
 		limit = {
 			NOT = {
-				check_variable = { UKR_Insurgent_Army_local_org_regain = 0 }
-				check_variable = { UKR_Insurgent_Army_compliance_growth = 0 }
-				check_variable = { UKR_Insurgent_Army_resistance_growth = 0 }
-				check_variable = { UKR_Insurgent_Army_resistance_target = 0 }
-				check_variable = { UKR_Insurgent_Army_resistance_decay = 0 }
-				check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0 }
+				AND = {
+					check_variable = { UKR_Insurgent_Army_local_org_regain = 0 }
+					check_variable = { UKR_Insurgent_Army_compliance_growth = 0 }
+					check_variable = { UKR_Insurgent_Army_resistance_growth = 0 }
+					check_variable = { UKR_Insurgent_Army_resistance_target = 0 }
+					check_variable = { UKR_Insurgent_Army_resistance_decay = 0 }
+					check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0 }
+				}
 			}
 		}
 		if = {
 			limit = {
 				check_variable = { UKR_Insurgent_Army_local_org_regain < 0 }
 			}
-			add_to_variable = { UKR_Insurgent_Army_local_org_regain = @temp_x1 }
+			add_to_variable = { UKR_Insurgent_Army_local_org_regain = @subtraction_var }
+			if = {
+				limit = {
+					check_variable = { UKR_Insurgent_Army_local_org_regain > 0 }
+				}
+				set_variable = { UKR_Insurgent_Army_local_org_regain = 0 }
+			}
 		}
 		if = {
 			limit = {
 				check_variable = { UKR_Insurgent_Army_compliance_growth < 0 }
 			}
-			add_to_variable = { UKR_Insurgent_Army_compliance_growth = @temp_x1 }
+			add_to_variable = { UKR_Insurgent_Army_compliance_growth = @subtraction_var }
+			if = {
+				limit = {
+					check_variable = { UKR_Insurgent_Army_compliance_growth > 0 }
+				}
+				set_variable = { UKR_Insurgent_Army_compliance_growth = 0 }
+			}
 		}
 		if = {
 			limit = {
 				check_variable = { UKR_Insurgent_Army_resistance_growth > 0 }
 			}
-			subtract_from_variable = { UKR_Insurgent_Army_resistance_growth = @temp_x1 }
+			subtract_from_variable = { UKR_Insurgent_Army_resistance_growth = @subtraction_var }
+			if = {
+				limit = {
+					check_variable = { UKR_Insurgent_Army_resistance_growth < 0 }
+				}
+				set_variable = { UKR_Insurgent_Army_resistance_growth = 0 }
+			}
 		}
 		if = {
 			limit = {
 				check_variable = { UKR_Insurgent_Army_resistance_target > 0 }
 			}
-			subtract_from_variable = { UKR_Insurgent_Army_resistance_target = @temp_x3 }
+			subtract_from_variable = { UKR_Insurgent_Army_resistance_target = @subtraction_var }
+			if = {
+				limit = {
+					check_variable = { UKR_Insurgent_Army_resistance_target < 0 }
+				}
+				set_variable = { UKR_Insurgent_Army_resistance_target = 0 }
+			}
 		}
 		if = {
 			limit = {
 				check_variable = { UKR_Insurgent_Army_resistance_decay < 0 }
 			}
-			add_to_variable = { UKR_Insurgent_Army_resistance_decay = @temp_x3 }
+			add_to_variable = { UKR_Insurgent_Army_resistance_decay = @subtraction_var }
+			if = {
+				limit = {
+					check_variable = { UKR_Insurgent_Army_resistance_decay > 0 }
+				}
+				set_variable = { UKR_Insurgent_Army_resistance_decay = 0 }
+			}
 		}
 		if = {
 			limit = {
 				check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison > 0 }
 			}
-			subtract_from_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = @temp_x1 }
+			subtract_from_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = @subtraction_var }
+			if = {
+				limit = {
+					check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison < 0 }
+				}
+				set_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0 }
+			}
 		}
 	}
 	else = {
 		remove_dynamic_modifier = {
 			modifier = UKR_Insurgent_Army
 		}
-		add_core_of = UKR
-		if = {
-			limit = {
-				is_UKR_Insurgent_army_POL = yes
+		for_each_loop = {
+			array = THIS.core_array
+			THIS = {
+				add_core_of = v
 			}
-			add_core_of = POL
 		}
 		remove_core_of = UPA
+	}
+}
+set_UKR_Insurgent_Army_up = {
+	set_temp_variable = { temp_up = UKR_Insurgent_Army_local_org_regain }
+	multiply_temp_variable = { temp_up = random_up }
+	multiply_temp_variable = { temp_up = 100 }
+	round_temp_variable = temp_up
+	divide_temp_variable = { temp_up = 100 }
+	if = {
+		limit = {
+			check_variable = { UKR_Insurgent_Army_local_org_regain > -0.5 }
+		}
+		set_variable = { UKR_Insurgent_Army_local_org_regain = temp_up }
+		if = {
+			limit = {
+				check_variable = { UKR_Insurgent_Army_local_org_regain < -0.5 }
+			}
+			set_variable = { UKR_Insurgent_Army_local_org_regain = -0.5 }
+		}
+	}
+	
+	set_temp_variable = { temp_up = UKR_Insurgent_Army_compliance_growth }
+	multiply_temp_variable = { temp_up = random_up }
+	multiply_temp_variable = { temp_up = 100 }
+	round_temp_variable = temp_up
+	divide_temp_variable = { temp_up = 100 }
+	if = {
+		limit = {
+			check_variable = { UKR_Insurgent_Army_compliance_growth > -0.5 }
+		}
+		set_variable = { UKR_Insurgent_Army_compliance_growth = temp_up }
+		if = {
+			limit = {
+				check_variable = { UKR_Insurgent_Army_compliance_growth < -0.5 }
+			}
+			set_variable = { UKR_Insurgent_Army_compliance_growth = -0.5 }
+		}
+	}
+	
+	set_temp_variable = { temp_up = UKR_Insurgent_Army_resistance_growth }
+	multiply_temp_variable = { temp_up = random_up }
+	multiply_temp_variable = { temp_up = 100 }
+	round_temp_variable = temp_up
+	divide_temp_variable = { temp_up = 100 }
+	if = {
+		limit = {
+			check_variable = { UKR_Insurgent_Army_resistance_growth < 0.5 }
+		}
+		set_variable = { UKR_Insurgent_Army_resistance_growth = temp_up }
+		if = {
+			limit = {
+				check_variable = { UKR_Insurgent_Army_resistance_growth > 0.5 }
+			}
+			set_variable = { UKR_Insurgent_Army_resistance_growth = 0.5 }
+		}
+	}
+	
+	set_temp_variable = { temp_up = UKR_Insurgent_Army_resistance_target }
+	multiply_temp_variable = { temp_up = random_up }
+	multiply_temp_variable = { temp_up = 100 }
+	round_temp_variable = temp_up
+	divide_temp_variable = { temp_up = 100 }
+	if = {
+		limit = {
+			check_variable = { UKR_Insurgent_Army_resistance_target < 0.7 }
+		}
+		set_variable = { UKR_Insurgent_Army_resistance_target = temp_up }
+		if = {
+			limit = {
+				check_variable = { UKR_Insurgent_Army_resistance_target > 0.7 }
+			}
+			set_variable = { UKR_Insurgent_Army_resistance_target = 0.7 }
+		}
+	}
+	
+	set_temp_variable = { temp_up = UKR_Insurgent_Army_resistance_decay }
+	multiply_temp_variable = { temp_up = random_up }
+	multiply_temp_variable = { temp_up = 100 }
+	round_temp_variable = temp_up
+	divide_temp_variable = { temp_up = 100 }
+	if = {
+		limit = {
+			check_variable = { UKR_Insurgent_Army_resistance_decay > -0.5 }
+		}
+		set_variable = { UKR_Insurgent_Army_resistance_decay = temp_up }
+		if = {
+			limit = {
+				check_variable = { UKR_Insurgent_Army_resistance_decay < -0.5 }
+			}
+			set_variable = { UKR_Insurgent_Army_resistance_decay = -0.5 }
+		}
+	}
+	
+	set_temp_variable = { temp_up = UKR_Insurgent_Army_resistance_damage_to_garrison }
+	multiply_temp_variable = { temp_up = random_up }
+	multiply_temp_variable = { temp_up = 100 }
+	round_temp_variable = temp_up
+	divide_temp_variable = { temp_up = 100 }
+	if = {
+		limit = {
+			check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison < 0.7 }
+		}
+		set_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = temp_up }
+		if = {
+			limit = {
+				check_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison > 0.7 }
+			}
+			set_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = 0.7 }
+		}
 	}
 }
 get_new_workers_in_random_core = {
@@ -89,7 +234,27 @@ get_new_workers_in_random_core = {
 		add_extra_state_shared_building_slots = 1
 		add_dynamic_modifier = {
 			modifier = A_new_workforce
-			days = 120
+			days = 90
 		}
 	}
+}
+@multiplier_to_x2 = 1.5
+get_dynamic_population_partisans_on_states = {
+	set_temp_variable = { temp_state_population = state_population_k }
+	divide_temp_variable = { temp_state_population = 100 }
+	set_temp_variable = { temp_state_population_x2 = temp_state_population }
+	multiply_temp_variable = { temp_state_population_x2 = @multiplier_to_x2 }
+	round_temp_variable = temp_state_population
+	round_temp_variable = temp_state_population_x2
+	divide_temp_variable = { temp_state_population = 100 }
+	divide_temp_variable = { temp_state_population_x2 = 100 }
+	set_temp_variable = { temp_state_population_neg = temp_state_population }
+	multiply_temp_variable = { temp_state_population_neg = -1 }
+
+	set_variable = { UKR_Insurgent_Army_local_org_regain = temp_state_population_neg }
+	set_variable = { UKR_Insurgent_Army_compliance_growth = temp_state_population_neg }
+	set_variable = { UKR_Insurgent_Army_resistance_growth = temp_state_population }
+	set_variable = { UKR_Insurgent_Army_resistance_target = temp_state_population_x2 }
+	set_variable = { UKR_Insurgent_Army_resistance_decay = temp_state_population_neg }
+	set_variable = { UKR_Insurgent_Army_resistance_damage_to_garrison = temp_state_population_x2 }
 }
