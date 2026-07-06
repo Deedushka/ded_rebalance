@@ -9,6 +9,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
+		white_peace = SOV
 		every_state = {
 			limit = {
 				AAL_states = yes
@@ -68,6 +69,7 @@ country_event = {
 		}
 
 		SOV = {
+			release = FIN
 			if = {
 				limit = {
 					has_dynamic_modifier = SOV_the_politburo_good_dynamic_modifier
@@ -84,7 +86,6 @@ country_event = {
 				modifier = SOV_adaptive_chaos
 			}
 			remove_ideas = home_of_revolution
-			remove_mission = AAL_SOV_war_status_timer
 			set_rule = {
 				can_access_market = no
 				can_create_factions = no
@@ -143,6 +144,7 @@ country_event = {
 	hidden = yes
 
 	immediate = {
+		white_peace = SOV
 		if = {
 			limit = {
 				MAN = {
@@ -183,7 +185,7 @@ country_event = {
 			}
 			drop_cosmetic_tag = yes
 		}
-		clr_country_flag = JAP_in_barb
+		clr_country_flag = JAP_in_AAL
 		clr_country_flag = to_MAN
 	}
 }

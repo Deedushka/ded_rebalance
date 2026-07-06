@@ -1,26 +1,21 @@
-@days_start_missions = 120
+@days_mission = 180
 AAL_decision_categories = {
 	AAL_barbarossa_mission = {
 		icon = generic_operation
+		activation = {
+			has_global_flag = AAL_been_continued
+		}
 		allowed = {
-			always = no
+			original_tag = GER
 		}
 		fire_only_once = yes
 		is_good = no
-		days_mission_timeout = @days_start_missions
+		days_mission_timeout = @days_mission
 		available = {
-			214 = {
-				is_axis_controlled = yes
+			hidden_trigger = {
+				has_global_flag = AAL_been_continued
 			}
-			219 = {
-				is_axis_controlled = yes
-			}
-			217 = {
-				is_axis_controlled = yes
-			}
-			236 = {
-				is_axis_controlled = yes
-			}
+			AAL_Objective = yes
 		}
 		timeout_effect = {
 			deactivate_AAL_missions = yes
@@ -29,304 +24,23 @@ AAL_decision_categories = {
 			AAL_SOV_peace_deal = yes
 		}
 	}
-	AAL_north_group_1 = { # Baltic
+	AAL_get_time_from_objective = {
 		icon = generic_operation
 		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 808
-			}
-		}
-		available = {
-			808 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_north_group_2 = { # Leningrad
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 195
-			}
-		}
-		available = {
-			195 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_north_group_3 = { # Arkhangelsk
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 214
-			}
-		}
-		available = {
-			214 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_center_group_1 = { # Minsk
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 206
-			}
-		}
-		available = {
-			206 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_center_group_2 = { # Smolensk
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 242
-			}
-		}
-		available = {
-			242 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_center_group_3 = { # Moscow
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 219
-			}
-		}
-		available = {
-			219 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_south_group_1 = { # Kiev
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 202
-			}
-		}
-		available = {
-			202 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_south_group_2 = { # Donbass
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 227
-			}
-		}
-		available = {
-			227 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_south_group_3 = { # Stalingrad
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 217
-			}
-		}
-		available = {
-			217 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-	AAL_south_group_4 = { # Astrakhan
-		icon = generic_operation
-		fire_only_once = yes
-		is_good = no
-		days_mission_timeout = days_mission_timeout@AAL_barbarossa_mission
-		on_map_mode = map_only
-		allowed = {
-			always = no
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 236
-			}
-		}
-		available = {
-			236 = {
-				is_axis_controlled = yes
-			}
-		}
-		complete_effect = {
-			AAL_add_days_missions = yes
-		}
-	}
-
-	AAL_SOV_war_status_timer = {
-		icon = generic_operation
-		fire_only_once = yes
-		visible = {
-			SOV = {
-				has_war_with = GER
-			}
-		}
-		days_mission_timeout = @days_start_missions
-		allowed = {
-			always = no
-		}
-		available = {
-			always = no
-		}
-	}
-	AAL_SOV_war_status_main_cities = {
-		icon = generic_operation
-		allowed = {
-			tag = SOV
-		}
-		fire_only_once = yes
+		state_target = yes
 		on_map_mode = map_only
 		available = {
-			always = no
-		}
-		visible = {
-			ROOT = {
-				has_active_mission = AAL_SOV_war_status_timer
+			hidden_trigger = {
+				always = no
 			}
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 214
-				state = 219
-				state = 217
-				state = 236
-			}
-		}
-	}
-	AAL_SOV_war_status_mini_cities = {
-		icon = generic_operation
-		allowed = {
-			tag = SOV
-		}
-		fire_only_once = yes
-		on_map_mode = map_only
-		available = {
-			always = no
-		}
-		visible = {
-			ROOT = {
-				has_active_mission = AAL_SOV_war_status_timer
-			}
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 808
-				state = 195
-				state = 214
-				state = 206
-				state = 242
-				state = 219
-				state = 202
-				state = 227
-				state = 217
-				state = 236
+		target_array = global.AAL_Objective_timed
+		target_trigger = {
+			has_global_flag = AAL_been_continued
+			FROM = {
+				NOT = {
+					is_axis_controlled = yes
+				}
 			}
 		}
 	}

@@ -1,0 +1,15 @@
+defined_text = {
+    name = AAL_get_time_from_objective
+    text = {
+        trigger = {
+			is_GER_Axis_controlled = yes
+        }
+        localization_key = AAL_get_time_from_objective_offensive
+    }
+    text = {
+        trigger = {
+			is_GER_Axis_controlled = no
+        }
+        localization_key = AAL_get_time_from_objective_defensive
+    }
+}

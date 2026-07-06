@@ -4,12 +4,11 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
-			allowed_civil_war = {
-				has_government = fascism
+			cancel = {
+				NOT = {
+					has_global_flag = AAL_been_continued
+				}
 			}
-
-			removal_cost = -1
 
 			picture = generic_acquire_tanks
 
@@ -24,13 +23,7 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			removal_cost = -1
-
-			picture = GFX_idea_AAL_GER_barbarossa_lost
+			picture = AAL_GER_barbarossa_lost
 
 			targeted_modifier = {
 				tag = SOV

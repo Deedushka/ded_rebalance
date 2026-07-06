@@ -1,72 +1,28 @@
 @days_add = 18
-activate_AAL_missions = {
-	add_ideas = {
-		AAL_GER_barbarossa
-	}
-	activate_mission = AAL_barbarossa_mission
-	activate_mission = AAL_north_group_1
-	activate_mission = AAL_north_group_2
-	activate_mission = AAL_north_group_3
-	activate_mission = AAL_center_group_1
-	activate_mission = AAL_center_group_2
-	activate_mission = AAL_center_group_3
-	activate_mission = AAL_south_group_1
-	activate_mission = AAL_south_group_2
-	activate_mission = AAL_south_group_3
-	activate_mission = AAL_south_group_4
-}
-activate_AAL_missions_spectate = {
-	activate_mission = AAL_SOV_war_status_timer
-}
 deactivate_AAL_missions = {
 	custom_effect_tooltip = deactivate_AAL_missions_tt
-	hidden_effect = {
-		remove_ideas = AAL_GER_barbarossa
-		JAP = {
-			clr_country_flag = JAP_in_barb
-		}
-		SOV = { remove_mission = AAL_SOV_war_status_timer }
-	}
+	clr_country_flag = JAP.JAP_in_AAL
 	add_timed_idea = {
 		idea = AAL_GER_barbarossa_lost
 		days = 160
 	}
 	SOV = {
-		add_to_variable = { SOV_the_red_army_surrender_limit = 0.1 }
-	}
-}
-AAL_add_days_missions = {
-	custom_effect_tooltip = AAL_add_days_missions_tt
-	hidden_effect = {
-		add_days_mission_timeout = { mission = AAL_barbarossa_mission days = @days_add }
-		add_days_mission_timeout = { mission = AAL_north_group_1 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_north_group_2 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_north_group_3 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_center_group_1 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_center_group_2 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_center_group_3 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_south_group_1 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_south_group_2 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_south_group_3 days = @days_add }
-		add_days_mission_timeout = { mission = AAL_south_group_4 days = @days_add }
-
-		SOV = { add_days_mission_timeout = { mission = AAL_SOV_war_status_timer days = @days_add } }
+		add_to_variable = { SOV_the_red_army_surrender_limit = 0.1 tooltip = surrender_limit_tt }
 	}
 }
 AAL_SOV_peace_deal = {
 	custom_effect_tooltip = AAL_SOV_peace_deal_tt
 	hidden_effect = {
+		clr_global_flag = AAL_been_continued
 		GER = { 
-			white_peace = SOV
 			country_event = AAL.1
-			set_country_flag = GER_win_barb
+			set_country_flag = GER_win_AAL
 		}
-		JAP = {
-			if = {  
-				limit = {
-					has_country_flag = JAP_in_barb
-				}
-				white_peace = SOV
+		if = {  
+			limit = {
+				has_country_flag = JAP.JAP_in_AAL
+			}
+			JAP = {
 				country_event = AAL.2
 			}
 		}

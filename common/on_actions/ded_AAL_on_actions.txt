@@ -3,6 +3,9 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					NOT = {
+						has_country_flag = GER.GER_win_AAL
+					}
 					OR = {
 						AND = {
 							ROOT = { original_tag = GER }
@@ -13,22 +16,25 @@ on_actions = {
 							FROM = { original_tag = GER }
 						}
 					}
-					GER = { 
-						NOT = {
-							has_country_flag = GER_win_barb
+				}
+				set_global_flag = AAL_been_continued
+				every_state = {
+					limit = {
+						AAL_Objective_timed = yes
+						CONTROLLER = {
+							OR = {
+								original_tag = SOV
+								is_subject_of = SOV
+							}
 						}
 					}
+					add_to_array = {
+						array = global.AAL_Objective_timed
+					}
 				}
-				GER = { 
-					activate_AAL_missions = yes
-				}
-				SOV = {
-					activate_AAL_missions_spectate = yes
-					if = {
-						limit = {
-							NOT = { has_completed_focus = SOV_claims_in_baltic }
-						}
-						complete_national_focus = SOV_claims_in_baltic
+				GER = {
+					add_ideas = {
+						AAL_GER_barbarossa
 					}
 				}
 			}
@@ -36,7 +42,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					GER = { has_active_mission = AAL_barbarossa_mission }
+					has_global_flag = AAL_been_continued
 					OR = {
 						AND = {
 							ROOT = { original_tag = JAP }
@@ -48,7 +54,7 @@ on_actions = {
 						}
 					}
 				}
-				JAP = { set_country_flag = JAP_in_barb }
+				set_country_flag = JAP.JAP_in_AAL
 			}
 		}
 	}
@@ -57,13 +63,42 @@ on_actions = {
 			if = {
 				limit = {
 					FROM.FROM = { state = 219 }
-					ROOT = {
-						has_active_mission = AAL_barbarossa_mission
-					}
+					has_global_flag = AAL_been_continued
 				}
 				FROM = {
 					kill_country_leader = yes
 					SOV_promote_to_country_leader_beriya = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_in_array = {
+						array = global.AAL_Objective_timed
+						value = FROM.FROM.FROM
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							is_GER_Axis_controlled = yes
+						}
+					}
+					GER = {
+						add_days_mission_timeout = {
+							mission = AAL_barbarossa_mission
+							days = 21
+						}
+					}
+				}
+				else = {
+					GER = {
+						add_days_mission_timeout = {
+							mission = AAL_barbarossa_mission
+							days = -21
+						}
+					}
 				}
 			}
 		}
