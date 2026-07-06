@@ -2,17 +2,12 @@ anti_partisan_decision_categories = {
 	low_partisan_strength = {
 		icon = GFX_decision_generic_ignite_civil_war
 		on_map_mode = map_and_decisions_view
-		available = {
-		}
 		state_target = yes
-		targets = {
-			201 198 199 93 91 89
-		}
+		target_array = global.is_UKR_Insurgent_army
 		target_trigger = {
 			FROM = {
 				is_controlled_by_ROOT_or_subject = yes
 				has_dynamic_modifier = UKR_Insurgent_Army
-				NOT = { has_state_flag = low_partisan_strength_flag }
 			}
 		}
 		custom_cost_trigger = {
@@ -32,7 +27,6 @@ anti_partisan_decision_categories = {
 		remove_effect = {
 			FROM = {
 				set_UKR_Insurgent_Army_down = yes
-				set_state_flag = { flag = low_partisan_strength_flag value = 1 days = 21 }
 			}
 			if = {
 				limit = {
@@ -58,10 +52,8 @@ anti_partisan_decision_categories = {
 		cancel_effect = {
 			hidden_effect = {
 				add_command_power = 25
-				FROM = {
-					clr_state_flag = low_partisan_strength_flag
-				}
 			}
 		}
+		days_re_enable = 21
 	}
 }

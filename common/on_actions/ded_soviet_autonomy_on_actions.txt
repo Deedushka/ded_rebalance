@@ -44,10 +44,19 @@ on_actions = {
 					modifier = UKR_Insurgent_Army
 				}
 				remove_core_of = OWNER
+				if = {
+					limit = {
+						is_core_of = UKR
+					}
+					remove_core_of = UKR
+				}
 				add_core_of = UPA
 				start_resistance = UPA
 				add_resistance = 20
 				add_compliance = 70
+				add_to_array = {
+					array = global.is_UKR_Insurgent_army
+				}
 			}
 		}
 	}
