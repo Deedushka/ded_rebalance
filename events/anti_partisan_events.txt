@@ -6,6 +6,7 @@ country_event = {
 	title = anti_partisan.1.t
 	desc = anti_partisan.1.d
 	is_triggered_only = yes
+	picture = GFX_report_event_bul_partisans_plovdiv
 
 	immediate = {
 		event_target:state_target = {
@@ -23,6 +24,7 @@ country_event = {
 	title = anti_partisan.2.t
 	desc = anti_partisan.2.d
 	is_triggered_only = yes
+	picture = GFX_report_event_bul_partisans_plovdiv
 
 	immediate = {
 		event_target:state_target = {
@@ -39,6 +41,7 @@ country_event = {
 	title = anti_partisan.3.t
 	desc = anti_partisan.3.d
 	is_triggered_only = yes
+	picture = GFX_report_event_bul_partisans_plovdiv
 
 	immediate = {
 		event_target:state_target = {
@@ -61,6 +64,7 @@ country_event = {
 	title = anti_partisan.4.t
 	desc = anti_partisan.4.d
 	is_triggered_only = yes
+	picture = GFX_report_event_bul_partisans_plovdiv
 
 	immediate = {
 		event_target:state_target = {
@@ -89,6 +93,7 @@ country_event = {
 	title = anti_partisan.5.t
 	desc = anti_partisan.5.d
 	is_triggered_only = yes
+	picture = GFX_report_event_bul_partisans_plovdiv
 
 	immediate = {
 		event_target:state_target = {
@@ -111,6 +116,7 @@ country_event = {
 	title = anti_partisan.6.t
 	desc = anti_partisan.6.d
 	is_triggered_only = yes
+	picture = GFX_report_event_bul_partisans_plovdiv
 
 	immediate = {
 		event_target:state_target = {
