@@ -95,6 +95,10 @@ set_UKR_Insurgent_Army_down = {
 			THIS = {
 				add_core_of = v
 			}
+			remove_from_array = {
+				array = THIS.core_array
+				value = v
+			}
 		}
 		remove_core_of = UPA
 	}
