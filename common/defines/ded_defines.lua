@@ -1,4 +1,4 @@
-    -- Game speed change
+	-- Game speed change
     NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 1000
     NDefines.NGame.LAG_DAYS_FOR_PAUSE = 30
     NDefines.NGame.GAME_SPEED_SECONDS = { 1000.0, 0.35, 0.2, 0.12, 0.0 }
@@ -56,11 +56,33 @@
 	-- Production
 	NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 30
 
-    -- EXP change
-    NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
-    NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
-    NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
-
 	-- DOCTRINE GAIN IN FACTION
 	NDefines.NFactions.DOCTRINE_SHARING_BASE_MASTERY_GAIN_MONTHLY = 20
 	NDefines.NFactions.DOCTRINE_SHARING_MONTHLY_MASTERY_GAIN_PER_COMMANDER = 5
+
+	-- Trying make Tanks more valuable
+	NDefines.NMilitary.PIERCING_THRESHOLDS = {
+		1.00,
+		0.90,
+		0.80,
+		0.60,
+		0.40,
+		0.00,
+	}
+	NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {
+		1.00,
+		0.75,
+		0.60,
+		0.40,
+		0.30,
+		0.10,
+	}
+	NDefines.NMilitary.LAND_COMBAT_STR_DICE_SIZE = 2                 	-- nr of damage dice (used by ground to ground)
+	NDefines.NMilitary.LAND_COMBAT_ORG_DICE_SIZE = 6                 	-- nr of damage dice (used by ground to ground)
+	NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 2   	-- extra damage dice if our armor outclasses enemy
+	NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_ON_SOFT_DICE_SIZE = 8   	-- extra damage dice if our armor outclasses enemy
+
+	-- EXPERIENCE LIMITS
+	NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
+	NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
+	NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999

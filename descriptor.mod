@@ -1,4 +1,4 @@
-version="0.3.3.3"
+version="0.3.3.4"
 replace_path="common/bookmarks"
 tags={
 	"Utilities"
