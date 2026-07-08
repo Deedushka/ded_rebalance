@@ -90,6 +90,12 @@ set_UKR_Insurgent_Army_down = {
 		remove_dynamic_modifier = {
 			modifier = UKR_Insurgent_Army
 		}
+		clear_variable = UKR_Insurgent_Army_local_org_regain
+		clear_variable = UKR_Insurgent_Army_compliance_growth
+		clear_variable = UKR_Insurgent_Army_resistance_growth
+		clear_variable = UKR_Insurgent_Army_resistance_target
+		clear_variable = UKR_Insurgent_Army_resistance_decay
+		clear_variable = UKR_Insurgent_Army_resistance_damage_to_garrison
 		for_each_loop = {
 			array = THIS.core_array
 			THIS = {
