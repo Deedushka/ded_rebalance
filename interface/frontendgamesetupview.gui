@@ -9,8 +9,8 @@ guiTypes = {
 	### bookmark entry
 	containerWindowType = {
 		name = "bookmark_entry"
-		position = { x= 0 y = 0 }
-		size = { width=232 height=211}
+		position = { x = 130 y =0 }
+		size = { width=232 height=211 }
 		clipping = no
 		fade_time = 500
 		fade_type = linear
@@ -571,7 +571,7 @@ guiTypes = {
 				name ="bookmarks_grid"
 				position = { x = 0 y = 0 }
 				size = { width = 100%% height = 100%% }
-				slotsize = { width = 260 height = 0 }
+				slotsize = { width = 9999 height = 0 }
 				add_horizontal = yes
 				max_slots_vertical = 1
 				format = "UPPER_LEFT"
@@ -728,7 +728,7 @@ guiTypes = {
 		containerWindowType = {
 			name ="countries_mini"
 			position = { x = 11 y = 360 }
-			size = { width = -15 height = 120}
+			size = { width = -15 height = 80}
 			
 
 			gridboxType = {
@@ -1559,11 +1559,11 @@ guiTypes = {
 			quadTextureSprite ="GFX_tiled_generic_bg_1"
 		}
 
-		background = {
-			name = "on_indicator"
-			quadTextureSprite ="GFX_changed_slider_indicator"
-			position = { x = 602 y = 10 }
-		}
+#		background = {
+#			name = "on_indicator"
+#			quadTextureSprite ="GFX_changed_slider_indicator"
+#			position = { x = 602 y = 10 }
+#		}
 
 		iconType = {
 			name = "custom_difficulty_icon"
@@ -1972,14 +1972,9 @@ guiTypes = {
 			fixedsize = yes
 		}
 
-		iconType = {
-			name = "historical_chain"
-			position = { x=530 y =145 }
-			quadTextureSprite = GFX_historical_chain_icon
-		}
 		checkboxType = {
 			name = "historical_cb"
-			position = { x=530 y =2000 }
+			position = { x=530 y =145}
 			quadTextureSprite ="GFX_generic_checkbox"
 			clicksound = click_checkbox
 		}

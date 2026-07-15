@@ -1,0 +1,14 @@
+bookmarks = {
+	bookmark = {
+		name = "-"
+		desc = "-"
+		date = 2005.1.1.12
+		picture = "GFX_select_date_1936"
+
+		filters = { new_content continent }
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}
