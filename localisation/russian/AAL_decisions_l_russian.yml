@@ -1,11 +1,12 @@
 ﻿l_russian:
  deactivate_AAL_missions_tt: "§RПлан Барбаросса провалится!§!"
- AAL_add_days_missions_tt: "Операция продлится на 21 дней дольше"
  AAL_SOV_peace_deal_tt: "§GМир на условиях Германии§!"
  AAL_decision_categories: "План Барбаросса"
+ GER_win_AAL: "§YПлан «Барбаросса»§! был реализован"
 
  AAL_barbarossa_mission: "Директива No 21"
  AAL_get_time_from_objective: "[AAL_get_time_from_objective]"
+ AAL_get_time_from_objective_desc: "Изменится количество дней в миссии «$AAL_barbarossa_mission$»"
  AAL_get_time_from_objective_offensive: "Цель захвата — [?FROM.GetName]"
  AAL_get_time_from_objective_defensive: "Цель освобождения — [?FROM.GetName]"
 

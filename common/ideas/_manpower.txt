@@ -25,6 +25,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
+				research_speed_factor = 0.05
 			}
 
 			cancel_if_invalid = no
@@ -164,6 +165,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.015
+				research_speed_factor = 0.02
 			}
 
 			default = yes

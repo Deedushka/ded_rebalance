@@ -51,6 +51,9 @@ on_actions = {
 						original_tag = IRQ
 						original_tag = PER
 
+						original_tag = AUS
+						original_tag = CZE
+
 						original_tag = CHI
 						original_tag = MAN
 						is_chinese_warlord = yes
@@ -61,6 +64,36 @@ on_actions = {
 						original_tag = D03
 						original_tag = D04
 						original_tag = D05
+						original_tag = D06
+						original_tag = D07
+						original_tag = D08
+						original_tag = D09
+						original_tag = D10
+
+						original_tag = RKB
+						original_tag = RKN
+						original_tag = RKG
+						original_tag = RKU
+						original_tag = RKO
+						original_tag = RKK
+						original_tag = RKT
+						original_tag = RKM
+						original_tag = RKL
+						original_tag = GEN
+						original_tag = RKH
+						original_tag = RKI
+						original_tag = RKC
+						original_tag = RGB
+						original_tag = RKA
+						original_tag = RNA
+						original_tag = RKV
+						original_tag = RAN
+						original_tag = RCO
+						original_tag = RUS
+						original_tag = RHD
+						original_tag = RAR
+						original_tag = ROA
+						original_tag = RAA
 					}
 				}
 				add_to_array = {
@@ -146,15 +179,6 @@ on_actions = {
 					}
 				}
 				add_ideas = no_embargo_modifier
-			}
-			for_each_scope_loop = {
-				array = global.countries
-				if = { 
-					limit = { is_in_array = { array = global.playable_countries value = THIS } } 
-					army_experience = 30
-					navy_experience = 30
-					air_experience = 20
-				}
 			}
 		}
 
@@ -350,6 +374,91 @@ on_actions = {
 					save_event_target_as = lobotomy_patient
 					country_event = debug_ded.2
 				}
+			}
+		}
+	}
+
+	# No peace conference
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = TAN
+							original_tag = MON
+						}
+					}
+					ROOT = {
+						original_tag = SOV
+					}
+				}
+				ROOT = { save_event_target_as = pc_winner }
+				FROM = { save_event_target_as = pc_loser }
+				if = {
+					limit = {
+						FROM = {
+							NOT = {
+								original_tag = TAN
+							}
+						}
+					}
+					country_event = debug_ded_pc.1
+				}
+				else = {
+					country_event = debug_ded_pc.2
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = TIB
+							original_tag = BHU
+							original_tag = NEP
+							original_tag = SIA
+							original_tag = CHI
+						}
+					}
+					ROOT = {
+						original_tag = JAP
+					}
+				}
+				ROOT = { save_event_target_as = pc_winner }
+				FROM = { save_event_target_as = pc_loser }
+				if = {
+					limit = {
+						FROM = {
+							NOT = {
+								original_tag = CHI
+							}
+						}
+					}
+					country_event = debug_ded_pc.1
+				}
+				else = {
+					country_event = debug_ded_pc.2
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = ETH
+							original_tag = GRE
+						}
+					}
+					ROOT = {
+						original_tag = ITA
+					}
+				}
+				ROOT = { save_event_target_as = pc_winner }
+				FROM = { save_event_target_as = pc_loser }
+				country_event = debug_ded_pc.2
 			}
 		}
 	}

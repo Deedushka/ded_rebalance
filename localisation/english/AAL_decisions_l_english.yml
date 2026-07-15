@@ -1,11 +1,12 @@
 ﻿l_english:
  deactivate_AAL_missions_tt: "§RThe Barbarossa plan will fail!§!"
- AAL_add_days_missions_tt: "The operation will take 21 days longer"
  AAL_SOV_peace_deal_tt: "§GPeace on Germany's condition§!"
  AAL_decision_categories: "The Barbarossa Plan"
+ GER_win_AAL: "The §Y«Barbarossa» plan§! was carried out"
 
  AAL_barbarossa_mission: "Directive No 21"
  AAL_get_time_from_objective: "[AAL_get_time_from_objective]"
+ AAL_get_time_from_objective_desc: "The number of days in the mission «$AAL_barbarossa_mission$» will change"
  AAL_get_time_from_objective_offensive: "Capture objective — [?FROM.GetName]"
  AAL_get_time_from_objective_defensive: "Goal of liberation — [?FROM.GetName]"
 

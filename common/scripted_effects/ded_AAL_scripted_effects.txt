@@ -1,13 +1,12 @@
-@days_add = 18
 deactivate_AAL_missions = {
 	custom_effect_tooltip = deactivate_AAL_missions_tt
 	clr_country_flag = JAP.JAP_in_AAL
+	hidden_effect = {
+		clr_global_flag = AAL_been_continued
+	}
 	add_timed_idea = {
 		idea = AAL_GER_barbarossa_lost
 		days = 160
-	}
-	SOV = {
-		add_to_variable = { SOV_the_red_army_surrender_limit = 0.1 tooltip = surrender_limit_tt }
 	}
 }
 AAL_SOV_peace_deal = {

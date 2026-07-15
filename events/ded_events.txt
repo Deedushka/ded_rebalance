@@ -1,10 +1,8 @@
-add_namespace = ded
 add_namespace = debug_ded
+add_namespace = debug_ded_pc
 
 country_event = {
 	id = debug_ded.1
-	title = title
-	desc = desc
 	is_triggered_only = yes
 	hidden = yes
 
@@ -55,8 +53,6 @@ country_event = {
 }
 country_event = {
 	id = debug_ded.2
-	title = title
-	desc = desc
 	is_triggered_only = yes
 	hidden = yes
 
@@ -68,6 +64,71 @@ country_event = {
 				}
 				clr_country_flag = lobotomized
 				remove_ideas = ded_lobotomized
+			}
+		}
+	}
+}
+country_event = {	# Peace conference (puppet)
+	id = debug_ded_pc.1
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = { 
+		event_target:pc_winner = {
+			white_peace = event_target:pc_loser
+			if = {
+				limit = {
+					NOT = {
+						has_government = democratic
+					}
+				}
+				set_autonomy = {
+					target = event_target:pc_loser
+					autonomy_state = autonomy_integrated_puppet
+				}
+			}
+			else = {
+				set_autonomy = {
+					target = event_target:pc_loser
+					autonomy_state = autonomy_supervised_state
+				}
+			}
+		}
+		event_target:pc_loser = {
+			country_event = { id = debug_ded_pc.10 days = 1 }
+		}
+	}
+}
+country_event = {	# Peace conference (resources)
+	id = debug_ded_pc.10
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		every_controlled_state = {
+			limit = {
+				state_has_any_resource = yes
+			}
+			PREV = {
+				give_resource_rights = {
+					receiver = event_target:pc_winner
+					state = PREV
+				}
+			}
+		}
+	}
+}
+country_event = {	# Peace conference (annex)
+	id = debug_ded_pc.2
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		event_target:pc_winner = {
+			white_peace = event_target:pc_loser
+			annex_country = {
+				target = event_target:pc_loser
+				transfer_troops = no
 			}
 		}
 	}

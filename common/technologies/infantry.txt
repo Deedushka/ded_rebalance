@@ -285,21 +285,21 @@ technologies = {
 
 		category_all_infantry = {
 			hard_attack = 0.25
-			ap_attack = 6
+			ap_attack = 4
 		}
 
 		category_cavalry = {
 			hard_attack = 0.1
-			ap_attack = 2
+			ap_attack = 1
 		}
 
 		fire_support = {
 			hard_attack = 0.15
-			ap_attack = 4
+			ap_attack = 2
 		}
 		mot_fire_support = {
 			hard_attack = 0.15
-			ap_attack = 4
+			ap_attack = 2
 		}
 
 		path = {
@@ -307,7 +307,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 3
+		research_cost = 2
 		start_year = 1942
 		folder = {
 			name = infantry_folder
@@ -315,7 +315,7 @@ technologies = {
 		}
 
 		categories = {
-			infantry_at
+			infantry_weapons
 		}
 
 		ai_will_do = {
@@ -343,29 +343,30 @@ technologies = {
 		allow = {
 			ROOT = {
 				is_special_project_completed = sp:sp_land_large_caliber_kinetic_energy_sabot
+				has_tech = rocket_artillery4
 			}
 		}
 
 		category_all_infantry = {
 			hard_attack = 0.25
-			ap_attack = 6
+			ap_attack = 4
 		}
 
 		category_cavalry = {
 			hard_attack = 0.1
-			ap_attack = 2
+			ap_attack = 1
 		}
 
 		fire_support = {
 			hard_attack = 0.15
-			ap_attack = 4
+			ap_attack = 2
 		}
 		mot_fire_support = {
 			hard_attack = 0.15
-			ap_attack = 4
+			ap_attack = 2
 		}
 		
-		research_cost = 3
+		research_cost = 2
 		start_year = 1943
 		folder = {
 			name = infantry_folder
@@ -373,7 +374,7 @@ technologies = {
 		}
 
 		categories = {
-			infantry_at
+			infantry_weapons
 		}
 
 		ai_will_do = {

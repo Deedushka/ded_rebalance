@@ -561,6 +561,9 @@
 					is_controlled_by = ROOT
 				}
 			}
+			GER = {
+				has_country_flag = GER_win_AAL
+			}
 			has_completed_focus = VIC_organize_CGQJ
 		}
 		
