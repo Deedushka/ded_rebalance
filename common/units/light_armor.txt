@@ -38,8 +38,7 @@ sub_units = {
 		#Tanks are awesome
 		# soft_attack = 0.5
 
-		breakthrough = 0.6
-		soft_attack = 0.2
+		breakthrough = 1.2
 
 		suppression = 2.5
 

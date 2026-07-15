@@ -71,10 +71,10 @@
 	}
 	NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {
 		1.00,
-		0.75,
 		0.60,
-		0.40,
+		0.50,
 		0.30,
+		0.20,
 		0.10,
 	}
 	NDefines.NMilitary.LAND_COMBAT_STR_DICE_SIZE = 2                 	-- nr of damage dice (used by ground to ground)
