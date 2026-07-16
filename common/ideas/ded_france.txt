@@ -18,7 +18,7 @@ ideas = {
 	hidden_ideas = {
 		FRA_capitulation_factor = {
 			allowed = {
-				original_tag = FRA
+				always = no
 			}
 			modifier = {
 				surrender_limit = -0.5

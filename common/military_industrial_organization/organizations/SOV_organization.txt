@@ -1533,8 +1533,15 @@ SOV_black_sea_shipyard_organization = {
 		}
 
 		available = {
-			FROM = {
-				has_full_control_of_state = 202 #KIEV
+			OR = {
+				FROM = {
+					has_full_control_of_state = 202 #KIEV
+				}
+				202 = {
+					controller = {
+						is_subject_of = FROM	
+					}
+				}
 			}
 			FROM = {
 				has_completed_focus = SOV_merge_naval_plants
@@ -1741,8 +1748,15 @@ SOV_sevastopol_marine_plant_organization = {
 		}
 
 		available = {
-			FROM = {
-				has_full_control_of_state = 197 #MYKOLAIV
+			OR = {
+				FROM = {
+					has_full_control_of_state = 197 #MYKOLAIV
+				}
+				197 = {
+					controller = {
+						is_subject_of = FROM	
+					}
+				}
 			}
 			FROM = {
 				has_completed_focus = SOV_merge_naval_plants
@@ -1925,8 +1939,15 @@ SOV_mig_design_bureau_organization = {
 		}
 
 		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
+			OR = {
+				FROM = {
+					has_full_control_of_state = 808 #RIGA
+				}
+				808 = {
+					controller = {
+						is_subject_of = FROM	
+					}
+				}
 			}
 			FROM = {
 				has_completed_focus = SOV_merge_aircraft_plants
@@ -2098,8 +2119,15 @@ SOV_ilyushin_design_bureau_organization = {
 		}
 		
 		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
+			OR = {
+				FROM = {
+					has_full_control_of_state = 808 #RIGA
+				}
+				808 = {
+					controller = {
+						is_subject_of = FROM	
+					}
+				}
 			}
 			FROM = {
 				has_completed_focus = SOV_merge_aircraft_plants
@@ -2250,8 +2278,15 @@ SOV_yakovlev_design_bureau_organization = {
 		}
 		
 		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
+			OR = {
+				FROM = {
+					has_full_control_of_state = 808 #RIGA
+				}
+				808 = {
+					controller = {
+						is_subject_of = FROM	
+					}
+				}
 			}
 			FROM = {
 				has_completed_focus = SOV_merge_aircraft_plants
@@ -2455,8 +2490,15 @@ SOV_tupolev_design_bureau_organization = {
 		}
 
 		available = {
-			FROM = {
-				has_full_control_of_state = 808 #RIGA
+			OR = {
+				FROM = {
+					has_full_control_of_state = 808 #RIGA
+				}
+				808 = {
+					controller = {
+						is_subject_of = FROM	
+					}
+				}
 			}
 			FROM = {
 				has_completed_focus = SOV_merge_aircraft_plants
