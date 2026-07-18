@@ -162,14 +162,6 @@ on_actions = {
 						}
 					}
 				}
-				add_timed_idea = {
-					idea = extra_planes_cost
-					years = 3
-				}
-			}
-
-			FRA = {
-				add_ideas = FRA_capitulation_factor
 			}
 
 			# No embargo
@@ -295,29 +287,6 @@ on_actions = {
 						instant_build = yes
 					}
 				}
-			}
-		}
-	}
-
-	# Japan-China war
-	on_declare_war = {
-		effect = {
-			if = {
-				limit = { 
-					tag = JAP
-					FROM = { tag = CHI }
-				}
-				JAP = { set_rule = { can_puppet = no } }
-			}
-		}
-	}
-	on_peace = {
-		effect = {
-			if = {
-				limit = { 
-					original_tag = CHI
-				}
-				JAP = { set_rule = { can_puppet = yes } }
 			}
 		}
 	}
