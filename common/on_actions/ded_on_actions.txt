@@ -218,6 +218,24 @@ on_actions = {
 				}
 			}
 		}
+
+		# Vision for factions
+		effect = {
+			every_country = {
+				if = {
+					limit = {
+						Allies_vision_faction = yes
+					}
+					Allies_vision_faction_get_intel = yes
+				}
+				else_if = {
+					limit = {
+						Axis_vision_faction = yes
+					}
+					Axis_vision_faction_get_intel = yes
+				}
+			}
+		}
 	}
 
 	# China cap factory count

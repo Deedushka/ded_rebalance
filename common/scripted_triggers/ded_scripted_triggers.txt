@@ -1,0 +1,37 @@
+Allies_vision_faction = {
+	OR = {
+		tag = ENG
+		tag = USA
+		tag = SOV
+		tag = CAN
+		tag = RAJ
+		tag = AST
+		tag = NZL
+		tag = SAF
+		tag = BRA
+		tag = ARG
+		tag = HOL
+		tag = BEL
+		tag = CZE
+		tag = NOR
+		tag = INS
+		tag = MEX
+		tag = AUS
+		tag = POL
+	}
+}
+Axis_vision_faction = {
+	OR = {
+		tag = GER
+		tag = JAP
+		tag = ITA
+		tag = HUN
+		tag = ROM
+		tag = BUL
+		tag = SIA
+		tag = SWE
+		tag = FIN
+		tag = AUS
+		tag = CZE
+	}
+}

@@ -1,0 +1,210 @@
+@intel = 1000
+Allies_vision_faction_get_intel = {
+	add_intel = {
+		target = ENG
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = USA
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = SOV
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = CAN
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = RAJ
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = AST
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = NZL
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = SAF
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+
+	add_intel = {
+		target = BRA
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = ARG
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = HOL
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = BEL
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+
+	add_intel = {
+		target = CZE
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = NOR
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = INS
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = MEX
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = AUS
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = POL
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+}
+Axis_vision_faction_get_intel = {
+	add_intel = {
+		target = GER
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = JAP
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = ITA
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = HUN
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = ROM
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = BUL
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = SIA
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = SWE
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = FIN
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = AUS
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = CZE
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+}
