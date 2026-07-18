@@ -54,7 +54,9 @@ on_actions = {
 						}
 					}
 				}
-				set_country_flag = JAP.JAP_in_AAL
+				JAP = {
+					set_country_flag = JAP_in_AAL
+				}
 			}
 		}
 	}

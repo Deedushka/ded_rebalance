@@ -21,6 +21,7 @@ is_GER_Axis_controlled = {
 
 AAL_Objective_timed = {
 	OR = {
+		# Europe States
 		state = 137
 		state = 192
 		state = 195
@@ -38,6 +39,11 @@ AAL_Objective_timed = {
 		state = 227
 		state = 217
 		state = 236
+
+		# Asia States
+		state = 408
+		state = 330
+		state = 566
 	}
 }
 AAL_Objective = {

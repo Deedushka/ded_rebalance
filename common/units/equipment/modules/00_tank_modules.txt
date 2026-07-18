@@ -657,7 +657,6 @@ equipment_modules = {
 			main_armament_slot = {
 				tank_medium_main_armament
 				tank_heavy_main_armament
-				tank_heavy_main_armament_modern
 			}
 		}
 		add_stats = {
@@ -1144,7 +1143,7 @@ equipment_modules = {
 	}
 	tank_high_velocity_cannon_3 = {
 		abbreviation = "hv3"
-		category = tank_heavy_main_armament_modern
+		category = tank_heavy_main_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = anti_tank
 
@@ -1225,7 +1224,7 @@ equipment_modules = {
 
 	tank_heavy_cannon_3 = {
 		abbreviation = "hc3"
-		category = tank_heavy_main_armament_modern
+		category = tank_heavy_main_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = anti_tank
 		parent = tank_heavy_cannon_2

@@ -1,6 +1,8 @@
 deactivate_AAL_missions = {
 	custom_effect_tooltip = deactivate_AAL_missions_tt
-	clr_country_flag = JAP.JAP_in_AAL
+	JAP = {
+		clr_country_flag = JAP_in_AAL
+	}
 	hidden_effect = {
 		clr_global_flag = AAL_been_continued
 	}
@@ -19,7 +21,9 @@ AAL_SOV_peace_deal = {
 		}
 		if = {  
 			limit = {
-				has_country_flag = JAP.JAP_in_AAL
+				JAP = {
+					has_country_flag = JAP_in_AAL
+				}
 			}
 			JAP = {
 				country_event = AAL.2
