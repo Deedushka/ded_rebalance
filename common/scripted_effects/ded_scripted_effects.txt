@@ -87,13 +87,6 @@ Allies_vision_faction_get_intel = {
 	}
 
 	add_intel = {
-		target = CZE
-		civilian_intel = @intel
-		army_intel = @intel
-		navy_intel = @intel
-		airforce_intel = @intel
-	}
-	add_intel = {
 		target = NOR
 		civilian_intel = @intel
 		army_intel = @intel
@@ -115,14 +108,28 @@ Allies_vision_faction_get_intel = {
 		airforce_intel = @intel
 	}
 	add_intel = {
-		target = AUS
+		target = POL
 		civilian_intel = @intel
 		army_intel = @intel
 		navy_intel = @intel
 		airforce_intel = @intel
 	}
 	add_intel = {
-		target = POL
+		target = EST
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = LAT
+		civilian_intel = @intel
+		army_intel = @intel
+		navy_intel = @intel
+		airforce_intel = @intel
+	}
+	add_intel = {
+		target = LIT
 		civilian_intel = @intel
 		army_intel = @intel
 		navy_intel = @intel

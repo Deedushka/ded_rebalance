@@ -12,12 +12,13 @@ Allies_vision_faction = {
 		tag = ARG
 		tag = HOL
 		tag = BEL
-		tag = CZE
 		tag = NOR
 		tag = INS
 		tag = MEX
-		tag = AUS
 		tag = POL
+		tag = EST
+		tag = LAT
+		tag = LIT
 	}
 }
 Axis_vision_faction = {
